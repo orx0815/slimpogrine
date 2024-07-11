@@ -16,7 +16,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <artifactId>slimpogrine</artifactId>
+        <artifactId>slimpogrine.parent</artifactId>
         <groupId>org.motorbrot</groupId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
@@ -37,12 +37,9 @@
                 <extensions>true</extensions>
 
                 <configuration>
+                    <replacePropertyVariables>oak.version,composum.nodes.version,composum.platform.version,composum.pages.version,composum.pages.options.version,composum.assets.version,composum.sites.version,cpm.platform.htl.version,composum.ai.version,composum.dashboard.version,jackson.version,peregrine-cms.version</replacePropertyVariables>
+                   
                     <skipAddFeatureDependencies>true</skipAddFeatureDependencies>
-                    <framework>
-                        <groupId>org.apache.felix</groupId>
-                        <artifactId>org.apache.felix.framework</artifactId>
-                        <version>${org.apache.felix.framework.version}</version>
-                    </framework>
 
                     <!--
                         Prepares a feature model aggregate that takes the following features from
@@ -57,6 +54,8 @@
                         <aggregate>
                             <classifier>app</classifier>
                             <filesInclude>*.json</filesInclude>
+                            <filesInclude>composum/*.json</filesInclude>
+                            <filesInclude>peregrine/*.json</filesInclude>
                             <includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.starter</artifactId>
@@ -71,13 +70,13 @@
                                 <version>${sling.starter.version}</version>
                                 <type>slingosgifeature</type>
                             </includeArtifact>
-                            <includeArtifact>
+                            <!--includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.starter</artifactId>
                                 <classifier>composum</classifier>
                                 <version>${sling.starter.version}</version>
                                 <type>slingosgifeature</type>
-                            </includeArtifact>
+                            </includeArtifact-->
                         </aggregate>
                     </aggregates>
                     <scans>
@@ -104,13 +103,25 @@
                     <execution>
                         <id>prepare-feature-launcher</id>
                         <goals>
-                            <goal>get</goal>
-                            <goal>copy</goal>
+                            <goal>unpack</goal>
                         </goals>
                         <phase>package</phase>
                         <configuration>
-                            <artifact>org.apache.sling:org.apache.sling.feature.launcher:${org.apache.sling.feature.launcher.version}</artifact>
-                            <stripVersion>true</stripVersion>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>org.apache.sling</groupId>
+                                    <artifactId>org.apache.sling.feature.launcher</artifactId>
+                                    <version>${sling.feature.launcher.version}</version>
+                                    <type>tar.gz</type>
+                                    <!-- remove the version number from the unpacked folder -->
+                                    <fileMappers>
+                                        <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                            <pattern>\Qorg.apache.sling.feature.launcher-${sling.feature.launcher.version}\E</pattern>
+                                            <replacement>org.apache.sling.feature.launcher</replacement>
+                                        </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                                    </fileMappers>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
