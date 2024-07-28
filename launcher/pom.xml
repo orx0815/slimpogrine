@@ -22,7 +22,7 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>launcher</artifactId>
+    <artifactId>slimpogrine.launcher</artifactId>
 
     <name>slimpogrine - Launcher</name>
     <description>
@@ -52,7 +52,7 @@
                      -->
                     <aggregates>
                         <aggregate>
-                            <classifier>app</classifier>
+                            <classifier>slimpogrine</classifier>
                             <filesInclude>*.json</filesInclude>
                             <filesInclude>composum/*.json</filesInclude>
                             <filesInclude>peregrine/*.json</filesInclude>
@@ -81,7 +81,7 @@
                     </aggregates>
                     <scans>
                         <scan>
-                            <includeClassifier>app</includeClassifier>
+                            <includeClassifier>slimpogrine</includeClassifier>
                         </scan>
                     </scans>
                 </configuration>

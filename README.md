@@ -1,3 +1,54 @@
+
+Slimpogrine = SLIng + coMPOsum + pereGRINE
+=====
+
+[![Try SliMpoGrine on Gitpod](https://img.shields.io/badge/Gitpod-Try%20SliMpoGrine%20CMS%20Online-0a4d2c?logo=gitpod)](https://gitpod.io/#https://github.com/orx0815/slimpogrine) 
+
+
+Here we bake two open-source WYSIWYG website editors into the same [![Apache Sling](https://sling.apache.org/res/logos/sling.png)](https://sling.apache.org) app-server.
+Because we can.
+
+1)  
+[Peregrine](https://www.peregrine-cms.com) with a VueJs-SPA approach from [headwire](https://www.headwire.com).
+(see [github](https://github.com/headwirecom/peregrine-cms), [adapt.to talk](https://adapt.to/2019/en/schedule/current-state-of-peregrine-cms.html) )  
+   
+2)  
+[Composum-Pages](https://www.composum.com/home.html) with a normal html-page approach from [ist-software](https://www.ist-software.com).
+Composum is friends with Sling standalone-apps anyway. They provide a node-browser, a content-package- and a user-manager for open-source Sling. 
+So that is already used by the plain sling-starter and peregrine-cms, so adding the pages feature seems quite natural.
+
+---
+There is also the official [Apache Sling - CMS Reference App](https://github.com/apache/sling-org-apache-sling-app-cms) that comes also with a WYSIWYG editor. [adapt.to talk](https://adapt.to/2021/en/schedule/sling-cms-building-a-simple-cms-on-apache-sling.html)  
+It's not used here but it's still worth looking into it to get some general concepts about Sling.
+
+---
+
+
+# Build and run
+You need [this peregrine-cms fork](https://github.com/orx0815/peregrine-cms).
+(Only that has ONE content-package migrated to [Jackrabbit FileVault Package Maven Plugin](https://jackrabbit.apache.org/filevault-package-maven-plugin/) to make it work)
+  
+**In the peregrine-cms fork** run
+
+    mvn clean install
+to have the required artefacts in your local .m2 repo.  
+
+**In here**
+
+    mvn clean install
+(Integration-tests need a look at).
+
+There is an [example start-skipt](launcher/launch.sh)
+
+Access it on port 8080: http://localhost:8080  
+It starts with the Peregrine Loging screen. (user:passwd is admin:admin)  
+Over the Tools section you can get into composum or via this link:
+http://localhost:8080/bin/pages.html
+    
+
+
+
+
 ### Maven Project generated from Maven Archetype
 
 #### License
