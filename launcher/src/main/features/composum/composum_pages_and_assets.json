@@ -1,22 +1,21 @@
 {
-  "bundles":[
+  "bundles": [
     {
-      "id":"com.composum.assets:metadata-extractor-bundle::${composum.assets.version}",
-      "start-order":"9"
-    },
-    {
-      "id": "org.apache.sling:org.apache.sling.jcr.packageinit:1.0.4",
-      "start-order": "20"
-    },
-    {
-      "id": "com.google.code.gson:gson:2.8.5",
-      "start-order": "20"
-    },
-    {
-      "id": "com.google.guava:guava:15.0",
-      "start-order": "20"
+      "id": "com.composum.assets:metadata-extractor-bundle::${composum.assets.version}",
+      "start-order": "9"
     }
   ],
+  "variables": {
+    "openapikey": "",
+    "openapikeyfile": ""
+  },
+  "configurations": {
+    "com.composum.ai.backend.base.service.chat.impl.GPTChatCompletionServiceImpl": {
+      "disable": false,
+      "openAiApiKey": "${openapikey}",
+      "openAiApiKeyFile": "${openapikeyfile}"
+    }
+  },
   "content-packages:ARTIFACTS|required": [
     {
       "id": "com.composum.platform:composum-platform-commons-package:zip:${composum.platform.version}",
@@ -65,8 +64,14 @@
     {
       "id": "com.composum.platform:cpm-platform-htl-package:zip:${cpm.platform.htl.version}",
       "start-order": "45"
+    },
+    {
+      "id": "com.composum.ai:composum-ai-integration-composum-package:zip:${composum.ai.version}",
+      "start-order": "45"
+    },
+    {
+      "id": "com.composum.dashboard:composum-dashboard-sling:zip:${composum.dashboard.version}",
+      "start-order": "45"
     }
-    
   ]
 }
- 

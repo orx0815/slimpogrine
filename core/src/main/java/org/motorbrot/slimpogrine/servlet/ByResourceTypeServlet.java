@@ -35,12 +35,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Hello World Servlet registered by resource type
  * 
- * <p>This servlet binds to the <tt>sling/servlet/default</tt> resource type,
+ * <p>This servlet binds to the <code>sling/servlet/default</code> resource type,
  * which means that it is registered for all resources. The registration is
  * narrowed down by the selectors and extensions.</p>
  * 
  * <p>Assuming the sample content is installed, it will serve requests of the form
- * <tt>GET /${resource}.hello.html</tt></p>
+ * <code>GET /${resource}.hello.html</code></p>
  * 
  * @see <a href="https://sling.apache.org/documentation/the-sling-engine/servlets.html">Servlets and Scripts</a>
  */

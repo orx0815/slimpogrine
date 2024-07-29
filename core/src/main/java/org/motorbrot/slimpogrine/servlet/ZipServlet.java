@@ -38,12 +38,12 @@ import org.slf4j.LoggerFactory;
 /**
  * Download servlet
  * 
- * <p>This servlet binds all resources of the type <tt>slimpogrine/home</tt>
+ * <p>This servlet binds all resources of the type <code>slimpogrine/home</code>
  * and the zip extension. It generates a simplistic zip archive of all the child
- * pages, based on the <tt>jcr:title</tt> and <tt>jcr:content</tt> properties.</p>
+ * pages, based on the <code>jcr:title</code> and <code>jcr:content</code> properties.</p>
  * 
  * <p>Assuming the sample content is installed, it will serve requests of the form 
- * <tt>GET /content/{contentFolderName}/home.zip</tt></p>
+ * <code>GET /content/{contentFolderName}/home.zip</code></p>
  * 
  * @see <a href="https://sling.apache.org/documentation/the-sling-engine/servlets.html">Servlets and Scripts</a>
  */

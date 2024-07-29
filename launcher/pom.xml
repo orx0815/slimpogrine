@@ -37,7 +37,22 @@
                 <extensions>true</extensions>
 
                 <configuration>
-                    <replacePropertyVariables>oak.version,composum.nodes.version,composum.platform.version,composum.pages.version,composum.pages.options.version,composum.assets.version,composum.sites.version,cpm.platform.htl.version,composum.ai.version,composum.dashboard.version,jackson.version,peregrine-cms.version</replacePropertyVariables>
+                    <replacePropertyVariables>
+                      oak.version,
+                      composum.nodes.version,
+                      composum.platform.version,
+                      composum.pages.version,
+                      composum.pages.options.version,
+                      composum.assets.version,
+                      org.apache.sling.jcr.packageinit.version,
+                      cpm.platform.htl.version,
+                      composum.ai.version,
+                      cpm.platform.replication.version,
+                      cpm.platform.workflow.version,
+                      cpm.platform.tenant.version,
+                      composum.dashboard.version,
+                      peregrine-cms.version
+                    </replacePropertyVariables>
                    
                     <skipAddFeatureDependencies>true</skipAddFeatureDependencies>
 

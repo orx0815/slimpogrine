@@ -34,7 +34,7 @@ import org.slf4j.LoggerFactory;
 /**
  * Hello World Servlet registered by path
  * 
- * This servlet registers itself to a specific path, namely <tt>/hello-world-servlet</tt>.
+ * This servlet registers itself to a specific path, namely <code>/hello-world-servlet</code>.
  * Note that this is discouraged and binding servlet resources is the preferred
  * way.
  * 
