@@ -42,7 +42,7 @@
     <sling.url>http://${sling.host}:${sling.port}</sling.url>
     
     <!-- wcmio-content-package:install -->
-    <vault.serviceURL>${sling.url}</vault.serviceURL>
+    <vault.serviceURL>${sling.url}/bin/cpm/package.service.html</vault.serviceURL>
     <vault.userId>${sling.host}</vault.userId>
     <vault.password>${sling.host}</vault.password>
     
@@ -287,6 +287,7 @@
     <module>/apps/core.example/ui.apps</module>
     <module>launcher</module>
     <module>/content-packages/all</module>
+    <module>/content-packages/sample-content</module>
   </modules>
   
 </project>

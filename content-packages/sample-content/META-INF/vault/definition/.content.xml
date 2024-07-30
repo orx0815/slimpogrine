@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0"
     jcr:description="Slimpogrine Sample-Content"
-    jcr:lastModified="{Date}2024-07-30T21:51:36.053+02:00"
+    jcr:lastModified="{Date}2024-07-30T23:09:57.017+02:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="vlt:PackageDefinition"
-    buildCount="1"
+    buildCount="2"
     builtWith="Apache Jackrabbit FileVault - Package Maven Plugin 1.3.6"
+    dependencies="[]"
     group="motorbrot-samples"
-    lastUnwrapped="{Date}2024-07-30T21:51:36.053+02:00"
+    lastUnwrapped="{Date}2024-07-30T23:09:57.017+02:00"
     lastUnwrappedBy="admin"
-    lastWrapped="{Date}2024-07-30T21:51:36.053+02:00"
+    lastWrapped="{Date}2024-07-30T23:09:57.017+02:00"
     lastWrappedBy="admin"
     name="slimpogrine-sample-content"
     requiresRestart="{Boolean}false"
@@ -43,6 +44,7 @@
         <f4
             jcr:primaryType="nt:unstructured"
             mode="replace"
+            propertyRules="[]"
             root="/home/groups/tenants/g3BdISOl1UID-VQK9SM0q"
             rules="[]"/>
     </filter>

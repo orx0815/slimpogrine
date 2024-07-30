@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:per="http://www.peregrine-cms.com/jcr/cms/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-    jcr:lastModified="{Date}2024-07-30T21:38:30.411+02:00"
+    jcr:lastModified="{Date}2024-07-30T23:08:57.091+02:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="per:Page">
     <jcr:content
-        jcr:lastModified="{Date}2024-07-30T21:38:30.411+02:00"
+        jcr:lastModified="{Date}2024-07-30T23:08:57.091+02:00"
         jcr:lastModifiedBy="admin"
         jcr:primaryType="per:PageContent"
         jcr:title="Home"
@@ -67,7 +67,7 @@
                         jcr:primaryType="nt:unstructured"
                         buttoncolor="primary"
                         buttonlink="/content/sligrine/pages/articles"
-                        buttontext="Our Articles"
+                        buttontext="Hallo Welt"
                         component="nt:unstructured"
                         iconclass="\0"
                         name="buttons1"
