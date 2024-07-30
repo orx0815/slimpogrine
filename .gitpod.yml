@@ -59,7 +59,7 @@ tasks:
         
         # symlink the .m2, where sling-feature-launcher expects local maven repo
         ln -s /workspace/m2-repository /home/gitpod/.m2/repository
-        cd launcher
+        cd ./launcher/
     
     command: ./launch.sh
   

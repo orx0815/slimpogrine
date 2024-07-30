@@ -43,12 +43,14 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>core</artifactId>
             <version>${project.version}</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>ui.apps</artifactId>
             <version>${project.version}</version>
             <type>content-package</type>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

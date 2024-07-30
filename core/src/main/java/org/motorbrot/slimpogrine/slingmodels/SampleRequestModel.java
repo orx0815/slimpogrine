@@ -16,6 +16,8 @@
  */
 package org.motorbrot.slimpogrine.slingmodels;
 
+import javax.jcr.Session;
+
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
@@ -24,30 +26,34 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.jcr.Session;
-
-@Model(adaptables = {Resource.class, SlingHttpServletRequest.class})
+/**
+ * Answers with userId
+ */
+@Model(adaptables = { Resource.class, SlingHttpServletRequest.class })
 public class SampleRequestModel {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SampleRequestModel.class);
+  private static final Logger LOG = LoggerFactory.getLogger(SampleRequestModel.class);
 
-    @SlingObject
-    private ResourceResolver resourceResolver;
+  @SlingObject
+  private ResourceResolver resourceResolver;
 
-    public SampleRequestModel() {
-        LOGGER.trace("Model Instance created");
+  /**
+   * constructor
+   */
+  public SampleRequestModel() {
+    LOG.trace("Model Instance created");
+  }
+
+  /** @return User Name of the Current User **/
+  String getCurrentUser() {
+    String answer = "No User";
+
+    // Adapt to a session and get the current User ID.
+    Session session = resourceResolver.adaptTo(Session.class);
+    LOG.trace("Found Session from Resolver: '{}'", session);
+    if (session != null) {
+      answer = session.getUserID();
     }
-
-    /** @return User Name of the Current User **/
-    public String getCurrentUser() {
-        String answer = "No User";
-
-        // Adapt to a session and get the current User ID.
-        Session session = resourceResolver.adaptTo(Session.class);
-        LOGGER.trace("Found Session from Resolver: '{}'", session);
-        if(session != null) {
-            answer = session.getUserID();
-        }
-        return answer;
-    }
+    return answer;
+  }
 }

@@ -4,25 +4,32 @@ pom.xml.releaseBackup
 pom.xml.versionsBackup
 pom.xml.next
 release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-# https://github.com/takari/maven-wrapper#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
+maven-eclipse.xml
+infinitest.filters
 
-# Eclipse m2e generated files
-# Eclipse Core
+node_modules/
+npm-debug.log
+
+.nodejs
 .project
-# JDT-specific (Eclipse Java Development Tools)
 .classpath
-
-# idea, netbeans, vscode
-.vscode/
-**/nb-configuration.xml
-*.swp
+.settings
+.externalToolBuilders
+.pmd
+.eclipse-pmd
+.checkstyle
+.idea
+.vagrant
 *.iml
-*.ipr
-*.iws
-*.bak
-.vlt
 .DS_Store
+*.retry
+.rubygems
+.sass-cache
+.rubygems-gem-maven-plugin
+*.sublime-*
+*nbactions*.xml
+**/nb-configuration.xml
+.temp/
+.vlt
+.vlt-sync*
+.brackets.json
