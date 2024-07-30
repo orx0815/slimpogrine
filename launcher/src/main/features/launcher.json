@@ -1,13 +1,13 @@
 {
   "bundles": [
     {
-        "id": "org.motorbrot/core/1.0-SNAPSHOT",
+        "id": "org.motorbrot/slimpogrine.core.example/1.0-SNAPSHOT",
         "start-order": 20
     }
   ],
   "content-packages:ARTIFACTS|required": [
     {
-        "id":"org.motorbrot/ui.apps/1.0-SNAPSHOT/zip"
+        "id":"org.motorbrot/slimpogrine.ui.apps.example/1.0-SNAPSHOT/zip"
     }
   ]
 }

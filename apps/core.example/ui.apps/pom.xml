@@ -28,10 +28,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>ui.apps</artifactId>
+    <artifactId>slimpogrine.ui.apps.example</artifactId>
     <packaging>content-package</packaging>
 
-    <name>slimpogrine - UI Apps</name>
+    <name>Slimpogrine -  UI Apps Example</name>
     <description>
         This is an empty JCR Package where the JCR Content
         can be deployed with.

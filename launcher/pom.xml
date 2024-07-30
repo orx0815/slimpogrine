@@ -24,7 +24,7 @@
 
     <artifactId>slimpogrine.launcher</artifactId>
 
-    <name>slimpogrine - Launcher</name>
+    <name>Slimpogrine - Launcher</name>
     <description>
         This is a Module which contains a sample feature model build, built on
         top of the Sling Starter and adding this project's artifacts.

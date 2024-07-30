@@ -28,10 +28,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>all</artifactId>
+    <artifactId>slimpogrine.all</artifactId>
     <packaging>content-package</packaging>
 
-    <name>slimpogrine - All</name>
+    <name>Slimpogrine - All</name>
     <description>org.motorbrot.slimpogrine - slimpogrine: All-in-one deployment content package</description>
 
     <properties>
@@ -41,13 +41,13 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>core</artifactId>
+            <artifactId>slimpogrine.core.example</artifactId>
             <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>ui.apps</artifactId>
+            <artifactId>slimpogrine.ui.apps.example</artifactId>
             <version>${project.version}</version>
             <type>content-package</type>
             <scope>compile</scope>
@@ -65,14 +65,14 @@
                     <embeddeds>
                         <embedded>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>core</artifactId>
+                            <artifactId>slimpogrine.core.example</artifactId>
                             <filter>true</filter>
                         </embedded>
                     </embeddeds>
                     <subPackages>
                         <subPackage>
                             <groupId>${project.groupId}</groupId>
-                            <artifactId>ui.apps</artifactId>
+                            <artifactId>slimpogrine.ui.apps.example</artifactId>
                             <filter>true</filter>
                         </subPackage>
                     </subPackages>
