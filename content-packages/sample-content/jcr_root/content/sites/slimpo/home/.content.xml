@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-30T21:44:13.510+02:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="cpp:PageContent"
+        jcr:uuid="9c13b110-f283-48d0-90d4-4abe60ed79ad"
+        sling:resourceType="composum/pages/components/page/home"
+        template="composum/pages/components/templates/page/home">
+        <search jcr:primaryType="nt:unstructured">
+            <field
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/search/field"
+                buttonSymbol="search"
+                searchResultPath="/content/sites/slimpo/meta/search"/>
+        </search>
+        <stage
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/composed/carousel"
+            autoStart="{Boolean}true"
+            interval="10000"
+            showIndicators="{Boolean}true"
+            useControls="{Boolean}true">
+            <teaser
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/teaser"
+                link="/content/sites/slimpo/home/test"
+                path="\0"
+                subtitle="Slimpogrine Composum-Pages Sample Content"
+                text="To be explained&lt;br>"
+                title="Hello World!"
+                variation="bgimage">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/content/sites/slimpo/assets/background/synchlotron.jpg"/>
+            </teaser>
+        </stage>
+        <main
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                path="\0">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <text
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/text"
+                        path="\0"
+                        text="This homepage should contain a teaser collection to guide a visitor to its points of interest on this site."/>
+                </column-0>
+            </row>
+            <row_1160738332
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-6--6-"
+                path="\0">
+                <column-1
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <teaser
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/teaser"
+                        icon="bullseye"
+                        link="/content/sites/slimpo/home/test"
+                        path="\0"
+                        subtitle="component test playground"
+                        text="Switch to the playground and place your components on that page to test the editing and the final presentation."
+                        title="A Test Page"
+                        variation="symbol">
+                        <image jcr:primaryType="nt:unstructured"/>
+                    </teaser>
+                </column-1>
+            </row_1160738332>
+        </main>
+        <navigation
+            jcr:primaryType="nt:unstructured"
+            title="Home"/>
+    </jcr:content>
+    <content/>
+    <test/>
+</jcr:root>

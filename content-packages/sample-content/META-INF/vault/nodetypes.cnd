@@ -1,0 +1,105 @@
+<'sling'='http://sling.apache.org/jcr/sling/1.0'>
+<'cpp'='http://sling.composum.com/pages/1.0'>
+<'mix'='http://www.jcp.org/jcr/mix/1.0'>
+<'nt'='http://www.jcp.org/jcr/nt/1.0'>
+<'rep'='internal'>
+<'cpl'='http://sling.composum.com/platform/1.0'>
+<'jcr'='http://www.jcp.org/jcr/1.0'>
+<'per'='http://www.peregrine-cms.com/jcr/cms/1.0'>
+
+[sling:Resource]
+  mixin
+  - sling:resourceType (string)
+
+[cpp:SiteConfiguration] > mix:created, mix:lastModified, mix:lockable, mix:versionable, nt:unstructured
+  orderable
+
+[rep:Members]
+  orderable
+  - * (weakreference) protected < 'rep:Authorizable'
+  + * (rep:Members) = rep:Members protected multiple
+
+[cpp:Site] > cpl:releaseRoot, sling:OrderedFolder
+  orderable
+  + jcr:content (cpp:SiteConfiguration) = cpp:SiteConfiguration multiple
+
+[sling:OrderedFolder] > sling:Folder
+  orderable
+  + * (nt:base) = sling:OrderedFolder version
+
+[sling:Folder] > nt:folder
+  - * (undefined) multiple
+  - * (undefined)
+  + * (nt:base) = sling:Folder version
+
+[cpl:releaseRoot]
+  mixin
+  - cpl:releaseChangeNumber (string)
+
+[per:Site] > nt:unstructured
+  orderable
+  - template (boolean) = 'false' autocreated
+  - internal (boolean) = 'false' autocreated
+
+[per:Asset] > mix:created, mix:lastModified, nt:hierarchyNode, sling:Resource
+  primaryitem jcr:content
+  + jcr:content (per:AssetContent) = per:AssetContent
+  + * (nt:base) = nt:base version
+
+[per:AssetContent] > nt:unstructured, per:Replication
+  orderable
+  + renditions (nt:folder)
+
+[per:Replication] > sling:Resource
+  mixin
+  - per:Replicated (date)
+  - per:ReplicationStatus (string)
+  - per:ReplicatedBy (string)
+  - per:ReplicationRef (string)
+  - per:ReplicationLastAction (string)
+
+[rep:Password]
+  - * (undefined) protected
+  - * (undefined) protected multiple
+
+[per:Component] > sling:Folder
+  - group (string)
+  - cardinality (string)
+
+[cpp:Element] > nt:unstructured, sling:Resource
+  orderable
+
+[cpp:Container] > cpp:Element
+  orderable
+
+[per:Page] > nt:hierarchyNode, sling:OrderedFolder
+  orderable primaryitem jcr:content
+  + jcr:content (nt:base) = nt:unstructured
+  + * (nt:base) = nt:base version
+
+[per:PageContent] > nt:unstructured, per:Replication, sling:Resource, sling:VanityPath
+  orderable
+  - useTitle (boolean) = 'true' autocreated
+  - useDescription (boolean) = 'true' autocreated
+  - ogTitle (string) = '' autocreated
+  - ogType (string) = 'website' autocreated < 'website'
+  - ogImage (string) = '' autocreated
+  - ogImageAlt (string) = '' autocreated
+  - ogUrl (string) = '' autocreated
+
+[sling:VanityPath]
+  mixin
+  - sling:vanityPath (string) multiple
+  - sling:redirect (boolean)
+  - sling:vanityOrder (long)
+  - sling:redirectStatus (long)
+
+[cpp:Page] > sling:OrderedFolder
+  orderable
+  + jcr:content (cpp:PageContent) = cpp:PageContent multiple
+
+[cpp:PageContent] > mix:created, mix:lastModified, mix:lockable, mix:versionable, nt:unstructured
+  orderable
+
+[per:ObjectDefinition] > per:Replication, sling:Folder
+

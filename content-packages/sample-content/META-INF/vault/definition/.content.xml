@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0"
+    jcr:description="Slimpogrine Sample-Content"
+    jcr:lastModified="{Date}2024-07-30T21:51:36.053+02:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="1"
+    builtWith="Apache Jackrabbit FileVault - Package Maven Plugin 1.3.6"
+    group="motorbrot-samples"
+    lastUnwrapped="{Date}2024-07-30T21:51:36.053+02:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2024-07-30T21:51:36.053+02:00"
+    lastWrappedBy="admin"
+    name="slimpogrine-sample-content"
+    requiresRestart="{Boolean}false"
+    requiresRoot="{Boolean}false"
+    version="1.0-SNAPSHOT">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/content/sites/slimpo"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/apps/sligrine"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/content/sligrine"
+            rules="[]"/>
+        <f3
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/home/users/tenants/y8Hrxn9ceeNqnPePptF3_"
+            rules="[]"/>
+        <f4
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/home/groups/tenants/g3BdISOl1UID-VQK9SM0q"
+            rules="[]"/>
+    </filter>
+</jcr:root>

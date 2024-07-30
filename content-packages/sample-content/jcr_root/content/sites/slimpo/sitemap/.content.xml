@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-30T21:31:06.461+02:00"
+        jcr:lastModifiedBy="sling-package-install"
+        jcr:primaryType="cpp:PageContent"
+        jcr:uuid="2f1a378b-c7b5-463a-93a4-08438ede9ef9"
+        sling:resourceType="composum/pages/components/page/sitemap"
+        template="composum/pages/components/templates/page/meta/sitemap"/>
+</jcr:root>
