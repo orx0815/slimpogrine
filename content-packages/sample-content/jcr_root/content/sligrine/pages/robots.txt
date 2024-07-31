@@ -1,5 +1,0 @@
-User-agent: *
-Disallow: /bin/
-Disallow: /system/
-Disallow: /perapi/admin/
-Disallow: /content/admin/

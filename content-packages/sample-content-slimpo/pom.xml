@@ -1,0 +1,76 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>slimpogrine.parent</artifactId>
+    <groupId>org.motorbrot</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>slimpogrine.sample-content-slimpo</artifactId>
+  <name>Slimpo Sample Content</name>
+  <description>Slimpo Sample Content</description>
+  <packaging>content-package</packaging>
+
+  <properties>
+    <contentPackage.name>slimpogrine-sample-content-slimpo</contentPackage.name>
+    <contentPackage.group>motorbrot-samples</contentPackage.group>
+  </properties>
+
+  <build>
+    <finalName>${contentPackage.name}-${project.version}</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <configuration>
+          <name>${contentPackage.name}</name>
+          <group>${contentPackage.group}</group>
+          <packageType>content</packageType>
+          <validatorsSettings>
+            <jackrabbit-accesscontrol>
+              <!--
+                    How to make your content packages comply with Jackrabbit FileVault Validation
+  https://wcm-io.atlassian.net/wiki/spaces/WCMIO/pages/1353056261/How+to+make+your+content+packages+comply+with+Jackrabbit+FileVault+Validation
+              -->
+              <isDisabled>true</isDisabled>
+            </jackrabbit-accesscontrol>
+          </validatorsSettings>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>io.wcm.maven.plugins</groupId>
+        <artifactId>wcmio-content-package-maven-plugin</artifactId>
+        <configuration>
+          <serviceURL>${sling.url}/bin/cpm/package.service.html</serviceURL>
+        </configuration>
+      </plugin>
+
+      <!-- Do not generate eclipse project files -->
+      <plugin>
+        <groupId>io.wcm.devops.maven.plugins</groupId>
+        <artifactId>eclipse-maven-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- Do not generate sources JAR -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <configuration>
+          <skipSource>true</skipSource>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

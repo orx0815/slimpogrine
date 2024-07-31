@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Content-Package-Id: motorbrot-samples:slimpogrine-sample-content:1.0-SNA
- PSHOT
-Content-Package-Description: Slimpogrine Sample-Content
-Content-Package-Roots: /home/users/tenants/y8Hrxn9ceeNqnPePptF3_,/conten
- t/sligrine,/content/sites/slimpo,/home/groups/tenants/g3BdISOl1UID-VQK9
- SM0q,/apps/sligrine
-Content-Package-Type: mixed
-

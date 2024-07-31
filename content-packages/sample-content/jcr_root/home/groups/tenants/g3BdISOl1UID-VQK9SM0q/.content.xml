@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:rep="internal"
-    jcr:mixinTypes="[rep:AccessControllable]"
-    jcr:primaryType="rep:Group"
-    jcr:uuid="2b719127-191f-312d-87b9-32f0394f8830"
-    rep:authorizableId="sligrine_group"
-    rep:members="{WeakReference}[9f086ca0-e424-3dd3-9c41-a5bffb96f6b7]"
-    rep:principalName="sligrine_group"/>
