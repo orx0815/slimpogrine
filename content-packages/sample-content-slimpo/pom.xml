@@ -32,15 +32,6 @@
           <name>${contentPackage.name}</name>
           <group>${contentPackage.group}</group>
           <packageType>content</packageType>
-          <validatorsSettings>
-            <jackrabbit-accesscontrol>
-              <!--
-                    How to make your content packages comply with Jackrabbit FileVault Validation
-  https://wcm-io.atlassian.net/wiki/spaces/WCMIO/pages/1353056261/How+to+make+your+content+packages+comply+with+Jackrabbit+FileVault+Validation
-              -->
-              <isDisabled>true</isDisabled>
-            </jackrabbit-accesscontrol>
-          </validatorsSettings>
         </configuration>
       </plugin>
       

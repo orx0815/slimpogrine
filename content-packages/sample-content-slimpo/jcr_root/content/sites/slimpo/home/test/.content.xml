@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-07-31T08:29:02.989+02:00"
+        jcr:lastModifiedBy="sling-package-install"
+        jcr:primaryType="cpp:PageContent"
+        jcr:uuid="f344497e-0b42-4702-ac00-66dbee66c246"
+        sling:resourceType="composum/pages/components/page"
+        template="composum/pages/components/templates/page/test">
+        <main
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                path="\0">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column"/>
+            </row>
+        </main>
+        <top
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <title
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/title"
+                path="\0"
+                subtitle="component testing"
+                title="A Page for testing features">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/content/sites/slimpo/assets/background/synchlotron.jpg"/>
+            </title>
+        </top>
+        <navigation
+            jcr:primaryType="nt:unstructured"
+            title="Testpage"/>
+    </jcr:content>
+</jcr:root>

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Content-Package-Id: motorbrot-samples:slimpogrine-sample-content-slimpo:
+ 1.0-SNAPSHOT
+Content-Package-Roots: /content/sites/slimpo
+Content-Package-Type: content
+

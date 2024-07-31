@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0"
+    jcr:lastModified="{Date}2024-07-31T09:09:19.180+02:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="1"
+    group="motorbrot-samples"
+    lastUnwrapped="{Date}2024-07-31T09:09:19.180+02:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2024-07-31T09:09:19.180+02:00"
+    lastWrappedBy="admin"
+    name="slimpogrine-sample-content-slimpo"
+    version="1.0-SNAPSHOT">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/content/sites/slimpo"
+            rules="[]"/>
+    </filter>
+</jcr:root>
