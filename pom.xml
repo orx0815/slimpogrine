@@ -204,7 +204,7 @@
       <dependency>
         <groupId>javax.inject</groupId>
         <artifactId>javax.inject</artifactId>
-        <version>$[javax.inject.version</version>
+        <version>${javax.inject.version}</version>
         <scope>provided</scope>
       </dependency>
       <!-- JCR API -->
@@ -285,10 +285,35 @@
   <modules>
     <module>/apps/core.example/core</module>
     <module>/apps/core.example/ui.apps</module>
-    <module>launcher</module>
     <module>/content-packages/all</module>
     <module>/content-packages/sample-content-slimpo</module>
     <module>/content-packages/sample-content-sligrine</module>
+    <module>launcher</module>
   </modules>
+  
+  <profiles>
+    <profile>
+      <!-- enabled to build on github -->
+      <id>github</id>
+      <repositories>
+        <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/orx0815/peregrine-cms</url>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+        </repository>
+      </repositories>
+      
+      <distributionManagement>
+        <repository>
+          <id>github</id>
+          <name>GitHub Packages</name>
+          <url>https://maven.pkg.github.com/orx0815/slimpogrine</url>
+        </repository>
+      </distributionManagement>
+      
+    </profile>
+  </profiles>
   
 </project>
