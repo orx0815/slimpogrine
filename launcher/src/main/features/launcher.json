@@ -8,6 +8,12 @@
   "content-packages:ARTIFACTS|required": [
     {
         "id":"org.motorbrot/slimpogrine.ui.apps.example/1.0-SNAPSHOT/zip"
+    },
+    {
+        "id":"org.motorbrot/slimpogrine.sample-content-slimpo/1.0-SNAPSHOT/zip"
+    },
+    {
+        "id":"org.motorbrot/slimpogrine.sample-content-sligrine/1.0-SNAPSHOT/zip"
     }
   ]
 }

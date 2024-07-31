@@ -26,6 +26,7 @@
         <artifactId>slimpogrine.parent</artifactId>
         <groupId>org.motorbrot</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>slimpogrine.all</artifactId>

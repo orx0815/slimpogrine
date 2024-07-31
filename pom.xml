@@ -287,8 +287,8 @@
     <module>/apps/core.example/ui.apps</module>
     <module>launcher</module>
     <module>/content-packages/all</module>
-    <!--module>/content-packages/sample-content-slimpo</module>
-    <module>/content-packages/sample-content-sligrine</module-->
+    <module>/content-packages/sample-content-slimpo</module>
+    <module>/content-packages/sample-content-sligrine</module>
   </modules>
   
 </project>
