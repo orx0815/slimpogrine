@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:per="http://www.peregrine-cms.com/jcr/cms/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:description="themecleanflex Pages Root"
+    jcr:primaryType="per:Page"
+    jcr:title="sligrine root page">
+    <js/>
+    <manifest.json/>
+    <serviceworker.js/>
+    <robots.txt/>
+    <jcr:content
+        jcr:primaryType="per:PageContent"
+        jcr:title="pages"
+        sling:resourceType="themecleanflex/components/page"
+        ogImage="\0"
+        ogImageAlt="\0"
+        ogTitle="\0"
+        ogType="website"
+        ogUrl="\0"
+        template="/content/sligrine/templates"
+        useDescription="{Boolean}true"
+        useTitle="{Boolean}true">
+        <replacements jcr:primaryType="nt:unstructured">
+            <manifest.json jcr:primaryType="nt:unstructured">
+                <shortName
+                    jcr:primaryType="nt:unstructured"
+                    regex="\\&quot;short_name\\&quot;: \\&quot;(.*)\\&quot;"
+                    replaceWith="&quot;short_name&quot;: &quot;_SITENAME_&quot;"/>
+                <name
+                    jcr:primaryType="nt:unstructured"
+                    regex="\\&quot;name\\&quot;: \\&quot;(.*)\\&quot;"
+                    replaceWith="&quot;name&quot;: &quot;_SITENAME_ site&quot;"/>
+                <paths
+                    jcr:primaryType="nt:unstructured"
+                    regex="/themecleanflex"
+                    replaceWith="/_SITENAME_"/>
+            </manifest.json>
+            <serviceworker.js jcr:primaryType="nt:unstructured">
+                <paths
+                    jcr:primaryType="nt:unstructured"
+                    regex="/themecleanflex"
+                    replaceWith="/_SITENAME_"/>
+            </serviceworker.js>
+        </replacements>
+        <intro
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="themecleanflex/components/richtext"
+            text="&lt;p>This page has been left blank intentionally - it serves as the root container of the website.&amp;nbsp;&lt;/p>&lt;p>Please edit the child page called index to change the root page.&lt;/p>"/>
+    </jcr:content>
+    <skeleton-pages/>
+    <css/>
+    <errors/>
+    <index/>
+    <articles/>
+    <authors/>
+    <sitemap/>
+</jcr:root>

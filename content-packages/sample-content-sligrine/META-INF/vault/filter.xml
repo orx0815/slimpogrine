@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/sligrine"/>
+    <filter root="/etc/felibs/sligrine"/>
+    <filter root="/content/sligrine"/>
+    <filter root="/home/groups/tenants/4wDOgJGLfwV9l4TG8L_8C"/>
+    <filter root="/home/users/tenants/ULVjVLwjU7O6LXf5XW2Ic"/>
+</workspaceFilter>

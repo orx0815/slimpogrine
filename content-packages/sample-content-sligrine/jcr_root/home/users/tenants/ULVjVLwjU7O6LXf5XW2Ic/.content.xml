@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:rep="internal"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="rep:User"
+    jcr:uuid="9f086ca0-e424-3dd3-9c41-a5bffb96f6b7"
+    rep:authorizableId="sligrine_user"
+    rep:password="\{SHA-256}dc950c92421ea62c-1000-d294feb8e2992ceacb96bec32d61eb92aeb38e32a192d83225b56eeefecfd2c1"
+    rep:principalName="sligrine_user">
+    <preferences
+        jcr:primaryType="nt:unstructured"
+        firstLogin="true"/>
+</jcr:root>

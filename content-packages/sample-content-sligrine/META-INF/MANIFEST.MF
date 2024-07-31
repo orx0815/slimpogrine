@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Content-Package-Id: motorbrot-samples:slimpogrine-sample-content-sligrin
+ e:1.0-SNAPSHOT
+Content-Package-Description: SligGRINE Sample Content
+Content-Package-Roots: /home/groups/tenants/4wDOgJGLfwV9l4TG8L_8C,/conte
+ nt/sligrine,/home/users/tenants/ULVjVLwjU7O6LXf5XW2Ic,/apps/sligrine,/e
+ tc/felibs/sligrine
+Content-Package-Type: mixed
+

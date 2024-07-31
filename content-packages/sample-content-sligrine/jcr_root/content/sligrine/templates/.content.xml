@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:per="http://www.peregrine-cms.com/jcr/cms/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="per:Page">
+    <jcr:content
+        jcr:primaryType="per:PageContent"
+        jcr:title="templates"
+        sling:resourceType="themecleanflex/components/page"
+        brand="SLImpoGRINE Pegregrine Sample Content"
+        ogImage="\0"
+        ogImageAlt="\0"
+        ogTitle="\0"
+        ogType="website"
+        ogUrl="\0"
+        prefetchDNS="[https://www.youtube.com,https://s.ytimg.com,https://www.google.com,https://fonts.gstatic.com,https://www.youtube-nocookie.com]"
+        siteCSS="[/etc/felibs/admin/dependencies/vfg.css,/content/sligrine/pages/css/commons.css,/content/sligrine/pages/css/palettes/default.css,/content/sligrine/pages/css/palette.css,/etc/felibs/themecleanflex.css,/content/sligrine/pages/css/custom.css,https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap]"
+        siteJS="[/etc/felibs/admin/dependencies/vfg.js,/content/themecleanflex/pages/js/formsapp.js,/etc/felibs/themecleanflex/dependencies/sha256.js,/etc/felibs/themecleanflex/dependencies/jsonforms-core.js,/etc/felibs/themecleanflex/dependencies/jsonforms-vue2.js,/etc/felibs/themecleanflex/dependencies/jsonforms-vue2-vanilla.js,/etc/felibs/themecleanflex/dependencies/customElements.js]"
+        useDescription="{Boolean}true"
+        useTitle="{Boolean}true"/>
+    <footer/>
+    <blank/>
+</jcr:root>

@@ -1,0 +1,81 @@
+<'sling'='http://sling.apache.org/jcr/sling/1.0'>
+<'rep'='internal'>
+<'nt'='http://www.jcp.org/jcr/nt/1.0'>
+<'per'='http://www.peregrine-cms.com/jcr/cms/1.0'>
+<'mix'='http://www.jcp.org/jcr/mix/1.0'>
+<'jcr'='http://www.jcp.org/jcr/1.0'>
+
+[sling:Resource]
+  mixin
+  - sling:resourceType (string)
+
+[rep:Members]
+  orderable
+  - * (weakreference) protected < 'rep:Authorizable'
+  + * (rep:Members) = rep:Members protected multiple
+
+[sling:OrderedFolder] > sling:Folder
+  orderable
+  + * (nt:base) = sling:OrderedFolder version
+
+[sling:Folder] > nt:folder
+  - * (undefined) multiple
+  - * (undefined)
+  + * (nt:base) = sling:Folder version
+
+[per:Site] > nt:unstructured
+  orderable
+  - template (boolean) = 'false' autocreated
+  - internal (boolean) = 'false' autocreated
+
+[per:Asset] > mix:created, mix:lastModified, nt:hierarchyNode, sling:Resource
+  primaryitem jcr:content
+  + jcr:content (per:AssetContent) = per:AssetContent
+  + * (nt:base) = nt:base version
+
+[per:AssetContent] > nt:unstructured, per:Replication
+  orderable
+  + renditions (nt:folder)
+
+[per:Replication] > sling:Resource
+  mixin
+  - per:Replicated (date)
+  - per:ReplicationStatus (string)
+  - per:ReplicatedBy (string)
+  - per:ReplicationRef (string)
+  - per:ReplicationLastAction (string)
+
+[rep:Password]
+  - * (undefined) protected
+  - * (undefined) protected multiple
+
+[per:Component] > sling:Folder
+  - group (string)
+  - cardinality (string)
+
+[per:Page] > nt:hierarchyNode, sling:OrderedFolder
+  orderable primaryitem jcr:content
+  + jcr:content (nt:base) = nt:unstructured
+  + * (nt:base) = nt:base version
+
+[per:FeLib] > sling:Folder
+
+[per:PageContent] > nt:unstructured, per:Replication, sling:Resource, sling:VanityPath
+  orderable
+  - useTitle (boolean) = 'true' autocreated
+  - useDescription (boolean) = 'true' autocreated
+  - ogTitle (string) = '' autocreated
+  - ogType (string) = 'website' autocreated < 'website'
+  - ogImage (string) = '' autocreated
+  - ogImageAlt (string) = '' autocreated
+  - ogUrl (string) = '' autocreated
+
+[sling:VanityPath]
+  mixin
+  - sling:vanityPath (string) multiple
+  - sling:redirect (boolean)
+  - sling:vanityOrder (long)
+  - sling:redirectStatus (long)
+
+[per:ObjectDefinition] > per:Replication, sling:Folder
+

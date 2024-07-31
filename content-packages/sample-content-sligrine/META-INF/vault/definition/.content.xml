@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:vlt="http://www.day.com/jcr/vault/1.0"
+    jcr:description="SligGRINE Sample Content"
+    jcr:lastModified="{Date}2024-07-31T10:42:44.917+02:00"
+    jcr:lastModifiedBy="admin"
+    jcr:primaryType="vlt:PackageDefinition"
+    buildCount="2"
+    dependencies="[]"
+    group="motorbrot-samples"
+    includeVersions="{Boolean}false"
+    lastUnwrapped="{Date}2024-07-31T10:42:44.917+02:00"
+    lastUnwrappedBy="admin"
+    lastWrapped="{Date}2024-07-31T10:42:44.917+02:00"
+    lastWrappedBy="admin"
+    name="slimpogrine-sample-content-sligrine"
+    requiresRestart="{Boolean}false"
+    requiresRoot="{Boolean}false"
+    version="1.0-SNAPSHOT">
+    <filter jcr:primaryType="nt:unstructured">
+        <f0
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/apps/sligrine"
+            rules="[]"/>
+        <f1
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/etc/felibs/sligrine"
+            rules="[]"/>
+        <f2
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/content/sligrine"
+            rules="[]"/>
+        <f3
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            propertyRules="[]"
+            root="/home/groups/tenants/4wDOgJGLfwV9l4TG8L_8C"
+            rules="[]"/>
+        <f4
+            jcr:primaryType="nt:unstructured"
+            mode="replace"
+            root="/home/users/tenants/ULVjVLwjU7O6LXf5XW2Ic"
+            rules="[]"/>
+    </filter>
+</jcr:root>

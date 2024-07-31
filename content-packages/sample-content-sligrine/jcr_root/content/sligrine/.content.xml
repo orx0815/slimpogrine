@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:per="http://www.peregrine-cms.com/jcr/cms/1.0" xmlns:rep="internal" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:mixinTypes="[rep:AccessControllable]"
+    jcr:primaryType="per:Site"
+    jcr:title="SLImpoGRINE Pegregrine Sample Content"
+    sling:resourceType="graphql/query"
+    internal="{Boolean}false"
+    sourceSite="themecleanflex"
+    template="{Boolean}false">
+    <assets/>
+    <objects/>
+    <object-definitions/>
+    <templates/>
+    <pages/>
+    <rep:policy/>
+</jcr:root>
