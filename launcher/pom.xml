@@ -1,14 +1,4 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor 
-    license agreements. See the NOTICE file distributed with this work for additional 
-    information regarding copyright ownership. The ASF licenses this file to 
-    you under the Apache License, Version 2.0 (the "License"); you may not use 
-    this file except in compliance with the License. You may obtain a copy of 
-    the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required 
-    by applicable law or agreed to in writing, software distributed under the 
-    License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS 
-    OF ANY KIND, either express or implied. See the License for the specific 
-    language governing permissions and limitations under the License. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
@@ -35,7 +25,7 @@
         <docker.skip>true</docker.skip>
         <!-- check docker.skip.push in https://dmp.fabric8.io/ -->
         <docker.skip.push>true</docker.skip.push>
-        <docker.image.name>ghcr.io/${env.GITHUB_ACTOR}/slimpogrine</docker.image.name>
+        <docker.image.name>ghcr.io/orx0815/slimpogrine</docker.image.name>
         <docker.image.tag>snapshot</docker.image.tag>
         <!-- pass a list of platforms to enable multi-arch builds: linux/amd64,linux/arm64 -->
         <docker.platforms></docker.platforms>
@@ -79,7 +69,7 @@
                      -->
                     <aggregates>
                         <aggregate>
-                            <classifier>slimpogrine</classifier>
+                            <classifier>slimpogrine_oak_tar</classifier>
                             <title>Slimpogrine (oak_tar) with Oak Segment NS Persistence</title>
                             <filesInclude>*.json</filesInclude>
                             <filesInclude>composum/*.json</filesInclude>
@@ -98,29 +88,63 @@
                                 <version>${sling.starter.version}</version>
                                 <type>slingosgifeature</type>
                             </includeArtifact>
-                            <!--includeArtifact>
-                                <groupId>org.apache.sling</groupId>
-                                <artifactId>org.apache.sling.starter</artifactId>
-                                <classifier>composum</classifier>
-                                <version>${sling.starter.version}</version>
-                                <type>slingosgifeature</type>
-                            </includeArtifact-->
+                        </aggregate>
+                        
+                        <aggregate>
+                            <classifier>slimpogrine_oak_mongo</classifier>
+                            <title>Slimpogrine (oak_mongo) With Oak Document NS Mongo Persistenc</title>
+                            <filesInclude>*.json</filesInclude>
+                            <filesInclude>composum/*.json</filesInclude>
+                            <filesInclude>peregrine/*.json</filesInclude>
+                            <includeArtifact>
+                              <groupId>org.apache.sling</groupId>
+                              <artifactId>org.apache.sling.starter</artifactId>
+                              <classifier>nosample_base</classifier>
+                              <version>${sling.starter.version}</version>
+                              <type>slingosgifeature</type>
+                            </includeArtifact>
+                            <includeArtifact>
+                              <groupId>org.apache.sling</groupId>
+                              <artifactId>org.apache.sling.starter</artifactId>
+                              <classifier>oak_persistence_mongods</classifier>
+                              <version>${sling.starter.version}</version>
+                              <type>slingosgifeature</type>
+                            </includeArtifact>
                         </aggregate>
                     </aggregates>
                     <scans>
                         <scan>
-                            <includeClassifier>slimpogrine</includeClassifier>
+                            <includeClassifier>slimpogrine_oak_tar</includeClassifier>
+                        </scan>
+                        <scan>
+                            <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
                         </scan>
                     </scans>
                     
                     <archives>
                         <archive>
-                            <classifier>slimpogrine_far</classifier>
-                            <includeClassifier>slimpogrine</includeClassifier>
+                            <classifier>slimpogrine_oak_tar_far</classifier>
+                            <includeClassifier>slimpogrine_oak_tar</includeClassifier>
+                        </archive>
+                        <archive>
+                            <classifier>slimpogrine_oak_mongo_far</classifier>
+                            <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
                         </archive>
                     </archives>
                     
-                    
+                     <repositories>
+                        <repository>
+                            <includeClassifier>slimpogrine_oak_tar</includeClassifier>
+                            <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
+                            <includeArtifact>
+                              <groupId>org.apache.sling</groupId>
+                              <artifactId>org.apache.sling.starter</artifactId>
+                              <classifier>docker</classifier>
+                              <version>${sling.starter.version}</version>
+                              <type>slingosgifeature</type>
+                            </includeArtifact>
+                        </repository>
+                    </repositories>
                     
                 </configuration>
                 <executions>

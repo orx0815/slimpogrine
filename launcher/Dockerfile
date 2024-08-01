@@ -27,4 +27,4 @@ USER sling:sling
 
 WORKDIR /opt/sling
 ENTRYPOINT [ "/opt/sling/bin/launch.sh" ]
-CMD ["oak_tar"]
+CMD ["slimpogrine_oak_tar"]
