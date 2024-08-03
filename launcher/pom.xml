@@ -111,6 +111,25 @@
                               <type>slingosgifeature</type>
                             </includeArtifact>
                         </aggregate>
+                        
+                        <!-- container images get a split repo, variable content in presistent volume claim -->
+                        <aggregate>
+                          <classifier>slimpogrine_composite_seed</classifier>
+                          <title>Slimpogrine - Composite Node Store Seed</title>
+                          <filesInclude>*.json</filesInclude>
+                          <filesInclude>composum/*.json</filesInclude>
+                          <filesInclude>peregrine/*.json</filesInclude>
+                          <filesInclude>oak/node-store/composite-seed.json</filesInclude>
+                        </aggregate>
+                        <aggregate>
+                          <classifier>slimpogrine_composite_runtime</classifier>
+                          <title>Slimpogrine - Composite Node Store Runtime</title>
+                          <filesInclude>*.json</filesInclude>
+                          <filesInclude>composum/*.json</filesInclude>
+                          <filesInclude>peregrine/*.json</filesInclude>
+                          <filesInclude>oak/node-store/composite-runtime.json</filesInclude>
+                        </aggregate>
+                        
                     </aggregates>
                     <scans>
                         <scan>
