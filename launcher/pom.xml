@@ -69,8 +69,8 @@
                      -->
                     <aggregates>
                         <aggregate>
-                            <classifier>slimpogrine_oak_tar</classifier>
-                            <title>Slimpogrine (oak_tar) with Oak Segment NS Persistence</title>
+                            <classifier>slimpogrine_core-aggregate</classifier>
+                            <title>Slimpogrine no Persistence</title>
                             <filesInclude>*.json</filesInclude>
                             <filesInclude>composum/*.json</filesInclude>
                             <filesInclude>peregrine/*.json</filesInclude>
@@ -81,6 +81,11 @@
                                 <version>${sling.starter.version}</version>
                                 <type>slingosgifeature</type>
                             </includeArtifact>
+                        </aggregate>
+                        <aggregate>
+                            <classifier>slimpogrine_oak_tar</classifier>
+                            <title>Slimpogrine (oak_tar) with Oak Segment NS Persistence</title>
+                            <includeClassifier>slimpogrine_core-aggregate</includeClassifier>
                             <includeArtifact>
                                 <groupId>org.apache.sling</groupId>
                                 <artifactId>org.apache.sling.starter</artifactId>
@@ -93,16 +98,7 @@
                         <aggregate>
                             <classifier>slimpogrine_oak_mongo</classifier>
                             <title>Slimpogrine (oak_mongo) With Oak Document NS Mongo Persistenc</title>
-                            <filesInclude>*.json</filesInclude>
-                            <filesInclude>composum/*.json</filesInclude>
-                            <filesInclude>peregrine/*.json</filesInclude>
-                            <includeArtifact>
-                              <groupId>org.apache.sling</groupId>
-                              <artifactId>org.apache.sling.starter</artifactId>
-                              <classifier>nosample_base</classifier>
-                              <version>${sling.starter.version}</version>
-                              <type>slingosgifeature</type>
-                            </includeArtifact>
+                            <includeClassifier>slimpogrine_core-aggregate</includeClassifier>
                             <includeArtifact>
                               <groupId>org.apache.sling</groupId>
                               <artifactId>org.apache.sling.starter</artifactId>
@@ -116,17 +112,13 @@
                         <aggregate>
                           <classifier>slimpogrine_composite_seed</classifier>
                           <title>Slimpogrine - Composite Node Store Seed</title>
-                          <filesInclude>*.json</filesInclude>
-                          <filesInclude>composum/*.json</filesInclude>
-                          <filesInclude>peregrine/*.json</filesInclude>
+                          <includeClassifier>slimpogrine_core-aggregate</includeClassifier>
                           <filesInclude>oak/node-store/composite-seed.json</filesInclude>
                         </aggregate>
                         <aggregate>
                           <classifier>slimpogrine_composite_runtime</classifier>
                           <title>Slimpogrine - Composite Node Store Runtime</title>
-                          <filesInclude>*.json</filesInclude>
-                          <filesInclude>composum/*.json</filesInclude>
-                          <filesInclude>peregrine/*.json</filesInclude>
+                          <includeClassifier>slimpogrine_core-aggregate</includeClassifier>
                           <filesInclude>oak/node-store/composite-runtime.json</filesInclude>
                         </aggregate>
                         
@@ -137,6 +129,12 @@
                         </scan>
                         <scan>
                             <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
+                        </scan>
+                        <scan>
+                            <includeClassifier>slimpogrine_composite_seed</includeClassifier>
+                        </scan>
+                        <scan>
+                            <includeClassifier>slimpogrine_composite_runtime</includeClassifier>
                         </scan>
                     </scans>
                     
@@ -155,6 +153,8 @@
                         <repository>
                             <includeClassifier>slimpogrine_oak_tar</includeClassifier>
                             <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
+                            <includeClassifier>slimpogrine_composite_runtime</includeClassifier>
+                            <includeClassifier>slimpogrine_composite_runtime</includeClassifier>
                             <includeArtifact>
                               <groupId>org.apache.sling</groupId>
                               <artifactId>org.apache.sling.starter</artifactId>
@@ -248,7 +248,7 @@
                               <platform>${docker.platforms}</platform>
                             </platforms>
                           </buildx>
-                          <dockerFile>Dockerfile</dockerFile>
+                          <dockerFile>../docker/slimpogrine/Dockerfile</dockerFile>
                           <contextDir>${project.basedir}</contextDir>
                         </build>
                       </image>

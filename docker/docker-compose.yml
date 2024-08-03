@@ -1,0 +1,31 @@
+version: '3.4'
+services:
+  author:
+    build: 
+      context: slimpogrine
+      args:
+        RUNMODE: author
+    ports:
+      - "8080:8080"
+    volumes:
+      - sling-author:/opt/slimpogrine/launcher/composite/repository-global
+  renderer:
+    build: 
+      context: slimpogrine
+      args:
+        RUNMODE: renderer
+    ports:
+      - "8090:8080"
+    volumes:
+      - sling-renderer:/opt/slimpogrine/launcher/composite/repository-global
+  webcache:
+    environment: 
+      AUTHOR_URL: author
+      RENDERER_URL: renderer
+    build: 
+      context: webcache
+    ports:
+      - "80:80"
+volumes:
+  sling-author:
+  sling-renderer:

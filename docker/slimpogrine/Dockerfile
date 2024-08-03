@@ -1,4 +1,4 @@
-FROM docker.io/eclipse-temurin:21
+FROM docker.io/eclipse-temurin:17
 
 LABEL org.opencontainers.image.authors="orx0815@users.noreply.github.com"
 
