@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - sling-author:/opt/slimpogrine/launcher/composite/repository-global
+      - sling-author:/opt/sling/launcher/composite/repository-global
   renderer:
     build: 
       context: slimpogrine
@@ -17,7 +17,7 @@ services:
     ports:
       - "8090:8080"
     volumes:
-      - sling-renderer:/opt/slimpogrine/launcher/composite/repository-global
+      - sling-renderer:/opt/sling/launcher/composite/repository-global
   webcache:
     environment: 
       AUTHOR_URL: author

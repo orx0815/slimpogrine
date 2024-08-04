@@ -153,7 +153,7 @@
                         <repository>
                             <includeClassifier>slimpogrine_oak_tar</includeClassifier>
                             <includeClassifier>slimpogrine_oak_mongo</includeClassifier>
-                            <includeClassifier>slimpogrine_composite_runtime</includeClassifier>
+                            <includeClassifier>slimpogrine_composite_seed</includeClassifier>
                             <includeClassifier>slimpogrine_composite_runtime</includeClassifier>
                             <includeArtifact>
                               <groupId>org.apache.sling</groupId>
@@ -248,7 +248,7 @@
                               <platform>${docker.platforms}</platform>
                             </platforms>
                           </buildx>
-                          <dockerFile>../docker/slimpogrine/Dockerfile</dockerFile>
+                          <dockerFile>src/main/container/slimpogrine/Dockerfile</dockerFile>
                           <contextDir>${project.basedir}</contextDir>
                         </build>
                       </image>
