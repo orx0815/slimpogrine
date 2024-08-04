@@ -40,8 +40,9 @@ WORKDIR /opt/sling
 #CMD ["slimpogrine_composite_seed"]
 
 # Setup Slimpogrine
-RUN /bin/bash /opt/sling/bin/setup-composite.sh
+#RUN /bin/bash /opt/sling/bin/setup-composite.sh
 
 #RUN cp /opt/sling/setup/config-${RUNMODE}.json /opt/sling/features
 ENTRYPOINT [ "/opt/sling/bin/launch.sh" ]
-CMD ["slimpogrine_composite_runtime"]
+#CMD ["slimpogrine_composite_runtime"]
+CMD ["slimpogrine_oak_tar"]
