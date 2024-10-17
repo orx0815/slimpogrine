@@ -15,5 +15,35 @@
     {
         "id":"org.motorbrot/slimpogrine.sample-content-sligrine/1.0-SNAPSHOT/zip"
     }
-  ]
+  ],
+  "configurations" :{
+    "org.apache.sling.engine.impl.auth.SlingAuthenticator" : {
+        "osgi.http.whiteboard.context.select" : "(osgi.http.whiteboard.context.name=*)",
+        "osgi.http.whiteboard.listener" : true,
+        "auth.sudo.cookie" : "sling.sudo",
+        "auth.sudo.parameter" : "sudo",
+        "auth.annonymous" : false,
+        "sling.auth.requirements" : [
+            "-/perapi/admin/access",
+            "-/system/sling/login",
+            "-/system/sling/info",
+            "-/content",
+            "-/etc/felibs",
+            "-/favicon.ico",
+            "-/content/apidocs",
+            // V-V-V needed for composum's InPlace replication on single instance
+            "-/public",
+            "-/libs/composum/pages/components",
+            "-/var/composum/clientlibs",
+            "-/libs/jslibs",
+            "-/bin/public",
+            "-/libs/fonts"
+        ],
+        "sling.auth.anonymous.user" : "",
+        "auth.http" : "preemtive",
+        "auth.http.realm" : "peregrine cms",
+        "auth.uri.suffix" : "/j_security_check"
+    }
+  },
+  "repoinit:TEXT|true": "@file"
 }
