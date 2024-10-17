@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
+    jcr:primaryType="nt:file">
+    <jcr:content
+        cpl:replicatedVersion="{Reference}28eecbff-9fd1-4a0f-ac0b-d4e54aff4a15"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModifiedBy="composum-platform-service"
+        jcr:mixinTypes="[mix:versionable,mix:ReplicatedVersionable]"
+        jcr:primaryType="nt:resource"/>
+</jcr:root>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        cpl:replicatedVersion="c97cd563-c9b4-453b-b2ac-6a98a1c401e5"
+        jcr:isCheckedOut="{Boolean}true"
+        jcr:lastModified="{Date}2024-10-15T12:39:34.997+02:00"
+        jcr:lastModifiedBy="composum-platform-service"
+        jcr:mixinTypes="[mix:ReplicatedVersionable]"
+        jcr:primaryType="cpp:PageContent"
+        jcr:uuid="7f03299f-ffdd-43a2-8acb-6d661d44a043"
+        sling:resourceType="composum/pages/components/page/home"
+        template="composum/pages/components/templates/page/home">
+        <search jcr:primaryType="nt:unstructured">
+            <field
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/search/field"
+                buttonSymbol="search"
+                searchResultPath="/public/sites/slimpo/meta/search"/>
+        </search>
+        <stage
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/composed/carousel"
+            autoStart="{Boolean}true"
+            interval="10000"
+            showIndicators="{Boolean}true"
+            useControls="{Boolean}true">
+            <teaser
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/teaser"
+                link="/public/sites/slimpo/home/test"
+                subtitle="Slimpogrine Composum-Pages Sample Content"
+                text="Reference content deployed with the launcher.&lt;br>"
+                title="Hello World !"
+                variation="bgimage">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/public/sites/slimpo/assets/background/Coruscant_2.jpg"/>
+            </teaser>
+        </stage>
+        <main
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <text
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/text"
+                        text="This homepage should contain a teaser collection to guide a visitor to its points of interest on this site."/>
+                </column-0>
+            </row>
+            <row_1160738332
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-6--6-">
+                <column-1
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <teaser
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/teaser"
+                        icon="bullseye"
+                        link="/public/sites/slimpo/home/test"
+                        subtitle="component test playground"
+                        text="Switch to the playground and place your components on that page to test the editing and the final presentation."
+                        title="A Test Page"
+                        variation="symbol">
+                        <image jcr:primaryType="nt:unstructured"/>
+                    </teaser>
+                </column-1>
+            </row_1160738332>
+            <row_669778322
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="bottom"
+                        text="SliMPO ipsum Dolores&lt;br>"
+                        title="Dark City">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/background/dark_city.jpg"/>
+                    </textimage>
+                </column-0>
+            </row_669778322>
+        </main>
+        <navigation
+            jcr:primaryType="nt:unstructured"
+            title="Home"/>
+        <bottom
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/iparsys"/>
+    </jcr:content>
+    <content/>
+    <test/>
+</jcr:root>
