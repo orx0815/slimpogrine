@@ -46,7 +46,8 @@ Over the Tools section you can get into composum or via this link:
 http://localhost:8080/bin/pages.html
     
 
-
+In launcher/src/main/container/webcache
+    docker build --tag 'ghcr.io/orx0815/slimpogrine_webcache:latest' . && docker run -t -i -p 80:80 --env RENDERER_URL=172.17.0.1 --env AUTHOR_URL=172.17.0.1 ghcr.io/orx0815/slimpogrine_webcache:latest
 
 
 ### Maven Project generated from Maven Archetype
