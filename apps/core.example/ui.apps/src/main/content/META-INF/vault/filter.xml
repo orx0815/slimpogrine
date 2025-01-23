@@ -43,4 +43,9 @@
         erase previous rules, therefore it needs to be uncommented.
      -->
     <filter root="/etc/map/http/localhost_any" />
+    <filter root="/etc/map/www" />
+    <filter root="/etc/map/slimpo" />
+    <filter root="/etc/map/sligrine" />
+    <filter root="/etc/map/editor" />
+
 </workspaceFilter>
