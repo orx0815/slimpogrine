@@ -21,7 +21,7 @@ RUN a2enmod expires
 RUN a2enmod headers
 
 # Configure sites
-RUN mkdir -p /var/www/vhosts/slimpogrine-author && mkdir -p /var/www/vhosts/slimpo
+RUN mkdir -p /var/www/vhosts/editor.motorbrot && mkdir -p /var/www/vhosts/slimpo
 COPY *.conf /etc/apache2/sites-enabled/
 
 # Expose endpoints
