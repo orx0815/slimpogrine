@@ -37,7 +37,8 @@
             "-/var/composum/clientlibs",
             "-/libs/jslibs",
             "-/bin/public",
-            "-/libs/fonts"
+            "-/libs/fonts",
+            "-/apps/slimpogrine/css_zen_garden"
         ],
         "sling.auth.anonymous.user" : "",
         "auth.http" : "preemtive",
