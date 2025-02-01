@@ -3,6 +3,62 @@
           jcr:primaryType="sling:Folder"
           jcr:title="SliMpoGrine Home"
           jcr:description="Bake two WYSIWYG website editors into the same Apache Sling DIY app-server. Because we can."
-          sling:resourceType="slimpogrine/home"
->
+          sling:resourceType="slimpogrine/home">
+  
+  <main jcr:primaryType="nt:unstructured">
+    <explanation 
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="slimpogrine/components/main/explanation"
+      headline="So What is SliMpoGrine?"
+      text="&lt;p&gt;There is a continuing need to show the power of &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt;.     The Zen Garden aims to excite, inspire, and encourage participation. To     begin, view some of the existing designs in the list. Clicking on any      one will load the style sheet into this very page. The &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt; remains the same, the only thing that has changed is the external &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; file. Yes, really.&lt;/p&gt;   &lt;p&gt;&lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; allows complete      and total control over the style of a hypertext document. The only way      this can be illustrated in a way that gets people excited is by      demonstrating what it can truly be, once the reins are placed in the      hands of those able to create beauty from structure. Designers and      coders alike have contributed to the beauty of the web; we can always      push it further.&lt;/p&gt;">
+    </explanation>
+    <participation
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="slimpogrine/components/main/participation"
+      headline="SliMpoGrine Participation"
+      text="&lt;p&gt;Strong visual design has always been our focus. You are modifying this page, so strong &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; skills are necessary too, but the example files are commented well enough that even &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; novices can use them as starting points. Please see the &lt;a href=&quot;https://csszengarden.com/pages/resources/&quot; title=&quot;A listing of CSS-related resources&quot;&gt;&lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; Resource Guide&lt;/a&gt; for advanced tutorials and tips on working with &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt;.&lt;/p&gt;
+			&lt;p&gt;You may modify the style sheet in any way you wish, but not the &lt;abbr title=&quot;HyperText Markup Language&quot;&gt;HTML&lt;/abbr&gt;.
+ This may seem daunting at first if you’ve never worked this way before, but follow the listed links to learn more, and use the sample files as a guide.&lt;/p&gt;
+&lt;p&gt;Download the sample &lt;a href=&quot;https://csszengarden.com/examples/index&quot; title=&quot;This page&apos;s source HTML code, not to be modified.&quot;&gt;HTML&lt;/a&gt; and &lt;a href=&quot;https://csszengarden.com/examples/style.css&quot; title=&quot;This page&apos;s sample CSS, the file you may modify.&quot;&gt;CSS&lt;/a&gt; to work on a copy locally. Once you have completed your masterpiece (and please, don’t submit half-finished work) upload your &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; file to a web server under your control. 
+   &lt;a href=&quot;https://csszengarden.com/pages/submit/&quot; title=&quot;Use the contact form to send us your CSS file&quot;&gt;Send us a link&lt;/a&gt;
+ to an archive of that file and all associated assets, and if we choose to use it we will download it and place it on our server.&lt;/p&gt;">
+
+    </participation>
+    <benefits
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="slimpogrine/components/main/benefits"
+      headline="SliMpoGrine Benefits"
+      text="&lt;p&gt;Why participate? For recognition, inspiration, and a resource we can all refer to showing people how amazing &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt;
+ really can be. This site serves as equal parts inspiration for those 
+working on the web today, learning tool for those who will be tomorrow, 
+and gallery of future techniques we can all look forward to.&lt;/p&gt;">
+
+    </benefits>
+    <requirements
+      jcr:primaryType="nt:unstructured"
+      sling:resourceType="slimpogrine/components/main/requirements"
+      headline="SliMpoGrine Requirements"
+      text="&lt;p&gt;Where possible, we would like to see mostly &lt;abbr title=&quot;Cascading Style Sheets, levels 1 and 2&quot;&gt;CSS 1 &amp;amp; 2&lt;/abbr&gt; usage. &lt;abbr title=&quot;Cascading Style Sheets, levels 3 and 4&quot;&gt;CSS 3 &amp;amp; 4&lt;/abbr&gt;
+ should be limited to widely-supported elements only, or strong 
+fallbacks should be provided. The CSS Zen Garden is about functional, 
+practical &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; and not the latest bleeding-edge tricks viewable by 2% of the browsing public. The only real requirement we have is that your &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; validates.&lt;/p&gt;
+			&lt;p&gt;Luckily, designing this way shows how well various browsers have implemented &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt;
+ by now. When sticking to the guidelines you should see fairly 
+consistent results across most modern browsers. Due to the sheer number 
+of user agents on the web these days — especially when you factor in 
+mobile — pixel-perfect layouts may not be possible across every 
+platform. That’s okay, but do test in as many as you can. Your design 
+should work in at least IE9+ and the latest Chrome, Firefox, iOS and 
+Android browsers (run by over 90% of the population).&lt;/p&gt;
+			&lt;p&gt;We ask that you submit original artwork. Please respect copyright 
+laws. Please keep objectionable material to a minimum, and try to 
+incorporate unique and interesting visual themes to your work. We’re 
+well past the point of needing another garden-related design.&lt;/p&gt;
+			&lt;p&gt;This is a learning exercise as well as a demonstration. You retain
+ full copyright on your graphics (with limited exceptions, see &lt;a href=&quot;https://csszengarden.com/pages/submit/guidelines/&quot;&gt;submission guidelines&lt;/a&gt;), but we ask you release your &lt;abbr title=&quot;Apache Sling&quot;&gt;Sling&lt;/abbr&gt; under a Creative Commons license identical to the &lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/3.0/&quot; title=&quot;View the Zen Garden&apos;s license information.&quot;&gt;one on this site&lt;/a&gt; so that others may learn from your work.&lt;/p&gt;
+			&lt;p role=&quot;contentinfo&quot;&gt;By &lt;a href=&quot;http://www.mezzoblue.com/&quot;&gt;Dave Shea&lt;/a&gt;. Bandwidth graciously donated by &lt;a href=&quot;http://www.mediatemple.net/&quot;&gt;mediatemple&lt;/a&gt;. Now available: &lt;a href=&quot;http://www.amazon.com/exec/obidos/ASIN/0321303474/mezzoblue-20/&quot;&gt;Zen Garden, the book&lt;/a&gt;.&lt;/p&gt;">
+
+    </requirements>
+  </main>
+  
 </jcr:root>

@@ -10,10 +10,11 @@
   <sly data-sly-include="${'intro.html'}" />
 
 	<div class="main supporting" id="zen-supporting" role="main">
-    <sly data-sly-include="${'main/explanation.html'}" />
-    <sly data-sly-include="${'main/participation.html'}" />
-    <sly data-sly-include="${'main/benefits.html'}" />
-    <sly data-sly-include="${'main/requirements.html'}" />
+    
+    <sly data-sly-resource="${'./main/explanation'}" />
+    <sly data-sly-resource="${'./main/participation'}" />
+    <sly data-sly-resource="${'./main/benefits'}" />
+    <sly data-sly-resource="${'./main/requirements'}" />
 		<sly data-sly-include="${'footer.html'}" />
 	</div>
 

@@ -1,4 +1,6 @@
+<!--/* This template does the same as page/head.html - just to prove a point about sling:resourceSuperType  +/-->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${properties.jcr:title}</title>
-<link rel="stylesheet" href="/apps/slimpogrine/css_zen_garden/214/214.css">
+<link rel="stylesheet" data-sly-use.cssPicker="org.motorbrot.slimpogrine.slingmodels.CssZenGarden"
+      href="/apps/slimpogrine/css_zen_garden/${cssPicker.randomCss}/${cssPicker.randomCss}.css" />
