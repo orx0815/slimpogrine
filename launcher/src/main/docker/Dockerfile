@@ -24,8 +24,9 @@ RUN groupadd --system sling && \
 
 VOLUME /opt/sling/launcher
 
-COPY src/main/container/slimpogrine/bin /opt/sling/bin
-COPY src/main/container/slimpogrine/setup /opt/sling/setup
+# contextDir is the slimpogrine/laucher
+COPY src/main/docker/bin /opt/sling/bin
+COPY src/main/docker/setup /opt/sling/setup
 COPY target/dependency/org.apache.sling.feature.launcher /opt/sling/org.apache.sling.feature.launcher
 COPY target/artifacts /opt/sling/artifacts
 

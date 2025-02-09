@@ -1,0 +1,22 @@
+version: '3.4'
+services:
+  slimpogrine:
+    build:
+      dockerfile: src/main/docker/Dockerfile
+      context: ../launcher
+      args:
+        RUNMODE: author
+    ports:
+      - "8080:8080"
+    volumes:
+      - slimpogrine-volume:/opt/sling/launcher
+  webcache:
+    environment: 
+      AUTHOR_URL: 172.17.0.1
+      RENDERER_URL: 172.17.0.1
+    build: 
+      context: webcache
+    ports:
+      - "80:80"
+volumes:
+  slimpogrine-volume:

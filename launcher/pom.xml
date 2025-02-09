@@ -248,7 +248,7 @@
                               <platform>${docker.platforms}</platform>
                             </platforms>
                           </buildx>
-                          <dockerFile>src/main/container/slimpogrine/Dockerfile</dockerFile>
+                          <dockerFile>src/main/docker/Dockerfile</dockerFile>
                           <contextDir>${project.basedir}</contextDir>
                         </build>
                       </image>
