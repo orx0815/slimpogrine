@@ -3,6 +3,10 @@
     {
       "id": "com.composum.assets:metadata-extractor-bundle::${composum.assets.version}",
       "start-order": "9"
+    },
+    {
+      "id": "com.google.guava:guava::15.0",
+      "start-order": "20"
     }
   ],
   "variables": {

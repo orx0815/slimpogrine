@@ -53,8 +53,8 @@ tasks:
         mvn install
         
         cd ../slimpogrine
-        # peregrine needed java-11 for unit-tests to pass. From now on we run java-17
-        sdk install java 17.0.12-tem < /dev/null && sdk default java 17.0.12-tem
+        # peregrine needed java-11 for unit-tests to pass. From now on we run java-21
+        sdk install java 21.0.6-tem < /dev/null && sdk default java 21.0.6-tem
         mvn clean install
         
         # symlink the .m2, where sling-feature-launcher expects local maven repo

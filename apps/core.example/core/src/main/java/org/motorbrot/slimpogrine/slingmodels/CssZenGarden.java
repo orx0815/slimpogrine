@@ -17,14 +17,20 @@ public class CssZenGarden {
 
   private static final Logger LOG = LoggerFactory.getLogger(SampleRequestModel.class);
 
-  private String cssId;
+  private final String cssId;
 
+  /**
+   * constructor
+   */
   public CssZenGarden() {
     Random rand = new Random();
     this.cssId = CSS_IDS[rand.nextInt(CSS_IDS.length)];
     LOG.info("CSS-id is: " + this.cssId);
   }
 
+  /**
+   * @return Random id of zengarden's css
+   */
   public String getRandomCss() {
     return this.cssId;
   }
