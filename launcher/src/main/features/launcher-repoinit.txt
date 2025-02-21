@@ -26,7 +26,7 @@
 
     set ACL for everyone
         allow jcr:read on /public
-        allow jcr:read on /apps/slimpogrine/css_zen_garden
         allow jcr:read on /libs/composum/pages/components
         allow jcr:read on /var/composum/clientlibs
+        allow jcr:read on /apps/slimpogrine/css_zen_garden
     end

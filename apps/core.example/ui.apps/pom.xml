@@ -60,6 +60,9 @@
                 <configuration>
                     <filterSource>${basedir}/src/main/content/META-INF/vault/filter.xml</filterSource>
                     <packageType>mixed</packageType>
+                    <properties>
+                        <acHandling>merge_preserve</acHandling>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>
