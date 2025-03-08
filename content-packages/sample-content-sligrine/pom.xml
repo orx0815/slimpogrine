@@ -47,8 +47,11 @@
       <plugin>
         <groupId>io.wcm.maven.plugins</groupId>
         <artifactId>wcmio-content-package-maven-plugin</artifactId>
+        <version>2.1.7-SNAPSHOT</version>
         <configuration>
-          <serviceURL>${sling.url}/bin/cpm/package.service.html</serviceURL>
+          <serviceURL>${sling.url}/bin/cpm/THIS_IS_ONLY_A_SWITCH</serviceURL>
+          <uploadPackageDefinition>false</uploadPackageDefinition>
+          <contentPackagePath>/${contentPackage.group}/${contentPackage.name}-${project.version}.zip</contentPackagePath>
         </configuration>
       </plugin>
 
