@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:per="http://www.peregrine-cms.com/jcr/cms/1.0"
-    jcr:lastModified="{Date}2024-07-31T08:28:52.038+02:00"
-    jcr:lastModifiedBy="sling-package-install"
     jcr:primaryType="per:Asset">
     <jcr:content
         jcr:data="{Binary}\0"

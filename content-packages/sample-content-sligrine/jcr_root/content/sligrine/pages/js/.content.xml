@@ -20,7 +20,7 @@
         <intro
             jcr:primaryType="nt:unstructured"
             sling:resourceType="themecleanflex/components/richtext"
-            text="&lt;p>This page has been left blank intentionally - it serves as the container.&amp;nbsp;&lt;/p>&lt;p>Please edit the child pages to customize/add javascript files for this site.&lt;/p>"/>
+            text="&lt;p&gt;This page has been left blank intentionally - it serves as the container.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Please edit the child pages to customize/add javascript files for this site.&lt;/p&gt;"/>
     </jcr:content>
     <formsapp.js/>
     <site-analytics.js/>

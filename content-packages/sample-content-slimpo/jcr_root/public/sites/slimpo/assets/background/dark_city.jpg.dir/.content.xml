@@ -3,8 +3,6 @@
     jcr:primaryType="nt:file">
     <jcr:content
         cpl:replicatedVersion="{Reference}976bab8a-8ee4-4696-bfa0-ee52b516b59e"
-        jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModifiedBy="composum-platform-service"
-        jcr:mixinTypes="[mix:versionable,mix:ReplicatedVersionable]"
+        jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="nt:resource"/>
 </jcr:root>

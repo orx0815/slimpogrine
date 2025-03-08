@@ -3,9 +3,6 @@
     jcr:primaryType="cpp:Page">
     <jcr:content
         cpl:replicatedVersion="d11866e6-007a-4c5f-aa8c-75deecba452c"
-        jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-10-15T12:39:35.034+02:00"
-        jcr:lastModifiedBy="composum-platform-service"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
         jcr:uuid="fa0dee10-9287-4f13-a484-26f2a140191e"

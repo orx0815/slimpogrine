@@ -2,9 +2,6 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-07-31T08:57:23.465+02:00"
-        jcr:lastModifiedBy="admin"
         jcr:primaryType="cpp:PageContent"
         jcr:uuid="4a24c4fc-403f-400a-ab1e-c4754acd4583"
         sling:resourceType="composum/pages/components/page/home"
@@ -29,7 +26,7 @@
                 link="/content/sites/slimpo/home/test"
                 path="\0"
                 subtitle="Slimpogrine Composum-Pages Sample Content"
-                text="Reference content deployed with the launcher.&lt;br>"
+                text="Reference content deployed with the launcher.&lt;br&gt;"
                 title="Hello World !"
                 variation="bgimage">
                 <image
@@ -88,7 +85,7 @@
                         jcr:primaryType="cpp:Element"
                         sling:resourceType="composum/pages/components/element/textimage"
                         imagePosition="bottom"
-                        text="SliMPO ipsum Dolores&lt;br>"
+                        text="SliMPO ipsum Dolores&lt;br&gt;"
                         title="Dark City">
                         <image
                             jcr:primaryType="nt:unstructured"

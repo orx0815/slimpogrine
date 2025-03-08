@@ -2,9 +2,6 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        jcr:isCheckedOut="{Boolean}true"
-        jcr:lastModified="{Date}2024-07-31T08:29:02.995+02:00"
-        jcr:lastModifiedBy="sling-package-install"
         jcr:primaryType="cpp:PageContent"
         jcr:uuid="6b472f53-9de2-488d-a5bc-02c83d1b0bda"
         sling:resourceType="composum/pages/components/page"
