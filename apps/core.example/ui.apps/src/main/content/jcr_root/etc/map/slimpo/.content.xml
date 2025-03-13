@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Regular Expressions for Reverse/Outgoing Mappings
-
-    If there is a sling:internalRedirect property containing a regular expression
-    the map entry will be exclusively used for reverse mappings (i.e. used only for ResourceResolver.map(...)) (see also SLING-2560).
-    The same resource may carry a sling:match property with wildcards and groups referring to the groups being defined in the sling:internalRedirect property.
--->
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="sling:Mapping"
-    sling:match="$1"
-    sling:internalRedirect="/public/sites/slimpo(.*)"/>
-
+    sling:internalRedirect="/public/sites/slimpo(.*)"
+    sling:match="$1"/>

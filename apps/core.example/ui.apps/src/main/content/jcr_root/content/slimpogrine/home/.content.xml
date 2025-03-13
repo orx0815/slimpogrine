@@ -1,64 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
-          jcr:primaryType="sling:Folder"
-          jcr:title="SliMpoGrine"
-          subtitle="SLIng + coMPOsum + pereGRINE"
-          intro_summary="&lt;p&gt;A demonstration of what can be accomplished through &lt;abbr title=&quot;Apache-Sling&quot;Sling™&lt;/abbr&gt; application servers.&lt;/p&gt;
-  &lt;p&gt;This page is a basic example of a reverse &lt;a href=&quot;https://csszengarden.com&quot;&gt;CSS Zen Garden&lt;/a&gt;,
-  but instead of static HTML about the power of CSS, this page&apos;s text can be edited on a Sling™ server.
-  &lt;/p&gt;"
-          intro_preamble_headline="The Content to Enlightenment"
-          intro_preamble="
-&lt;p&gt;It randomly assigns styles that were blatantly copied, resulting in confusion when the page looks different all the time 
-  with variying usability, responsiveness and general appeal.
-  But it makes a point that this is about the content and it&apos;s management by open-source means.&lt;/p&gt;
-&lt;p&gt;Even among Java developers, Sling™ is quite unknown. It&apos;s concept is very abstract:  &quot;In a nutshell, Sling maps HTTP request URLs to content resources&quot;. 
-This page aims to show the power behind that by deploying **three** proof-of-concepts of editable websites into the same server. &lt;/p&gt;"
-          sling:resourceType="slimpogrine/home">
-  
-  <main jcr:primaryType="nt:unstructured">
-    <explanation 
-      jcr:primaryType="nt:unstructured"
-      sling:resourceType="slimpogrine/components/main/explanation"
-      headline="So What is SliMpoGrine?"
-      text="
-&lt;p&gt;SliMpoGrine is about how far we can get with existing open-source solutions on self-hosted Sling. The &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-starter&quot;&gt;Sling Starter&lt;/a&gt; already comes with Composum applications on top, developed by &lt;a href=&quot;https://www.ist-software.com/&quot;&gt;IST&lt;/a&gt;, that provide basic functions like Nodes-Browser (think crx/de), User-Manager and Package-Manager for import/export of content.&lt;/p&gt;
-&lt;p&gt;And with this groundwork, others were able to develop their own CMS&apos;s on top.
-Here we leverage Sling&apos;s OSGi Feature Model to glue together two of them and this silly example into our own application server.&lt;/p&gt;
-&lt;p&gt; This is not software on it's own but rather a combination of quite a lot open-source software developed by others into something new.&lt;/p&gt;
-">
-    </explanation>
-    <participation
-      jcr:primaryType="nt:unstructured"
-      sling:resourceType="slimpogrine/components/main/participation"
-      headline="SliMpoGrine Participants"
-      text="
-&lt;p&gt;The participating CMS&apos;s are Composum&apos;s Pages+Assets as well as Peregrine-CMS. They both provide a &lt;abbr title=&quot;What You See Is What You Get&quot;&gt;WYSIWYG&lt;/abbr&gt; editor for websites, but with radical different approaches. The first one generates good old HTML, Peregrine renders a vue.js Single-page application. Both share the same repository and just live next to each other within the same Micro-Service / docker-image.&lt;/p&gt;
-
-&lt;p&gt;Noteable CMS&apos;s not included:&lt;br/&gt;
-The offical &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-app-cms&quot;&gt;Sling CMS App&lt;/a&gt; because like with most of Sling it lacks a bit of visual bling. But for general concepts &lt;a href=&quot;https://adapt.to/2021/schedule/sling-cms-building-a-simple-cms-on-apache-sling&quot;&gt;it&apos;s worth a look&lt;/a&gt;, especially for cloud-deployment pipelines.
-There is &lt;a href=&quot;https://www.websight.io/&quot;&gt;WebSight&lt;/a&gt;, with a free community edition but not open-source. And there is &lt;a href=&quot;https://www.aem.live/&quot;&gt;Adobe&apos;s Experience Manager&lt;/a&gt; which is not free at all but actually powers the development of Sling.&lt;/p&gt;
-">
-    </participation>
-    <benefits
-      jcr:primaryType="nt:unstructured"
-      sling:resourceType="slimpogrine/components/main/benefits"
-      headline="SliMpoGrine Benefits"
-      text="
-The shown content should explain the 'how did we get here' in form of text-components with code-blocks and diagrams in future.
-Content can be synched back into sources on github after creation and become part of the SliMpoGrine server.
-">
-
-    </benefits>
-    <requirements
-      jcr:primaryType="nt:unstructured"
-      sling:resourceType="slimpogrine/components/main/requirements"
-      headline="SliMpoGrine Requirements"
-      text="
-Required is a general interest in Java middleware... tbc
-">
-
-    </requirements>
-  </main>
-  
-</jcr:root>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:Folder"
+    jcr:title="SliMpoGrine"
+    sling:resourceType="slimpogrine/home"
+    intro_preamble=" &lt;p>It randomly assigns styles that were blatantly copied, resulting in confusion when the page looks different all the time    with variying usability, responsiveness and general appeal.   But it makes a point that this is about the content and it's management by open-source means.&lt;/p> &lt;p>Even among Java developers, Sling™ is quite unknown. It's concept is very abstract:  &quot;In a nutshell, Sling maps HTTP request URLs to content resources&quot;.  This page aims to show the power behind that by deploying **three** proof-of-concepts of editable websites into the same server. &lt;/p>"
+    intro_preamble_headline="The Content to Enlightenment"
+    intro_summary="&lt;p>A demonstration of what can be accomplished through &lt;abbr title=&quot;Apache-Sling&quot;Sling™&lt;/abbr> application servers.&lt;/p>   &lt;p>This page is a basic example of a reverse &lt;a href=&quot;https://csszengarden.com&quot;>CSS Zen Garden&lt;/a>,   but instead of static HTML about the power of CSS, this page's text can be edited on a Sling™ server.   &lt;/p>"
+    subtitle="SLIng + coMPOsum + pereGRINE"/>
