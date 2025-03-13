@@ -27,7 +27,7 @@
                 sling:resourceType="composum/pages/components/element/teaser"
                 link="/public/sites/slimpo/home/test"
                 subtitle="Slimpogrine Composum-Pages Sample Content"
-                text="Reference content deployed with the launcher.&lt;br&gt;"
+                text="Reference content deployed with the launcher.&lt;br>"
                 title="Hello World !"
                 variation="bgimage">
                 <image
@@ -82,7 +82,7 @@
                         jcr:primaryType="cpp:Element"
                         sling:resourceType="composum/pages/components/element/textimage"
                         imagePosition="bottom"
-                        text="SliMPO ipsum Dolores&lt;br&gt;"
+                        text="SliMPO ipsum Dolores&lt;br>"
                         title="Dark City">
                         <image
                             jcr:primaryType="nt:unstructured"

@@ -4,7 +4,7 @@
     jcr:primaryType="cpp:Site">
     <jcr:content
         cpl:replicatedVersion="4142acda-c6b0-42b2-be41-d41e935e398a"
-        jcr:description="Reference content deployed with the launcher&lt;br&gt;"
+        jcr:description="Reference content deployed with the launcher&lt;br>"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:SiteConfiguration"
         jcr:title="SliMpo Composum-Pages Sample-Content"

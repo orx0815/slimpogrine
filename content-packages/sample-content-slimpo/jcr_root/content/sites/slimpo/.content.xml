@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cpp:Site">
     <jcr:content
-        jcr:description="Reference content deployed with the launcher&lt;br&gt;"
+        jcr:description="Reference content deployed with the launcher&lt;br>"
         jcr:primaryType="cpp:SiteConfiguration"
         jcr:title="SliMpo Composum-Pages Sample-Content"
         jcr:uuid="e3d964ec-0022-408c-957c-d52c2712c119"
