@@ -65,6 +65,16 @@
                     </properties>
                 </configuration>
             </plugin>
+            
+            <plugin>
+              <groupId>io.wcm.maven.plugins</groupId>
+              <artifactId>wcmio-content-package-maven-plugin</artifactId>
+              <configuration>
+                <unpackDirectory>src/main/content</unpackDirectory>
+              </configuration>
+            </plugin>
+      
         </plugins>
+        
     </build>
 </project>
