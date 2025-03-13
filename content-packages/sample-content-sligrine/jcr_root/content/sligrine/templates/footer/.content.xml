@@ -55,7 +55,7 @@
                     component="nt:unstructured"
                     name="columns0"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns0"
-                    text="&lt;div&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;/content/sligrine/pages/index.html&quot; title=&quot;&quot; target=&quot;_self&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/content/sligrine/pages/articles.html&quot; title=&quot;&quot; target=&quot;_self&quot;&gt;Articles&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/content/sligrine/pages/authors.html&quot; title=&quot;&quot; target=&quot;_self&quot;&gt;Authors&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;/content/sligrine/pages/sitemap.html&quot; title=&quot;our sitemap - access all pages of this site&quot; target=&quot;_self&quot;&gt;Sitemap&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;"
+                    text="&lt;div>&lt;ul>&lt;li>&lt;a href=&quot;/content/sligrine/pages/index.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Home&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/articles.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Articles&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/authors.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Authors&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/sitemap.html&quot; title=&quot;our sitemap - access all pages of this site&quot; target=&quot;_self&quot;>Sitemap&lt;/a>&lt;/li>&lt;/ul>&lt;/div>&lt;div>&lt;br>&lt;/div>"
                     title="Menu"/>
                 <n1594665568050
                     jcr:primaryType="nt:unstructured"
@@ -69,14 +69,14 @@
                     component="nt:unstructured"
                     name="columns1"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns1"
-                    text="&lt;p&gt;EMail:&amp;nbsp;&lt;a href=&quot;mailto:info@example.com&quot; title=&quot;send us a note&quot; target=&quot;_self&quot;&gt;info@example.com&lt;/a&gt;&lt;br&gt;Phone: ++1 949 555 1212&lt;/p&gt;"
+                    text="&lt;p>EMail:&amp;nbsp;&lt;a href=&quot;mailto:info@example.com&quot; title=&quot;send us a note&quot; target=&quot;_self&quot;>info@example.com&lt;/a>&lt;br>Phone: ++1 949 555 1212&lt;/p>"
                     title="Contact"/>
                 <columns2
                     jcr:primaryType="nt:unstructured"
                     component="nt:unstructured"
                     name="columns2"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns2"
-                    text="&lt;p&gt;1234 South Sample Way&lt;br&gt;Neptune, CA 90909&lt;/p&gt;"
+                    text="&lt;p>1234 South Sample Way&lt;br>Neptune, CA 90909&lt;/p>"
                     title="Location"/>
             </columns>
             <icons jcr:primaryType="nt:unstructured">

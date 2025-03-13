@@ -37,7 +37,7 @@
             mediawidth="50"
             overlaycolor="#ffffff"
             overlayopacity="50"
-            text="&lt;p&gt;The child pages of this page serve as skeleton pages (stubs). When you create a new page you can either select to create from a template or select to create from a skeleton page. A skeleton page is a template with initial content on the page that can be modified.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Your website currently has the following skeleton pages:&lt;/p&gt;"
+            text="&lt;p>The child pages of this page serve as skeleton pages (stubs). When you create a new page you can either select to create from a template or select to create from a skeleton page. A skeleton page is a template with initial content on the page that can be modified.&amp;nbsp;&lt;/p>&lt;p>Your website currently has the following skeleton pages:&lt;/p>"
             videosrc="\0"/>
         <n22d0be97-31de-4ca3-9521-2ad144e612dd
             jcr:primaryType="nt:unstructured"

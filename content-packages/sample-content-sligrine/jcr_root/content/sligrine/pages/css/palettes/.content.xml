@@ -17,7 +17,7 @@
         <intro
             jcr:primaryType="nt:unstructured"
             sling:resourceType="themecleanflex/components/richtext"
-            text="&lt;p&gt;This page has been left blank intentionally - it serves as the container.&amp;nbsp;&lt;/p&gt;&lt;p&gt;Please edit the child pages to customize the css palettes of this site.&lt;/p&gt;"/>
+            text="&lt;p>This page has been left blank intentionally - it serves as the container.&amp;nbsp;&lt;/p>&lt;p>Please edit the child pages to customize the css palettes of this site.&lt;/p>"/>
     </jcr:content>
     <default.css/>
     <dawn.css/>

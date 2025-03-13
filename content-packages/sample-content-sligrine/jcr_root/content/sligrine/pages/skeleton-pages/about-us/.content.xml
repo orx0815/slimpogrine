@@ -48,7 +48,7 @@
                     showtext="false"
                     showtitle="true"
                     subtitle="Read more about what drives. "
-                    text="&lt;p&gt;Eligendi fugit asperiores et. Corrupti voluptatum quasi sit. Adipisci ut voluptatem necessitatibus cumque aspernatur.&lt;/p&gt;"
+                    text="&lt;p>Eligendi fugit asperiores et. Corrupti voluptatum quasi sit. Adipisci ut voluptatem necessitatibus cumque aspernatur.&lt;/p>"
                     textwidth="100"
                     title="About Us"
                     toppadding="30"
@@ -94,7 +94,7 @@
                     mediawidth="50"
                     overlaycolor="#ffffff"
                     overlayopacity="50"
-                    text="&lt;h2 style=&quot;text-align: center;&quot;&gt;Our Customers&lt;/h2&gt;"
+                    text="&lt;h2 style=&quot;text-align: center;&quot;>Our Customers&lt;/h2>"
                     videosrc="\0"/>
                 <nfbf5c432-3381-438b-803a-7c54b71a468b
                     jcr:primaryType="nt:unstructured"
