@@ -29,6 +29,7 @@
         <docker.image.tag>snapshot</docker.image.tag>
         <!-- pass a list of platforms to enable multi-arch builds: linux/amd64,linux/arm64 -->
         <docker.platforms></docker.platforms>
+        <deepseek-key></deepseek-key>
     </properties>
     
     <build>
@@ -53,7 +54,8 @@
                       cpm.platform.workflow.version,
                       cpm.platform.tenant.version,
                       composum.dashboard.version,
-                      peregrine-cms.version
+                      peregrine-cms.version,
+                      deepseek-key
                     </replacePropertyVariables>
                    
                     <skipAddFeatureDependencies>true</skipAddFeatureDependencies>

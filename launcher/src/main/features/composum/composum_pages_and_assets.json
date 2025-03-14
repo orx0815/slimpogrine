@@ -16,8 +16,13 @@
   "configurations": {
     "com.composum.ai.backend.base.service.chat.impl.GPTChatCompletionServiceImpl": {
       "disable": false,
-      "openAiApiKey": "${openapikey}",
-      "openAiApiKeyFile": "${openapikeyfile}"
+      "chatCompletionUrl": "https://api.deepseek.com/chat/completions",
+      "openAiApiKey": "${deepseek-key}",
+      "openAiApiKeyFile": "${deepseek-keyfile}",
+      "defaultModel": "deepseek-chat",
+      "highIntelligenceModel": "deepseek-reasoner",
+      "imageModel": "",
+      "embeddingsModel": ""
     }
   },
   "content-packages:ARTIFACTS|required": [
