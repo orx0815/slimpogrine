@@ -1,9 +1,14 @@
 package org.motorbrot.slimpogrine.slingmodels;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
+import javax.inject.Inject;
+import org.apache.commons.lang3.StringUtils;
 
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.Self;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,19 +18,28 @@ import org.slf4j.LoggerFactory;
 @Model(adaptables = {SlingHttpServletRequest.class})
 public class CssZenGarden {
 
-  private final String[] CSS_IDS = new String[]{"099", "142", "214", "215", "219"};
+  private static final String[] CSS_IDS = new String[]{"099", "142", "221", "214", "215", "219"};
 
   private static final Logger LOG = LoggerFactory.getLogger(SampleRequestModel.class);
-
+  
   private final String cssId;
 
   /**
-   * constructor
+   * Constructor
    */
-  public CssZenGarden() {
-    Random rand = new Random();
-    this.cssId = CSS_IDS[rand.nextInt(CSS_IDS.length)];
-    LOG.info("CSS-id is: " + this.cssId);
+  @Inject
+  public CssZenGarden(@Self SlingHttpServletRequest request) {
+    
+    final List<String> ids = Arrays.asList(CSS_IDS);
+    String suffix = StringUtils.removeStart(request.getRequestPathInfo().getSuffix(), "/");
+    if (ids.contains(suffix)) {
+      this.cssId = suffix;
+    } else {
+      Random rand = new Random();
+      this.cssId = CSS_IDS[rand.nextInt(CSS_IDS.length)];
+      LOG.info("CSS-id is: " + this.cssId);
+    }
+        
   }
 
   /**
