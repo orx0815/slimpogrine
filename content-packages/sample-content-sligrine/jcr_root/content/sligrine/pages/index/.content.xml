@@ -34,7 +34,7 @@
                 buttonsize="large"
                 color2="#c0c0c0"
                 colorscheme="light"
-                custombackground="false"
+                custombackground="true"
                 fullheight="true"
                 htmlelement="section"
                 imagesrc="\0"
