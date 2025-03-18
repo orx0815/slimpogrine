@@ -6,5 +6,4 @@ echo '--------------------------------------------------------------------------
 # docker run -p 8080:8080 -v /tmp/sling:/opt/sling/sling apache/sling:12
 
 mvn clean package -Ddocker.skip=false
-docker volume create slimpogrine-volume
-docker run -p 8080:8080 -v slimpogrine-volume:/opt/sling/launcher ghcr.io/orx0815/slimpogrine:snapshot
+docker run -p 8080:8080 --rm -v slimpogrine-volume:/opt/sling/launcher ghcr.io/orx0815/slimpogrine:snapshot

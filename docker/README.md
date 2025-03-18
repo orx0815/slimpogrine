@@ -1,8 +1,8 @@
-# Apache Sling Slimpogrine Docker Support
+# Slimpogrine Docker Support
 
 This is a sample Docker Compose configuration for using Apache Sling Slimpogrine in a containerized environment.
 
-It will start a container with the Apache Sling Slimpogrine backed by a shared volume and a webcache container pre-configured to proxy and cache two URLs.
+It will start a container with the Slimpogrine backed by a shared volume and a webcache container pre-configured to proxy and cache three subdomains.
 
 ## Dependencies
 
@@ -35,5 +35,9 @@ To use the containers, run the command:
 
 Then map the URLs *slimpogrine.motorbrot.org* and *author.slimpogrine.motorbrot.org* to your docker host. On local hosts, you can add the following entries into your /etc/hosts file:
 
-    127.0.0.1 slimpogrine.motorbrot.org
-    127.0.0.1 author.slimpogrine.motorbrot.org
+    127.0.0.1 slimpo.motorbrot.local
+    127.0.0.1 sligrine.motorbrot.local
+    127.0.0.1 www.motorbrot.local
+    127.0.0.1 editor.motorbrot.local
+
+
