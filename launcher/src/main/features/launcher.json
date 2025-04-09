@@ -57,6 +57,9 @@
             "^editor\\.motorbrot\\.org$",
             "^editor\\.motorbrot\\.local$"
         ]
+    },
+    "org.apache.sling.engine.parameters" : {
+        "request.max.file.count" : 150
     }
   },
   "repoinit:TEXT|true": "@file"
