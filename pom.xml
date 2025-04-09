@@ -74,7 +74,7 @@
 		<cpm.platform.replication.version>1.1.2</cpm.platform.replication.version>
 		<cpm.platform.workflow.version>1.1.2</cpm.platform.workflow.version>
 		<cpm.platform.tenant.version>1.1.2</cpm.platform.tenant.version>
-    <composum.ai.version>2.2.3</composum.ai.version>
+    <composum.ai.version>2.2.5</composum.ai.version>
 		
     <peregrine-cms.version>1.0-SNAPSHOT</peregrine-cms.version>
     <!-- renovate: depName=org.apache.jackrabbit:oak-api -->
