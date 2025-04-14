@@ -30,6 +30,7 @@
         <!-- pass a list of platforms to enable multi-arch builds: linux/amd64,linux/arm64 -->
         <docker.platforms></docker.platforms>
         <deepseek-key></deepseek-key>
+        <slimpogrine.launcher.version>${project.version}</slimpogrine.launcher.version>
     </properties>
     
     <build>
@@ -41,6 +42,7 @@
 
                 <configuration>
                     <replacePropertyVariables>
+                      slimpogrine.launcher.version,
                       oak.version,
                       composum.nodes.version,
                       composum.platform.version,
