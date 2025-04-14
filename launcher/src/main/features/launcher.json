@@ -1,19 +1,19 @@
 {
   "bundles": [
     {
-        "id": "org.motorbrot/slimpogrine.core.example/1.0-SNAPSHOT",
+        "id": "org.motorbrot/slimpogrine.core.example/${slimpogrine.launcher.version}",
         "start-order": 20
     }
   ],
   "content-packages:ARTIFACTS|required": [
     {
-        "id":"org.motorbrot/slimpogrine.ui.apps.example/1.0-SNAPSHOT/zip"
+        "id":"org.motorbrot/slimpogrine.ui.apps.example/${slimpogrine.launcher.version}/zip"
     },
     {
-        "id":"org.motorbrot/slimpogrine.sample-content-slimpo/1.0-SNAPSHOT/zip"
+        "id":"org.motorbrot/slimpogrine.sample-content-slimpo/${slimpogrine.launcher.version}/zip"
     },
     {
-        "id":"org.motorbrot/slimpogrine.sample-content-sligrine/1.0-SNAPSHOT/zip"
+        "id":"org.motorbrot/slimpogrine.sample-content-sligrine/${slimpogrine.launcher.version}/zip"
     }
   ],
   "configurations" :{
