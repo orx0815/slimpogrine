@@ -3,7 +3,7 @@ name: Release Slimpogrine Starter Docker image
 on:
   push:
     tags:
-      - org.motorbrot.slimpogrine.launcher-**
+      - slimpogrine.parent-**
   workflow_dispatch:
 
 jobs:
