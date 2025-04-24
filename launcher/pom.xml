@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <artifactId>slimpogrine.parent</artifactId>
         <groupId>org.motorbrot</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -28,8 +26,8 @@
         <docker.image.name>ghcr.io/orx0815/slimpogrine</docker.image.name>
         <docker.image.tag>snapshot</docker.image.tag>
         <!-- pass a list of platforms to enable multi-arch builds: linux/amd64,linux/arm64 -->
-        <docker.platforms></docker.platforms>
-        <deepseek-key></deepseek-key>
+        <docker.platforms />
+        <deepseek-key />
         <slimpogrine.launcher.version>${project.version}</slimpogrine.launcher.version>
     </properties>
     
