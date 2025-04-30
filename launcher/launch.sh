@@ -36,7 +36,7 @@ docker_feature=$(find ./target/artifacts -name "*docker.slingosgifeature")
 feature="${feature},${docker_feature}"
 
 # remove add-opens after SLING-10831 is fixed
-JAVA_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
+JAVA_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=38080"
 
 export JAVA_OPTS
 echo "[INFO] JAVA_OPTS=${JAVA_OPTS}"
