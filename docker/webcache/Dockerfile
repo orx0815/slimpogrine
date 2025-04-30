@@ -5,7 +5,7 @@ FROM ubuntu:latest
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Install Apache
-RUN apt-get update && apt-get install apache2 -y
+RUN apt-get -y update && apt-get -y install apache2
 
 # Configure mod_rewrite
 RUN a2enmod rewrite
@@ -21,7 +21,10 @@ RUN a2enmod expires
 RUN a2enmod headers
 
 # Configure sites
-RUN mkdir -p /var/www/vhosts/editor.motorbrot && mkdir -p /var/www/vhosts/slimpo
+RUN mkdir -p /var/www/vhosts/editor.motorbrot && mkdir -p /var/www/vhosts/slimpo &&  mkdir -p /var/www/vhosts/www && \
+    mkdir -p /var/cache/httpd/slimpogrine && mkdir -p /var/cache/httpd/slimpo && mkdir -p /var/cache/httpd/sligrine && \
+    chown -R www-data:www-data /var/cache/httpd
+
 COPY *.conf /etc/apache2/sites-enabled/
 
 # Expose endpoints
