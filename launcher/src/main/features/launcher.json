@@ -33,11 +33,10 @@
             "-/content/apidocs",
             // V-V-V needed for composum's InPlace replication on single instance
             "-/public",
-            "-/libs/composum/pages/components",
-            "-/var/composum/clientlibs",
             "-/libs/jslibs",
             "-/bin/public",
             "-/libs/fonts",
+            "-/libs/composum/pages/commons/images",
             "-/apps/slimpogrine/css_zen_garden"
         ],
         "sling.auth.anonymous.user" : "",
