@@ -15,14 +15,17 @@
   },
   "configurations": {
     "com.composum.ai.backend.base.service.chat.impl.GPTChatCompletionServiceImpl": {
-      "disable": false,
+      "disable": true,
       "chatCompletionUrl": "https://api.deepseek.com/chat/completions",
       "openAiApiKey": "${deepseek-key}",
       "openAiApiKeyFile": "${deepseek-keyfile}",
       "defaultModel": "deepseek-chat",
       "highIntelligenceModel": "deepseek-reasoner",
       "imageModel": "",
-      "embeddingsModel": ""
+      "embeddingsModel": "",
+      "requestsPerMinute": "100",
+      "requestsPerHour": "1000",
+      "requestsPerDay": "3000"
     }
   },
   "content-packages:ARTIFACTS|required": [
