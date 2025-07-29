@@ -1,78 +1,168 @@
 package org.motorbrot.slimpogrine.slingmodels;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 import javax.inject.Inject;
-import org.apache.commons.lang3.StringUtils;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
+import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Answers with css id
+ * Picks a design. Assigned by htl, url or random
  */
 @Model(adaptables = {SlingHttpServletRequest.class})
 public class CssZenGarden {
 
-  private static final String[] CSS_IDS = new String[]{
-    "041", // 'door to my garden' by Patrick Lauke, http://redux.deviantart.com/
-    "083", // 'Springtime', by Boër Attila
-    "084", // 'Start Listening!', by Liz Lubowitz, http://hiptobeasquare.com 
-    "099", // 'Wiggles the Wonderworm', by Joseph Pearson, http://www.make-believe.org/
-    "139", // 'Neat & Tidy', by Oli Dale, http://www.designerstalk.com/
-    "142", // 'Invasion of the Body Switchers' by Andy Clarke, http://www.stuffandnonsense.co.uk/
-    "145", // 'Paravion', by Emiliano Pennisi, http://www.peamarte.it/01/metro.html
-    "146", // 'Urban', by Matt, Kim &amp; Nicole, http://www.learnnewmedia.designer-namea/
-    "156", // 'Table Layout Assassination', by Marko Krsul & Marko Dugonjic, http://web.burza.hr/
-    "171", // 'Shaolin Yokobue', by Javier Cabrera, http://www.emaginacion.com.ar/hacks/
-    "177", // 'Zen City Morning', by Ray Henry, http://www.reh3.com/
-    "193", // 'Leggo My Ego', by Jon Tan, http://www.gr0w.com/
-    "194", // 'Dark Rose', by Rose Fu, http://www.rosefu.net/
-    "195", // 'Dazzling Beauty', by Deny Sri Supriyono, http://blog.denysri.com/
-    "198", // 'The Original', by Joachim Shotter, http://www.bluejam.com/
-    "199", // 'Zen Army', by Carl Desmond, http://www.niceguy.com/
-    "200", // 'Icicle Outback', by Timo Virtanen, http://www.timovirtanen.com/
-    "202", // 'Retro Theater', by Eric RogŽ, http://space-sheeps.info/
-    "205", // 'spring360', by Rene Hornig, http://www.medialab360.com/
-    "213", // 'Under the Sea', by Eric Stoltz, http://www.ericstoltz.com/
-    "214", // 'Verde Moderna', by Dave Shea, http://www.mezzoblue.com/
-    "215", // 'A Robot Named Jimmy', by meltmedia, http://meltmedia.com 
-    "218", // 'Apothecary', by Trent Walton, http: //www.trentwalton.com/
-    "219", // 'Steel', by Steffen Knoeller, http://www.steffen-knoeller.de/ 
-    "221"  // 'Mid Century Modern', by Andrew Lohman, http://www.andrewlohman.com/
+  private static final Design[] CSS_DESIGNS = new Design[]{
+    new Design("041", "door to my garden", "Patrick Lauke", "http://redux.deviantart.com/"),
+    new Design("083", "Springtime", "Boër Attila", ""),
+    new Design("084", "Start Listening!", "Liz Lubowitz", "http://hiptobeasquare.com"),
+    new Design("099", "Wiggles the Wonderworm", "Joseph Pearson", "http://www.make-believe.org/"),
+    new Design("139", "Neat & Tidy", "Oli Dale", "http://www.designerstalk.com/"),
+    new Design("142", "Invasion of the Body Switchers", "Andy Clarke", "http://www.stuffandnonsense.co.uk/"),
+    new Design("145", "Paravion", "Emiliano Pennisi", "http://www.peamarte.it/01/metro.html"),
+    new Design("146", "Urban", "Matt, Kim &amp; Nicole", "http://www.learnnewmedia.com"),
+    new Design("156", "Table Layout Assassination", "Marko Krsul & Marko Dugonjic", "http://web.burza.hr/"),
+    new Design("171", "Shaolin Yokobue", "Javier Cabrera", "http://www.emaginacion.com.ar/hacks/"),
+    new Design("177", "Zen City Morning", "Ray Henry", "http://www.reh3.com/"),
+    new Design("193", "Leggo My Ego", "Jon Tan", "http://www.gr0w.com/"),
+    new Design("194", "Dark Rose", "Rose Fu", "http://www.rosefu.net/"),
+    new Design("195", "Dazzling Beauty", "Deny Sri Supriyono", "http://blog.denysri.com/"),
+    new Design("198", "The Original", "Joachim Shotter", "http://www.bluejam.com/"),
+    new Design("199", "Zen Army", "Carl Desmond", "http://www.niceguy.com/"),
+    new Design("200", "Icicle Outback", "Timo Virtanen", "http://www.timovirtanen.com/"),
+    new Design("202", "Retro Theater", "Eric RogŽ", "http://space-sheeps.info/"),
+    new Design("205", "spring360", "Rene Hornig", "http://www.medialab360.com/"),
+    new Design("213", "Under the Sea", "Eric Stoltz", "http://www.ericstoltz.com/"),
+    new Design("214", "Verde Moderna", "Dave Shea", "http://www.mezzoblue.com/"),
+    new Design("215", "A Robot Named Jimmy", "meltmedia", "http://meltmedia.com"),
+    new Design("217", "Screen Filler", "Elliot Jay Stocks", "http://elliotjaystocks.com/"),
+    new Design("218", "Apothecary", "Trent Walton", "http://www.trentwalton.com/"),
+    new Design("219", "Steel", "Steffen Knoeller", "http://www.steffen-knoeller.de/"),
+    new Design("221", "Mid Century Modern", "Andrew Lohman", "http://www.andrewlohman.com/"),
+    new Design("401", "Blue Vibe Code", "Claude Sonnet 4", "https://claude.ai/new"),
+    new Design("402", "Light Vibe Code", "Claude Sonnet 4", "https://claude.ai/new")
+
   };
 
+  private static final String REQUEST_ATTRIBUTE_CSS_ZEN_GARDEN_DESIGN = CssZenGarden.class.getName() + "_Design";
+  private static final String REQUEST_ATTRIBUTE_HTL_SELECT_DESIGN = "design_id";
   private static final Logger LOG = LoggerFactory.getLogger(SampleRequestModel.class);
-  
-  private final String cssId;
+
+  private Design design;
 
   /**
-   * Constructor
+   * Constructor injection
    */
   @Inject
   public CssZenGarden(@Self SlingHttpServletRequest request) {
-    
-    final List<String> ids = Arrays.asList(CSS_IDS);
-    String suffix = StringUtils.removeStart(request.getRequestPathInfo().getSuffix(), "/");
-    if (ids.contains(suffix)) {
-      this.cssId = suffix;
-    } else {
-      Random rand = new Random();
-      this.cssId = CSS_IDS[rand.nextInt(CSS_IDS.length)];
-      LOG.info("CSS-id is: " + this.cssId);
+
+    // Keep the same design per request, when model is called in different components
+    this.design = (Design)request.getAttribute(REQUEST_ATTRIBUTE_CSS_ZEN_GARDEN_DESIGN);
+    if (this.design == null) {
+      // check if template forced an id
+      this.design = designFromSightly(request);
+      if (this.design == null) {
+        // check if url has one
+        this.design = designFromSuffix(request);
+        if (this.design == null) {
+          // pick one randomly
+          Random rand = new Random();
+          this.design = CSS_DESIGNS[rand.nextInt(CSS_DESIGNS.length)];
+          LOG.info("CSS-id is: " + this.design);
+        }
+      }
+      request.setAttribute(REQUEST_ATTRIBUTE_CSS_ZEN_GARDEN_DESIGN, this.design);
     }
-        
   }
 
   /**
-   * @return Random id of zengarden's css
+   * Reads number from suffix and tries to find a design with that id
+   *
+   * @param request like slimpogrine/home.html/401
+   * @return Design with that id or null
    */
-  public String getRandomCss() {
-    return this.cssId;
+  @Nullable
+  private Design designFromSuffix(SlingHttpServletRequest request) {
+    String suffix = request.getRequestPathInfo().getSuffix();
+    suffix = StringUtils.getDigits(suffix);
+    suffix = StringUtils.substring(suffix, 0, 3);
+    Design designFromSuffix = byId(suffix);
+    return designFromSuffix;
+  }
+  
+  /**
+   * Design id can get passed in via sightly:
+   * data-sly-use.cssPicker="${'org.motorbrot.slimpogrine.slingmodels.CssZenGarden' @ design_id='401'}"
+   * 
+   * @param request 
+   * @return Design with that id or null
+   */
+  @Nullable
+  private Design designFromSightly(SlingHttpServletRequest request) {
+    String idByHtl = (String)request.getAttribute(REQUEST_ATTRIBUTE_HTL_SELECT_DESIGN);
+    Design designFromSuffix = byId(idByHtl);
+    return designFromSuffix;
+  }
+
+  @Nullable
+  private Design byId(String cssId) {
+    return Arrays.stream(CSS_DESIGNS)
+      .filter(d -> d.cssId.equals(cssId))
+      .findAny()
+      .orElse(null);
+  }
+
+  /**
+   * @return Random URL of zengarden's css (Sightly getter)
+   */
+  public String getRandomCssUrl() {
+    return "/apps/slimpogrine/css_zen_garden/" + this.design.cssId + "/" + this.design.cssId + ".css";
+  }
+
+  /**
+   * @return Name of the designer (Sightly getter)
+   */
+  public String getDesignName() {
+    return this.design.name;
+  }
+
+  /**
+   * @return URL to designer's website (Sightly getter)
+   */
+  public String getDesignerUrl() {
+    return this.design.designerUrl;
+  }
+
+  /**
+   * @return Name of the designer
+   */
+  public String getDesigner() {
+    return this.design.designerName;
+  }
+
+  /**
+   * Data object holding info about a zengarden design like it's original
+   * creator
+   */
+  public static class Design {
+
+    private final String cssId;
+    private final String name;
+    private final String designerName;
+    private final String designerUrl;
+
+    public Design(String cssId, String name, String designerName, String designerUrl) {
+      this.cssId = cssId;
+      this.name = name;
+      this.designerName = designerName;
+      this.designerUrl = designerUrl;
+    }
   }
 
 }
