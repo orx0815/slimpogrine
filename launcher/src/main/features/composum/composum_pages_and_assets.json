@@ -5,7 +5,7 @@
       "start-order": "9"
     },
     {
-      "id": "com.google.guava:guava::15.0",
+      "id": "org.apache.jackrabbit:oak-shaded-guava::1.76.0",
       "start-order": "20"
     }
   ],

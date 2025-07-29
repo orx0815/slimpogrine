@@ -25,7 +25,10 @@
       "id" : "org.apache.sling:org.apache.sling.servlet-helpers:jar:1.4.2",
       "start-order":"20"
     },
-    
+    {
+      "id": "com.google.guava:guava::15.0",
+      "start-order": "20"
+    },
     {
       "id":"com.peregrine-cms:admin.core:${peregrine-cms.version}",
       "start-order":"20"

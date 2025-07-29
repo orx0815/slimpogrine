@@ -83,6 +83,11 @@
                                 <version>${sling.starter.version}</version>
                                 <type>slingosgifeature</type>
                             </includeArtifact>
+                            <artifactsOverrides>
+                                <!-- Artifact clash overrides go here -->
+                                <artifactsOverride>org.apache.jackrabbit:oak-shaded-guava:ALL</artifactsOverride>
+                                <artifactsOverride>org.apache.sling:org.apache.sling.commons.johnzon:ALL</artifactsOverride>
+                            </artifactsOverrides>
                         </aggregate>
                         <aggregate>
                             <classifier>slimpogrine_oak_tar</classifier>
