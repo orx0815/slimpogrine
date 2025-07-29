@@ -2,10 +2,10 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="d11866e6-007a-4c5f-aa8c-75deecba452c"
+        cpl:replicatedVersion="a31c6fd2-4032-4db2-847c-38a5e4c76e8c"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
-        jcr:uuid="fa0dee10-9287-4f13-a484-26f2a140191e"
+        jcr:uuid="81b8b2d6-0e58-4721-9085-b16e2f52a3a6"
         sling:resourceType="composum/pages/components/page"
         template="composum/pages/components/templates/page/content">
         <top jcr:primaryType="cpp:Container">

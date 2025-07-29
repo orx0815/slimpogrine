@@ -39,20 +39,6 @@
                 jcr:primaryType="nt:unstructured"
                 key="fr"
                 label="français"/>
-            <greek
-                jcr:primaryType="nt:unstructured"
-                key="el"
-                label="ελληνικά"/>
-            <hebrew
-                jcr:primaryType="nt:unstructured"
-                direction="rtl"
-                key="he"
-                label="עִבְרִית"/>
-            <arabic
-                jcr:primaryType="nt:unstructured"
-                direction="rtl"
-                key="ar"
-                label="العربية"/>
             <chinese
                 jcr:primaryType="nt:unstructured"
                 key="zh"

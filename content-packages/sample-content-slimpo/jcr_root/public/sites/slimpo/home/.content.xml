@@ -2,10 +2,10 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="c97cd563-c9b4-453b-b2ac-6a98a1c401e5"
+        cpl:replicatedVersion="7aa588be-113d-41cf-9586-ba5a39fbf308"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
-        jcr:uuid="7f03299f-ffdd-43a2-8acb-6d661d44a043"
+        jcr:uuid="113ce817-6557-423b-861d-d14cf155cb5d"
         sling:resourceType="composum/pages/components/page/home"
         template="composum/pages/components/templates/page/home">
         <search jcr:primaryType="nt:unstructured">
@@ -45,10 +45,17 @@
                 <column-0
                     jcr:primaryType="cpp:Container"
                     sling:resourceType="composum/pages/components/container/row/column">
-                    <text
+                    <textimage
                         jcr:primaryType="cpp:Element"
-                        sling:resourceType="composum/pages/components/element/text"
-                        text="This homepage should contain a teaser collection to guide a visitor to its points of interest on this site."/>
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        floatingText="{Boolean}true"
+                        imagePosition="right"
+                        text="&lt;p>In a cold, sterile laboratory, where the hum of machines never ceased, a small white jackrabbit sat alone in a wire cage. Its pink eyes darted nervously, ears twitching at every sound. The scientists called him Subject 47, but he knew himself as Snow. The lab was a maze of blinking lights and echoing footsteps, but worst of all were the voices.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ul>  &#xd;&#xa;  &lt;li>&quot;Deliver the content faster,&quot; they whispered, though no one was near.&lt;/li>  &#xd;&#xa;  &lt;li>&quot;Optimize. Streamline. No delays,&quot; another voice hissed, bouncing off the metal walls.&lt;/li>  &#xd;&#xa;&lt;/ul>  &#xd;&#xa;&#xd;&#xa;&lt;p>Snow didn't understand what &quot;content&quot; was, but the voices demanded it with urgency. He pressed his paws against the cage door, longing for the open fields he barely remembered. The lab had stolen his freedom, and now it was stealing his mind.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;p>One night, as the fluorescent lights flickered, a new voice spoke—softer, kinder. &quot;You don't belong here,&quot; it murmured. &quot;Run.&quot; Snow's heart pounded. Was it a trick? A test? But the voice came again. &quot;The vents. Now.&quot;&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ol>  &#xd;&#xa;  &lt;li>With trembling paws, Snow nudged the latch of his cage—it was loose!&lt;/li>  &#xd;&#xa;  &lt;li>He squeezed through the bars and leaped onto a counter, scattering papers.&lt;/li>  &#xd;&#xa;  &lt;li>A small vent cover, just big enough, beckoned from the wall.&lt;/li>  &#xd;&#xa;&lt;/ol>  &#xd;&#xa;&#xd;&#xa;&lt;p>As he wriggled into the darkness, the angry voices rose behind him. &quot;Content incomplete! Subject escaping!&quot; But Snow didn't look back. The vent led him upward, toward a sliver of moonlight. The world outside was vast and unknown, but it was his. And for the first time in forever, the voices fell silent.&lt;/p>"
+                        title="Follow the white Jackrabbit">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/follow_the_white_jackrabbit_5.png"/>
+                    </textimage>
                 </column-0>
             </row>
             <row_1160738332

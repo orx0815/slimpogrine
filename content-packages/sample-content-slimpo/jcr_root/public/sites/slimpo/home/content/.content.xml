@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="9b00d4e7-7e82-49ca-9061-9edf58ca6c06"
+        cpl:replicatedVersion="ea288dc8-f486-4db5-b56f-c2e7eb8e97e1"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
         jcr:uuid="ba559f6f-dba4-4384-a4ed-014847d7fe38"
@@ -17,7 +17,21 @@
                 columns="-12-">
                 <column-0
                     jcr:primaryType="cpp:Container"
-                    sling:resourceType="composum/pages/components/container/row/column"/>
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <text
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/text"
+                        text="&lt;p>Apache Sling is an innovative web framework designed to simplify the development of content-centric applications. It is built on top of the Java Content Repository (JCR) and leverages the power of OSGi (Open Service Gateway initiative) to provide a modular and extensible architecture.&lt;/p>&lt;p>&lt;strong>Key Features of Apache Sling:&lt;/strong>&lt;/p>&lt;ul>&#xd;&#xa;    &lt;li>&lt;strong>Resource-Oriented:&lt;/strong> Treats web content as resources, making it easy to manage and manipulate.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>Scripting Support:&lt;/strong> Allows developers to use scripting languages like JSP, HTL (Sightly), and JavaScript for dynamic content rendering.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>RESTful Principles:&lt;/strong> Follows REST (Representational State Transfer) principles, enabling seamless integration with modern web applications.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>Modular Architecture:&lt;/strong> Built on OSGi, making it highly modular and allowing for dynamic updates without downtime.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>JCR Integration:&lt;/strong> Works seamlessly with Java Content Repository (JCR) standards like Apache Jackrabbit.&lt;/li>&#xd;&#xa;&lt;/ul>&lt;br>&lt;p>&lt;strong>Use Cases:&lt;/strong>&lt;/p>&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&lt;ol>&#xd;&#xa;    &lt;li>Content Management Systems (CMS)&lt;/li>&#xd;&#xa;    &lt;li>Websites and Portals&lt;/li>&#xd;&#xa;    &lt;li>Digital Experience Platforms&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&#xd;&#xa;&lt;p>Apache Sling is widely used in projects like Adobe Experience Manager (AEM) due to its flexibility and scalability.&lt;/p>"
+                        textAlignment="justify"
+                        title="What is Apache Sling? (AI generated)">
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Apache Sling ist ein innovatives Web-Framework, das entwickelt wurde, um die Erstellung inhaltszentrierter Anwendungen zu vereinfachen. Es basiert auf dem Java Content Repository (JCR) und nutzt die Leistungsfähigkeit von OSGi (Open Service Gateway Initiative), um eine modulare und erweiterbare Architektur zu bieten.&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;p>&lt;strong>Wichtige Merkmale von Apache Sling:&lt;/strong>&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;    &lt;li>&lt;strong>Ressourcenorientiert:&lt;/strong> Behandelt Webinhalte als Ressourcen, was die Verwaltung und Bearbeitung erleichtert.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>Skriptunterstützung:&lt;/strong> Ermöglicht Entwicklern die Verwendung von Skriptsprachen wie JSP, HTL (Sightly) und JavaScript für dynamisches Content-Rendering.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>RESTful-Prinzipien:&lt;/strong> Folgt den REST-Prinzipien (Representational State Transfer) und ermöglicht so eine nahtlose Integration mit modernen Webanwendungen.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>Modulare Architektur:&lt;/strong> Auf OSGi aufbauend, hochgradig modular und ermöglicht dynamische Updates ohne Ausfallzeiten.&lt;/li>&#xd;&#xa;    &lt;li>&lt;strong>JCR-Integration:&lt;/strong> Arbeitet nahtlos mit Java Content Repository (JCR)-Standards wie Apache Jackrabbit.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&#xd;&#xa;&lt;p>&lt;strong>Anwendungsfälle:&lt;/strong>&lt;/p>&#xd;&#xa;&lt;ol>&#xd;&#xa;    &lt;li>Content-Management-Systeme (CMS)&lt;/li>&#xd;&#xa;    &lt;li>Websites und Portale&lt;/li>&#xd;&#xa;    &lt;li>Digital Experience Plattformen&lt;/li>&#xd;&#xa;&lt;/ol>&#xd;&#xa;&#xd;&#xa;&lt;p>Apache Sling wird aufgrund seiner Flexibilität und Skalierbarkeit häufig in Projekten wie Adobe Experience Manager (AEM) eingesetzt.&lt;/p>"
+                                title="Was ist Apache Sling? (KI-generiert)"/>
+                        </i18n>
+                    </text>
+                </column-0>
             </row>
         </main>
         <top
