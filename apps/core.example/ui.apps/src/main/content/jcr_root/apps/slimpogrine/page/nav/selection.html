@@ -1,27 +1,51 @@
 <div class="design-selection" id="design-selection">
-				<h3 class="select">Building Blocks:</h3>
-				<nav role="navigation">
-					<ul>
-					<li>
-						<a href="https://csszengarden.com/" class="design-name">CSS Zen Garden</a>
-            on Github <a href="https://github.com/mezzoblue/csszengarden.com" class="designer-name">mezzoblue/csszengarden.com</a>
-					</li>
-          <li>
-						<a href="https://sling.apache.org/" class="design-name">Apache Sling™</a>
-            on Github <a href="https://github.com/apache/sling-aggregator" class="designer-name">apache/sling-aggregator</a>
-					</li>
-          <li>
-						<a href="https://www.composum.com/" class="design-name">Composum Pages</a> 
-            on Github <a href="https://github.com/ist-dresden/composum-pages" class="designer-name">ist-dresden/composum-pages</a>
-					</li>
-          <li>
-						<a href="https://www.peregrine-cms.com/"" class="design-name">Peregrine CMS</a>
-            on Github <a href="https://github.com/peregrine-cms" class="designer-name">peregrine-cms</a>
-					</li>
-          <li>
-						<a href="https://adapt.to/" class="design-name">adaptTo()</a>
-            APACHE SLING & FRIENDS TECH MEETUP
-					</li>
-          </ul>
-				</nav>
-			</div>
+  <h3 class="select">nav/selection.html</h3>
+  <nav role="navigation">
+    <ul data-sly-use.cssPicker="org.motorbrot.slimpogrine.slingmodels.CssZenGarden">
+      <li>
+        <a href="https://csszengarden.com/${cssPicker.design.cssId @ context='uri'}/" target="_blank" class="design-name">
+          The original '${cssPicker.design.name}'
+        </a>  
+        by <a href="${cssPicker.design.designerUrl @ context='uri'}" class="designer-name" target="_blank">${cssPicker.design.designerName}
+        </a>
+      </li>
+      
+      <li>
+        <a href="${cssPicker.nextDesign.urlWithFixedCss @ context='uri'}" class="design-name">
+          Next design '${cssPicker.nextDesign.name}'
+        </a>
+        by <a href="${cssPicker.nextDesign.designerUrl @ context='uri'}" class="designer-name" target="_blank">${cssPicker.nextDesign.designerName}
+        </a>
+      </li>
+      
+      <li>
+        <a href="${cssPicker.previousDesign.urlWithFixedCss @ context='uri'}" class="design-name">
+          Previous design '${cssPicker.previousDesign.name}'
+        </a>
+        by <a href="${cssPicker.previousDesign.designerUrl @ context='uri'}" class="designer-name" target="_blank">${cssPicker.previousDesign.designerName}
+        </a>
+      </li>
+
+      <li>
+        <a href="https://csszengarden.com/" class="design-name">CSS Zen Garden</a>
+        on Github <a href="https://github.com/mezzoblue/csszengarden.com" class="designer-name">mezzoblue/csszengarden.com</a>
+      </li>
+      <li>
+        <a href="https://sling.apache.org/" class="design-name">Apache Sling™</a>
+        on Github <a href="https://github.com/apache/sling-aggregator" class="designer-name">apache/sling-aggregator</a>
+      </li>
+      <li>
+        <a href="https://www.composum.com/" class="design-name">Composum Pages</a> 
+        on Github <a href="https://github.com/ist-dresden/composum-pages" class="designer-name">ist-dresden/composum-pages</a>
+      </li>
+      <li>
+        <a href="https://www.peregrine-cms.com/"" class="design-name">Peregrine CMS</a>
+        on Github <a href="https://github.com/peregrine-cms" class="designer-name">peregrine-cms</a>
+      </li>
+      <li>
+        <a href="https://adapt.to/" class="design-name">adaptTo()</a>
+        APACHE SLING & FRIENDS TECH MEETUP
+      </li>
+    </ul>
+  </nav>
+</div>

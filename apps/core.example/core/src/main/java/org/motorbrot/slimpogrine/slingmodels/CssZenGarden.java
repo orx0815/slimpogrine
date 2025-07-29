@@ -1,13 +1,17 @@
 package org.motorbrot.slimpogrine.slingmodels;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Random;
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
+import org.apache.sling.api.uri.SlingUriBuilder;
 import org.apache.sling.models.annotations.Model;
 import org.apache.sling.models.annotations.injectorspecific.Self;
+
 import org.jetbrains.annotations.Nullable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +22,7 @@ import org.slf4j.LoggerFactory;
 @Model(adaptables = {SlingHttpServletRequest.class})
 public class CssZenGarden {
 
-  private static final Design[] CSS_DESIGNS = new Design[]{
+  private final Design[] CSS_DESIGNS = new Design[]{
     new Design("041", "door to my garden", "Patrick Lauke", "http://redux.deviantart.com/"),
     new Design("083", "Springtime", "Boër Attila", ""),
     new Design("084", "Start Listening!", "Liz Lubowitz", "http://hiptobeasquare.com"),
@@ -34,7 +38,7 @@ public class CssZenGarden {
     new Design("194", "Dark Rose", "Rose Fu", "http://www.rosefu.net/"),
     new Design("195", "Dazzling Beauty", "Deny Sri Supriyono", "http://blog.denysri.com/"),
     new Design("198", "The Original", "Joachim Shotter", "http://www.bluejam.com/"),
-    new Design("199", "Zen Army", "Carl Desmond", "http://www.niceguy.com/"),
+    new Design("199", "Zen Army", "Carl Desmond", "https://www.niceguy.blog/"),
     new Design("200", "Icicle Outback", "Timo Virtanen", "http://www.timovirtanen.com/"),
     new Design("202", "Retro Theater", "Eric RogŽ", "http://space-sheeps.info/"),
     new Design("205", "spring360", "Rene Hornig", "http://www.medialab360.com/"),
@@ -45,6 +49,8 @@ public class CssZenGarden {
     new Design("218", "Apothecary", "Trent Walton", "http://www.trentwalton.com/"),
     new Design("219", "Steel", "Steffen Knoeller", "http://www.steffen-knoeller.de/"),
     new Design("221", "Mid Century Modern", "Andrew Lohman", "http://www.andrewlohman.com/"),
+    
+    // Vibe coded modern, responsive styles
     new Design("401", "Blue Vibe Code", "Claude Sonnet 4", "https://claude.ai/new"),
     new Design("402", "Light Vibe Code", "Claude Sonnet 4", "https://claude.ai/new")
 
@@ -55,13 +61,16 @@ public class CssZenGarden {
   private static final Logger LOG = LoggerFactory.getLogger(SampleRequestModel.class);
 
   private Design design;
+  
+  private final SlingHttpServletRequest request;
 
   /**
    * Constructor injection
+   * @param request via Sling-Model injection
    */
   @Inject
   public CssZenGarden(@Self SlingHttpServletRequest request) {
-
+    this.request = request;
     // Keep the same design per request, when model is called in different components
     this.design = (Design)request.getAttribute(REQUEST_ATTRIBUTE_CSS_ZEN_GARDEN_DESIGN);
     if (this.design == null) {
@@ -74,7 +83,7 @@ public class CssZenGarden {
           // pick one randomly
           Random rand = new Random();
           this.design = CSS_DESIGNS[rand.nextInt(CSS_DESIGNS.length)];
-          LOG.info("CSS-id is: " + this.design);
+          LOG.info("CSS-id is: " + this.design.cssId);
         }
       }
       request.setAttribute(REQUEST_ATTRIBUTE_CSS_ZEN_GARDEN_DESIGN, this.design);
@@ -119,50 +128,144 @@ public class CssZenGarden {
   }
 
   /**
-   * @return Random URL of zengarden's css (Sightly getter)
+   * Sightly getter
+   * @return current CSS info 
+   */
+  public Design getDesign() {
+    return this.design;
+  }
+
+  /**
+   * Sightly getter
+   * @return next CSS of our curated list
+   */
+  public Design getNextDesign() {
+    int nextIdx = ArrayUtils.indexOf(CSS_DESIGNS, this.design) + 1;
+    if (nextIdx == CSS_DESIGNS.length) {
+      nextIdx = 0;
+    }
+    return CSS_DESIGNS[nextIdx];
+  }
+  
+  /**
+   * Sightly getter
+   * @return previous CSS 
+   */
+  public Design getPreviousDesign() {
+    int prevIdx = ArrayUtils.indexOf(CSS_DESIGNS, this.design) - 1;
+    if (prevIdx == -1) {
+      prevIdx = CSS_DESIGNS.length - 1;
+    }
+    return CSS_DESIGNS[prevIdx];
+  }
+  
+  
+  /**
+   * Get random URL of zengarden's css (Sightly getter)
+   * @return URL to css
    */
   public String getRandomCssUrl() {
     return "/apps/slimpogrine/css_zen_garden/" + this.design.cssId + "/" + this.design.cssId + ".css";
   }
-
+  
   /**
-   * @return Name of the designer (Sightly getter)
+   * Links to current Page with given design 
+   * @param forcedDesign will be added as suffix
+   * @return url
    */
-  public String getDesignName() {
-    return this.design.name;
+  private String getUrlWithDesign(Design forcedDesign) {
+    
+    String resourcePath = request.getRequestPathInfo().getResourcePath();
+    
+    // Map the resource path to absolute and shortened URL (including host and port)
+    // https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#reverse-outgoing-mapping
+    // ToDo: add mappings to /etc/map
+    String externalUrl = request.getResourceResolver().map(resourcePath);
+    LOG.info("Mapped Url: " + externalUrl);
+    
+    String url = SlingUriBuilder.createFrom(request)
+      .setSuffix("/" + forcedDesign.cssId)
+      .build().toString();
+    return url;
   }
 
-  /**
-   * @return URL to designer's website (Sightly getter)
-   */
-  public String getDesignerUrl() {
-    return this.design.designerUrl;
-  }
 
   /**
-   * @return Name of the designer
+   * Data object holding info about a zengarden design like it's original creator
+   * Gets passed to the HTL/Sightly template
    */
-  public String getDesigner() {
-    return this.design.designerName;
-  }
-
-  /**
-   * Data object holding info about a zengarden design like it's original
-   * creator
-   */
-  public static class Design {
+  public class Design {
 
     private final String cssId;
     private final String name;
     private final String designerName;
     private final String designerUrl;
 
-    public Design(String cssId, String name, String designerName, String designerUrl) {
+    private Design(String cssId, String name, String designerName, String designerUrl) {
       this.cssId = cssId;
       this.name = name;
       this.designerName = designerName;
       this.designerUrl = designerUrl;
     }
+
+    /**
+     * Id from csszengarden.com
+     * @return ID of the design
+     */
+    public String getCssId() {
+      return cssId;
+    }
+
+    /**
+     * @return Name of the CSS
+     */
+    public String getName() {
+      return name;
+    }
+
+    /**
+     * @return Name of the designer
+     */
+    public String getDesignerName() {
+      return designerName;
+    }
+
+    /**
+     * @return URL to designer's website (Sightly getter)
+     */
+    public String getDesignerUrl() {
+      return designerUrl;
+    }
+    
+    /**
+     * @return URL to current page with this design forced
+     */
+    public String getUrlWithFixedCss() {
+      return getUrlWithDesign(this);
+    }
+
+    @Override
+    public int hashCode() {
+      int hash = 5;
+      hash = 29 * hash + Objects.hashCode(this.cssId);
+      return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+      if (this == obj) {
+        return true;
+      }
+      if (obj == null) {
+        return false;
+      }
+      if (getClass() != obj.getClass()) {
+        return false;
+      }
+      final Design other = (Design)obj;
+      return Objects.equals(this.cssId, other.cssId);
+    }
+
   }
 
 }
