@@ -181,11 +181,13 @@ public class CssZenGarden {
     // https://sling.apache.org/documentation/the-sling-engine/mappings-for-resource-resolution.html#reverse-outgoing-mapping
     // ToDo: add mappings to /etc/map
     String externalUrl = request.getResourceResolver().map(resourcePath);
-    LOG.info("Mapped Url: " + externalUrl);
     
-    String url = SlingUriBuilder.createFrom(request)
+    String url = SlingUriBuilder.parse(externalUrl, request.getResourceResolver())
+      .setExtension("html")
       .setSuffix("/" + forcedDesign.cssId)
       .build().toString();
+    
+    LOG.info("Mapped Url: " + url);
     return url;
   }
 
