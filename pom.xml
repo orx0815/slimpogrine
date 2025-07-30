@@ -22,7 +22,7 @@
   
   <groupId>org.motorbrot</groupId>
   <artifactId>slimpogrine.parent</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2</version>
   <packaging>pom</packaging>
   <name>SliMpoGrine - parent</name>
   <description>Composum-Pages + Peregrine CMSs ontop of Apache Sling (Parent POM)</description>
@@ -81,7 +81,7 @@
     <oak.version>1.72.0</oak.version>
     
     <!-- Enable reproducible builds -->
-    <project.build.outputTimestamp>2025-07-30T09:07:47Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2025-07-30T11:21:18Z</project.build.outputTimestamp>
     
     <!-- D E P E N D E N C I E S          
          Compile-time, present in Apache Sling Starter                          -->
@@ -345,4 +345,8 @@
       
     </profile>
   </profiles>
+
+  <scm>
+    <tag>slimpogrine.parent-1.2</tag>
+  </scm>
 </project>
