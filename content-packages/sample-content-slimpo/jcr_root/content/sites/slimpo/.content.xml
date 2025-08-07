@@ -15,12 +15,12 @@
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="composum/pages/components/element/image"
-            imageRef="/content/sites/slimpo/assets/logo/Composum-color.svg"/>
+            imageRef="/content/sites/slimpo/assets/logo/slingslop_640x480.png"/>
         <thumbnail jcr:primaryType="nt:unstructured">
             <image
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="composum/pages/components/element/image"
-                imageRef="/content/sites/slimpo/assets/thumbnail/pages-dk.png"/>
+                imageRef="/content/sites/slimpo/assets/logo/slingslop_640x480.png"/>
         </thumbnail>
         <languages jcr:primaryType="nt:unstructured">
             <english

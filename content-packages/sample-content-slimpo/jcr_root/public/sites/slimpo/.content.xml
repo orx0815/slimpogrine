@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
-    cpl:releaseChangeNumber="chg339279332284503023"
+    cpl:releaseChangeNumber="chg5125562646043148400"
     jcr:primaryType="cpp:Site">
     <jcr:content
-        cpl:replicatedVersion="7ae17fff-a599-4584-8abb-4c14ff953efc"
+        cpl:replicatedVersion="6d17e4dd-7163-465d-bf05-1f93c2c4d893"
         jcr:description="Reference content deployed with the launcher&lt;br>"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:SiteConfiguration"
@@ -18,12 +18,12 @@
         <logo
             jcr:primaryType="nt:unstructured"
             sling:resourceType="composum/pages/components/element/image"
-            imageRef="/public/sites/slimpo/assets/logo/Composum-color.svg"/>
+            imageRef="/public/sites/slimpo/assets/logo/slingslop_640x480.png"/>
         <thumbnail jcr:primaryType="nt:unstructured">
             <image
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="composum/pages/components/element/image"
-                imageRef="/public/sites/slimpo/assets/thumbnail/pages-dk.png"/>
+                imageRef="/public/sites/slimpo/assets/logo/slingslop_640x480.png"/>
         </thumbnail>
         <languages jcr:primaryType="nt:unstructured">
             <english
