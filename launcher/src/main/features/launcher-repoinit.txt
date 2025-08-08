@@ -16,7 +16,7 @@
         allow jcr:read on /var/composum/clientlibs
         allow jcr:read on /apps/slimpogrine/css_zen_garden
 
-        allow jcr:read on /libs/composum/nodes/commons/components/clientlibs
+        allow jcr:read on /libs/composum/nodes/commons
         allow jcr:read on /libs/composum/pages/commons
         allow jcr:read on /libs/composum/pages/options/ai/clientlibs
         allow jcr:read on /libs/composum/platform
