@@ -1,0 +1,49 @@
+{{#if httpd.ssl.certificateFile ~}}
+{{ensureProperties
+    "httpd.serverNameSsl"
+    "httpd.ssl.certificateKeyFile"
+~}}
+
+# Virtual host for publish site of tenant {{tenant}} (HTTPS)
+<VirtualHost {{httpd.serverListenAddressSsl}}:{{httpd.serverPortSsl}}>
+
+{{~#partial "serverName"}}
+# Primary hostname
+ServerName {{httpd.serverNameSsl}}
+{{/partial}}
+
+{{~#partial "serverAliasNames"}}
+{{~#if httpd.serverAliasNamesSsl}}
+# Alternative hostnames
+{{~#each httpd.serverAliasNamesSsl}}
+ServerAlias {{this}}
+{{~/each}}
+{{~/if}}
+{{/partial}}
+
+{{#partial "rewriteEnforcePrimaryHostname"}}
+# Make sure primary hostname is always used - but don't rewrite the dispatcher invalidation URL
+RewriteCond %{REQUEST_URI} !^/dispatcher/invalidate.cache
+RewriteCond %{HTTP_HOST} !^{{regexQuote (httpHostSsl httpd.serverNameSsl port=httpd.serverPortSsl)}}$ [NC]
+RewriteRule ^(.*)$ https://{{httpHostSsl httpd.serverNameSsl port=httpd.serverPortSsl}}$1 [R=301,L]
+{{/partial ~}}
+
+
+{{> slimpogrine-webcache/publish/vhost_publish_tenant.partials.hbs}}
+
+# SSL configuration
+SSLEngine on
+SSLCertificateFile      {{httpd.ssl.certificateFile}}
+SSLCertificateKeyFile   {{httpd.ssl.certificateKeyFile}}
+{{#if httpd.ssl.caCertificatePath}}
+SSLCACertificatePath    {{httpd.ssl.caCertificatePath}}
+{{/if}}
+{{#if httpd.ssl.caCertificateFile}}
+SSLCACertificateFile    {{httpd.ssl.caCertificateFile}}
+{{/if}}
+SSLProtocol             {{httpd.ssl.protocol}}
+SSLCipherSuite          {{httpd.ssl.cipherSuite}}
+
+</VirtualHost>
+
+{{~/if}}

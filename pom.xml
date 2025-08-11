@@ -318,7 +318,8 @@
     <module>/content-packages/all</module>
     <module>/content-packages/sample-content-slimpo</module>
     <module>/content-packages/sample-content-sligrine</module>
-    <module>launcher</module>
+    <module>/launcher</module>
+    <module>/dev-ops/conga-slimpogrine-definitions</module>
   </modules>
   
   <profiles>

@@ -1,0 +1,83 @@
+# Example prod Environment
+nodes:
+
+- node: slimpogrine-standalone-node
+
+  config:
+
+  roles:
+  - role: slimpogrine-sling
+    variant: slimpogrine-standalone-variant
+  - role: slimpogrine-webcache
+    variants:
+    - slimpogrine-webcache-variant
+    - ssl
+    - http2
+    config:
+      httpd:
+        accessRestriction:
+          locationFilter:
+          - location: /location3Allow
+            type: allow
+          - location: /location4Deny
+            type: deny
+          - location: /admin
+            type: allow
+          - _merge_
+
+config:
+  quickstart:
+    enableDavEx: true
+    adminUser:
+      username: admin
+      password: mynewpwd
+      passwordOld: admin
+
+  httpd:
+    logging:
+      level: error
+      accessLogFormat: '"%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\""'
+      rewriteLogLevel: debug
+    accessRestriction:
+      adminAccessFromIp: 10.0.0.0/255.0.0.0
+      adminAccessFromHost: www.example.org
+    ssl:
+      certificateFile: /etc/ssl/certs/sample.crt
+      certificateKeyFile: /etc/ssl/private/sample.key
+      cACertificatePath: /etc/ssl/certs
+      cACertificateFile: /etc/ssl/certs/sample.pem
+
+  sling:
+    caconfig:
+      overrides:
+        "/content":
+        - io.wcm.handler.url.SiteConfig/siteUrl="http://site1"
+        - io.wcm.handler.url.SiteConfig/siteUrlAuthor="https://author.site1"
+
+
+tenants:
+
+- tenant: www.motorbrot.local:8080
+  config:
+    httpd:
+      serverName: www.motorbrot.local
+      portSuffix: 8080
+      serverAliasNames:
+      - motorbrot.local
+      rootRedirect.url: /home.html
+    
+- tenant: slimpo.motorbrot.local:8080
+  config:
+    httpd:
+      serverName: slimpo.motorbrot.local
+      portSuffix: 8080
+      rootRedirect.url: /home.html
+    sling.mapping.rootPath: /public/sites/slimpo
+
+- tenant: sligrine.motorbrot.local:8080
+  config:
+    httpd:
+      serverName: sligrine.motorbrot.local
+      portSuffix: 8080
+      rootRedirect.url: /index.html
+    sling.mapping.rootPath: /content/sligrine/pages

@@ -1,0 +1,32 @@
+[feature name=aem-cms-system-config]
+
+
+[configurations]
+
+{{~#if quickstart.enableDavEx}}
+  # Enable Apache Sling DavEx Servlet to be able to use CRX DE Lite
+  org.apache.sling.jcr.davex.impl.servlets.SlingDavExServlet
+    alias="/crx/server"
+    dav.create-absolute-uri=B"true"
+{{~/if}}
+
+{{#if sling.caconfig.overrides}}
+  # Sling Context-Aware Configuration Overrides
+  org.apache.sling.caconfig.impl.override.OsgiConfigurationOverrideProvider-conga-aem-cms-system-config
+    enabled=B"true"
+    description="CONGA aem-cms-system-config"
+    overrides=[
+      {{~#each sling.caconfig.overrides ~}}
+        {{~#each this ~}}
+          "[{{../@key}}]{{this}}",
+        {{~/each ~}}
+      {{~/each ~}}
+    ]
+{{/if}}
+
+{{#if quickstart.adminUser.password}}
+  # Apache Felix OSGi Management Console configuration
+  org.apache.felix.webconsole.internal.servlet.OsgiManager
+    username="{{quickstart.adminUser.username}}"
+    password="{{webconsolePasswordHash quickstart.adminUser.password}}"
+{{/if}}

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <artifactId>slimpogrine.parent</artifactId>
+    <groupId>org.motorbrot</groupId>
+    <version>1.3-SNAPSHOT</version>
+    <relativePath>../../pom.xml</relativePath>
+  </parent>
+
+
+  <artifactId>org.motorbrot.conga.definitions.slimpogrine</artifactId>
+  <packaging>config</packaging>
+
+  <name>Slimpogrine - CONGA Definitions</name>
+  <description>Example environment definition.</description>
+
+  <build>
+
+    <plugins>
+
+      <plugin>
+        <groupId>io.wcm.devops.conga</groupId>
+        <artifactId>conga-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <dependencies>
+
+          <!-- Activate further CONGA plugins for special file types -->
+          <dependency>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>io.wcm.devops.conga.plugins.sling</artifactId>
+            <version>1.4.2</version>
+          </dependency>
+          <dependency>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>io.wcm.devops.conga.plugins.aem</artifactId>
+            <version>2.21.0</version>
+          </dependency>
+
+          <!-- Test with ansible encryption -->
+          <dependency>
+            <groupId>io.wcm.devops.conga.plugins</groupId>
+            <artifactId>io.wcm.devops.conga.plugins.ansible</artifactId>
+            <version>1.4.8</version>
+          </dependency>
+
+        </dependencies>
+        <configuration>
+
+          <!-- Path to AEM crytpo key (recommendation: encrypt it with Ansible Vault) -->
+          <pluginConfig>
+            aem-plugin;cryptoAesKeyUrl=classpath:/crypto/master
+          </pluginConfig>
+
+        </configuration>
+      </plugin>
+
+      <!-- only for this example: set Ansible vault password as system property via maven plugin -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>properties-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+            <id>set-properties</id>
+            <goals>
+              <goal>set-system-properties</goal>
+            </goals>
+            <configuration>
+              <properties>
+                <ansible.vault.password>test123</ansible.vault.password>
+              </properties>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <!-- do not deploy this example into maven repository -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <inherited>false</inherited>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- do not generate site for this project -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <configuration>
+          <skip>true</skip>
+          <skipDeploy>true</skipDeploy>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

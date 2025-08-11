@@ -1,0 +1,120 @@
+{
+  "jcr:primaryType": "sling:Folder",
+
+  "http": {
+    "jcr:primaryType": "sling:Folder"
+
+{{~#eachIf tenants "config.sling.mapping.rootPath" as |tenant|}}
+{{~#assign "tenantName"}}{{tenant.tenant}}{{/assign}}
+{{~#withAllCloudManagerConditional tenant.config}}
+{{~#assign "serverName"}}{{#if httpd.serverName}}{{httpd.serverName}}{{else}}{{tenantName}}{{/if}}{{/assign}}
+{{~#assign "portSuffix"}}{{#ifNotEquals httpd.serverPort 80}}.{{httpd.serverPort}}{{/ifNotEquals}}{{/assign}}
+{{~#neq serverName "*"}},
+    "{{serverName}}{{portSuffix}}": {
+      "jcr:primaryType": "sling:Mapping",
+      "sling:internalRedirect": ["{{sling.mapping.rootPath}}"],
+      "resolver-mapping": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "(.+)$",
+        "sling:internalRedirect": ["/$1","{{sling.mapping.rootPath}}/$1"]
+      },
+      "reverse-mapping-root-with-selector": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$1",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}(\\..+)"]
+      },
+      "reverse-mapping-root": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}"]
+      }
+    }
+{{/neq ~}}
+{{~#each httpd.serverAliasNames as |alias|}}
+{{~#assign "serverAlias"}}{{alias}}{{/assign}}
+{{~#neq serverAlias "*"}},
+    "{{serverAlias}}{{portSuffix}}": {
+      "jcr:primaryType": "sling:Mapping",
+      "sling:internalRedirect": ["{{../sling.mapping.rootPath}}"],
+      "resolver-mapping": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "(.+)$",
+        "sling:internalRedirect": ["/$1","{{sling.mapping.rootPath}}/$1"]
+      },
+      "reverse-mapping-root-with-selector": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$1",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}(\\..+)"]
+      },
+      "reverse-mapping-root": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}"]
+      }
+    }
+{{/neq ~}}
+{{/each ~}}
+{{/withAllCloudManagerConditional ~}}
+{{/eachIf ~}}
+
+  },
+
+  "https": {
+    "jcr:primaryType": "sling:Folder"
+
+{{~#eachIf tenants "config.sling.mapping.rootPath" as |tenant|}}
+{{~#assign "tenantName"}}{{tenant.tenant}}{{/assign}}
+{{~#withAllCloudManagerConditional tenant.config}}
+{{~#assign "serverName"}}{{#if httpd.serverName}}{{httpd.serverName}}{{else}}{{tenantName}}{{/if}}{{/assign}}
+{{~#assign "portSuffix"}}{{#ifNotEquals httpd.serverPort 80}}.{{httpd.serverPort}}{{/ifNotEquals}}{{/assign}}
+{{~#neq serverName "*"}},
+    "{{serverName}}{{portSuffix}}": {
+      "jcr:primaryType": "sling:Mapping",
+      "sling:internalRedirect": ["{{sling.mapping.rootPath}}"],
+      "resolver-mapping": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "(.+)$",
+        "sling:internalRedirect": ["/$1","{{sling.mapping.rootPath}}/$1"]
+      },
+      "reverse-mapping-root-with-selector": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$1",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}(\\..+)"]
+      },
+      "reverse-mapping-root": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}"]
+      }
+    }
+{{/neq ~}}
+{{~#each httpd.serverAliasNames as |alias|}}
+{{~#assign "serverAlias"}}{{alias}}{{/assign}}
+{{~#neq serverAlias "*"}},
+    "{{serverAlias}}{{portSuffix}}": {
+      "jcr:primaryType": "sling:Mapping",
+      "sling:internalRedirect": ["{{../sling.mapping.rootPath}}"],
+      "resolver-mapping": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "(.+)$",
+        "sling:internalRedirect": ["/$1","{{sling.mapping.rootPath}}/$1"]
+      },
+      "reverse-mapping-root-with-selector": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$1",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}(\\..+)"]
+      },
+      "reverse-mapping-root": {
+        "jcr:primaryType": "sling:Mapping",
+        "sling:match": "$",
+        "sling:internalRedirect": ["{{sling.mapping.rootPath}}"]
+      }
+    }
+{{/neq ~}}
+{{/each ~}}
+{{/withAllCloudManagerConditional ~}}
+{{/eachIf ~}}
+
+  }
+
+}

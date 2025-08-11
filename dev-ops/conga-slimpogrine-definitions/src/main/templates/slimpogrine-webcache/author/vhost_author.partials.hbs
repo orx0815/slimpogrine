@@ -1,0 +1,87 @@
+{{!-- Contains configuration snippets that can be used when building the vhost author template --}}
+
+{{~#block "serverName"}}
+# Primary hostname
+ServerName {{httpd.serverName}}
+{{/block}}
+
+
+{{~#block "serverAliasNames"}}
+{{~#if httpd.serverAliasNames}}
+# Alternative hostnames
+{{~#each httpd.serverAliasNames}}
+ServerAlias {{this}}
+{{~/each}}
+{{~/if}}
+{{/block}}
+
+
+{{~#block "http2"}}
+{{~#if httpd.http2.enabled}}
+# Enable HTTP/2
+ProtocolsHonorOrder On
+Protocols h2 h2c http/1.1
+{{/if}}
+{{/block}}
+
+
+{{~#block "logSettings"}}
+# Possible values include: debug, info, notice, warn, error, crit, alert, emerg.
+LogLevel {{httpd.logging.level}}
+ErrorLog ${APACHE_LOG_DIR}/vhost_author_error.log
+CustomLog ${APACHE_LOG_DIR}/vhost_author_access.log {{httpd.logging.accessLogFormat}}
+{{/block}}
+
+
+{{~#block "generalSettings"}}
+# Suppress leaking the exact Apache/Dispatcher version
+ServerSignature Off
+
+# Enable rewrite engine
+RewriteEngine On
+{{/block}}
+
+{{~#block "remoteIPForwarding"}}
+{{~#if httpd.remoteIPInternalProxies}}
+# Trusted remote ip proxies
+<IfModule mod_remoteip.c>
+{{~#each httpd.remoteIPInternalProxies}}
+RemoteIPInternalProxy {{this}}
+{{~/each}}
+RemoteIPHeader {{httpd.remoteIPHeader}}
+</IfModule>
+{{~/if}}
+{{/block}}
+
+{{~#block "rewriteEnforcePrimaryHostname"}}
+# Make sure primary hostname is always used - but don't rewrite the dispatcher invalidation URL
+RewriteCond %{REQUEST_URI} !^/dispatcher/invalidate.cache
+RewriteCond %{HTTP_HOST} !^{{regexQuote (httpHost httpd.serverName port=httpd.serverPort)}}$ [NC]
+RewriteRule ^(.*)$ http://{{httpHost httpd.serverName port=httpd.serverPort}}$1 [R=301,L]
+{{/block}}
+
+
+{{~#block "damContentDispositionHeader"}}
+# Set content disposition header for downloads
+<LocationMatch "^.*/dam/.*\.download_attachment\..*$">
+  Header set Content-Disposition: attachment
+</LocationMatch>
+{{/block}}
+
+{{~#block "sslEnforce"}}
+{{~#if httpd.ssl.enforce}}
+# SSL enforcing
+Header always set Strict-Transport-Security "max-age=31536000"
+{{/if}}
+{{/block}}
+
+
+{{~#block "accessRestrictionsLocationFilter"}}
+# Location filter
+{{#each httpd.accessRestriction.locationFilter~}}
+{{aemHttpdFilter this allowFromKey="httpd.accessRestriction.adminAccessFromIp" allowFromHostKey="httpd.accessRestriction.adminAccessFromHost"}}
+{{/each~}}
+{{/block}}
+
+
+

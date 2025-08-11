@@ -1,0 +1,240 @@
+# On Premises Apache https with cache module for AEM Sling standalone instance
+# Generates general dispatcher configuration
+
+variants:
+
+# webcache for single instances - configure a tenant for each vhost
+- variant: slimpogrine-webcache-variant
+  config:
+
+    httpd:
+      # Default server name to tenant name on publish
+      serverName: ${tenant}
+
+# Mixin variant to support HTTPS access
+- variant: ssl
+  config:
+    httpd:
+      modules:
+      - _merge_
+      - ssl
+
+# Mixin variant to support HTTP/2
+- variant: http2
+  config:
+    httpd:
+      modules:
+        - _merge_
+        - http2
+      http2:
+        enabled: true
+
+templateDir: slimpogrine-webcache
+
+files:
+
+# --- publish ---
+
+# httpd vhost per tenant (HTTP)
+- file: ${new('java.text.DecimalFormat','0000').format(multiplyIndex)}_vhost_publish_${tenant}.conf
+  dir: vhosts.d
+  variants:
+  - slimpogrine-webcache-variant
+  template: publish/vhost_publish_tenant.conf.hbs
+  # Mulitply file for each tenant that has the given roles
+  multiply: tenant
+
+# httpd vhost per tenant (HTTPS)
+- file: ${new('java.text.DecimalFormat','0000').format(multiplyIndex)}_vhost_publish_${tenant}.ssl.conf
+  dir: vhosts.d
+  variants:
+  - sslimpogrine-webcache-variant
+  - ssl*
+  condition: ${httpd.ssl.certificateFile}
+  template: publish/vhost_publish_tenant.ssl.conf.hbs
+  # Mulitply file for each tenant that has the given roles
+  multiply: tenant
+
+
+config:
+
+  httpd:
+
+    # Modules to be activated in httpd as they are used in the templates. Use names that can be used with a2enmod.
+    modules:
+    - dispatcher
+    - rewrite
+    - headers
+
+    # HTTP/2 support. Defaults to false; enable it by adding the http2 variant.
+    http2:
+      enabled: false
+
+    # Server and alias names and - optionally - an alternative server names for SSL.
+    # On publish instances the server name defaults to the tenant name.
+    serverName:
+    serverNameSsl: ${httpd.serverName}
+    serverAliasNames:
+    serverAliasNamesSsl: ${httpd.serverAliasNames}
+
+    # Server ports
+    serverPort: 80
+    serverPortSsl: 443
+
+    # Server listen address
+    serverListenAddress: "*"
+    serverListenAddressSsl: ${httpd.serverListenAddress}
+
+    # Logging configuration
+    logging:
+      level: warn
+      # Access logging similar to "Combined", but without IP address (privacy protection)
+      accessLogFormat: '"0.0.0.0 %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-agent}i\""'
+      # Log level for mod_rewrite (error, warn, info, debug, trace1-trace8)
+      rewriteLogLevel: warn
+
+    # Access restrictions
+    accessRestriction:
+
+      # Allow access to administrative areas only to certain sources (same on author and publish)
+      locationFilter:
+      - location: /admin
+        type: deny_allow_admin
+      - location: /crx
+        type: deny_allow_admin
+      - location: /system
+        type: deny_allow_admin
+      - locationMatch: /system/sling/logout.*
+        type: allow
+
+      # Allow access to administrative URLs like /crx, /system/console etc. only from these sources
+      #adminAccessFromIp: 10.0.0.0/255.0.0.0
+      #adminAccessFromHost: www.example.org
+
+      # Allow dispatcher flush only from these sources
+      #dispatcherFlushFromIp: 127.0.0.1
+      #dispatcherFlushFromHost: localhost
+
+    # SSL configuration
+    ssl:
+      # SSL Certificate files
+      #certificateFile: /path/to/sslCertificateFile
+      #certificateKeyFile: /path/to/sslCertificateKeyFile
+      #caCertificatePath: /path/to/sslCACertificates
+      #caCertificateFile: /path/to/sslCACertificateFile
+
+      # If set to true, the certificate files won't be copied from the controlhost. This is useful in scenarios where
+      # the files are already present on the target host and are handled/maintained by another tool.
+      # This setting is only relevant in conjunction with the Ansible role wcm_io_devops.conga_aem_dispatcher.
+      #skipCopyCertificates: false
+
+      # If set to true all requests are redirected to HTTPS and HSTS is enabled
+      enforce: false
+
+      # SSL offloading configuration
+      offloading:
+        # if set to true a additional rewriteCondition will be added to the rewriteEnforcePrimaryHostname block to ensure
+        # requests forwarded for https are not rewritten to https
+        enabled: false
+        rewriteCondition: "%{HTTP:X-Forwarded-Proto} !https"
+
+      # SSL protocol and cipher configuration
+      protocol: "all -SSLv2 -SSLv3 -TLSv1 -TLSv1.1"
+      cipherSuite: "TLS13-AES-256-GCM-SHA384:TLS13-CHACHA20-POLY1305-SHA256:TLS13-AES-128-GCM-SHA256:TLS13-AES-128-CCM-8-SHA256:TLS13-AES-128-CCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:ECDHE-ECDSA-AES256-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA"
+
+    # Redirecting from "/" (only publish dispatcher)
+    rootRedirect:
+      #url: /en.html
+      httpStatus: 301
+
+    # Configure CORS header to be sent to the client (only on publish dispatcher)
+    corsHeader:
+      enabled: true
+      # Generate them by default only for font-related files
+      locationMatch: "\\.(svg|eot|ttf|woff)"
+      # If set to true always "*" is sent as 'Access-Control-Allow-Origin' header
+      # If set to false only the requesting host is all if it is in the hostWhiteList (or this list is empty), and not in the hostBlackList
+      allowAllHosts: true
+      #hostWhiteList:
+      #- "https://www.host1.com"
+      #- "https://www.host2.com"
+
+    headers:
+      # Enables/Configures the Content-Security-Policy header on publish dispatcher (see https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
+      contentSecurityPolicy:
+      # Enables/Configures the Feature-Policy  header on publish dispatcher (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy)
+      featurePolicy:
+      # Enables/Configures the Permissions-Policy header on publish dispatcher (see https://w3c.github.io/webappsec-permissions-policy/)
+      permissionsPolicy:
+      # Enables/Configures the Referrer-Policy header on publish dispatcher (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy)
+      referrerPolicy: "origin-when-cross-origin"
+      # Enables/Configures the X-XSS-Protection header on publish dispatcher (see https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection)
+      xssProtection:
+      # Enables/Configures the Cache-Control header on publish dispatcher (see https://developer.mozilla.org/en/docs/Web/HTTP/Headers/Cache-Control)
+      cacheControl:
+        # Cache AEM Clientlibs with long cache key for 1 year
+        - locationMatch: "\\.lc-.*-lc\\.min\\.(css|js)$"
+          directives: "max-age=31536000, public"
+
+    # Request URI patterns for Sling mapping short URL configuration
+    mapping:
+      uriExcludeFromMapping:
+      - ^/apps
+      - ^/bin
+      - ^/content
+      - ^/dispatcher/invalidate.cache
+      - ^/etc
+      - ^/home
+      - ^/libs
+      - ^/services
+      - ^/system
+      - ^/tmp
+      - ^/var
+      uriAllowContentAccess:
+      - ^/content/dam
+
+    # Custom configuration snippets for vhost files (only on publish dispatcher - useful for tenant-specific configurations)
+    customVHostConfig:
+      # Placed at the top of the vhost config file
+      before:
+      # Placed before the rewrite rules in the host config file
+      beforeRewrite:
+      # Placed at the bottom of the vhost confign file
+      after:
+
+    # Configures adresses (or address blocks) to trust as presenting a valid RemoteIPHeader (use in load balancer setup where client IP forwarding is needed)
+    remoteIPInternalProxies:
+    # - 10.0.2.0/24
+    # - gateway.localdomain
+    # The name of the header the remoteip module is using for detecting the client IP address
+    remoteIPHeader: X-Forwarded-For
+
+  sling:
+
+    # Configure Sling Mapping for URL shortening of content paths
+    mapping:
+      # Content root path which is stripped off
+      #rootPath: /content/path
+      # By default, only access to paths shortened via Sling Mapping are allowed. Set this to true to also allow unshortened paths.
+      #allowUnshortenedPath: false
+
+
+
+# Example tenant configuration. Tenant name = primary host name/server name
+#config:
+#  httpd:
+#    serverName: ${tenant}
+#    serverNameSsl:
+#    serverAliasNames:
+#    - alias1
+#    - alias2
+#    rootRedirect.url: /en.html
+#    ssl:
+#      certificateFile: /path/to/sslCertificateFile
+#      certificateKeyFile: /path/to/sslCertificateKeyFile
+#      caCertificateFile: /path/to/sslCACertificateFile
+#      caCertificatePath: /path/to/sslCACertificates
+#    customVHostConfig.after: |
+#      Custom Config Line 1
+#      Custom Config Line 2
+#  sling.mapping.rootPath: /content/path

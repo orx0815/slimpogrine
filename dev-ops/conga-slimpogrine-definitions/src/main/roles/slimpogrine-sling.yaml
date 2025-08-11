@@ -1,0 +1,151 @@
+# Sling server running in standalone configuration (edit+render on same node)
+variants:
+- variant: slimpogrine-standalone-variant
+  config:
+
+templateDir: slimpogrine-sling
+
+files:
+
+# Sling Mapping
+- file: slimpogrine-standalone-slingmapping.json
+  dir: packages
+  template: slingmapping.json.hbs
+  variants:
+  - slimpogrine-standalone-variant
+  condition: ${sling.mapping.generatePackage}
+  validatorOptions:
+    contentPackage.validatorsSettings:
+      jackrabbit-filter:
+        isDisabled: true
+  postProcessors:
+  - aem-contentpackage
+  postProcessorOptions:
+    dependencyChainIgnore: true
+    contentPackage:
+      name: slimpogrine-standalone-slingmapping
+      packageType: content
+      rootPath: /etc/map
+      filters:
+      - filter: /etc/map
+        rules:
+        - rule: include
+          pattern: /etc/map/.*
+        - rule: exclude
+          pattern: /etc/map/http/AppMeasurementBridge
+
+# AEM Quickstart start script
+- file: start
+  dir: bin
+  template: start.hbs
+  fileHeader: none
+
+# OSGi System Configuration
+- file: system-config.provisioning
+  dir: packages
+  template: system-config.provisioning.hbs
+  postProcessors:
+  - aem-contentpackage-osgiconfig
+  postProcessorOptions:
+    dependencyChainIgnore: true
+    contentPackage:
+      name: slimpogrine-standalone-system-config
+      rootPath: /apps/slimpogrine-single-system-config/config
+      filters:
+      - filter: /apps/slimpogrine-single-system-config
+
+# Crypto keys
+- file: master
+  dir: bundle-files/com.adobe.granite.crypto.file
+  url: ${crypto.aesCryptoKeyUrl}
+  condition: ${crypto.aesCryptoKeyUrl:}
+  modelOptions:
+    bundleFileProperties:
+      bundle: com.adobe.granite.crypto.file
+- file: hmac
+  dir: bundle-files/com.adobe.granite.crypto.file
+  url: ${crypto.hmacCryptoKeyUrl}
+  condition: ${crypto.hmacCryptoKeyUrl:}
+  modelOptions:
+    bundleFileProperties:
+      bundle: com.adobe.granite.crypto.file
+
+# Defines configuration parameters and default values
+config:
+  contentPackage:
+    group: conga-slimpogrine
+    version: ${version}
+
+  jvm:
+    heapspace:
+      min: 2048m
+      max: 2048m
+    permgenspace:
+      max: 256m
+    #timezone: Europe/Berlin
+    # Additional JVM argument
+    #args: arg1
+    # List of additional JVM arguments
+    #argsList:
+    #- arg1
+    #- arg2
+
+  quickstart:
+    # Port for AEM instance
+    port: 4502
+    # Default runmodes
+    runmodes:
+    - author
+    - nosamplecontent
+    # Hide configuration wizards after first AEM startup
+    hideConfigWizard: true
+    # Enable Apache Sling DavEx Servlet to be able to use CRXDE Lite
+    enableDavEx: false
+    # AEM root path where quickstart jar is located
+    rootPath: /opt/adobe/aem-author
+    # Seconds to wait for instance to be stopped until process is killed
+    stopTimeout: 1200
+
+    # AEM/Sling admin user
+    adminUser:
+      # The admin username
+      username: admin
+      # The admin password to set for OAK and Apache Felix Webconsole (used together with passwordOld to change the password in CONGA-Ansible automation)
+      password:
+      # The old (initial) admin password for OAK and Apache Felix Webconsole
+      passwordOld: admin
+
+  sling:
+
+    # Configure Sling Mapping for URL shortening of content paths
+    mapping:
+      # generate aem-cms-publish-slingmapping package by default
+      generatePackage: true
+      # Content root path which is stripped off
+      #rootPath: /content/path
+
+    caconfig:
+      # Example for config override configuration - key is context path, list values contain the override strings
+      # see also https://sling.apache.org/documentation/bundles/context-aware-configuration/context-aware-configuration-override.html
+      overrides:
+      #  "/content":
+      #  - io.wcm.handler.url.SiteConfig/siteUrl="http://site1"
+      #  - io.wcm.handler.url.SiteConfig/siteUrlAuthor="https://author.site1"
+
+  crypto:
+    # URLs of crypto keys to be deployed to AEM (as bundle files, supported for AEM 6.3 and up)
+    #aesCryptoKeyUrl: classpath:/crypto/master
+    #hmacCryptoKeyUrl: classpath:/crypto/hmac
+
+  httpd:
+    # Server ports - needs to be defined here to be available for dispatcher flush targets
+    serverPort: 80
+    serverPortSsl: 443
+
+
+
+# Configuration parameter that should be encrypted in model export YAML file
+sensitiveConfigParameters:
+- quickstart.adminUser.password
+- quickstart.adminUser.passwordOld
+- replication.author.publishTargets.transportPassword
