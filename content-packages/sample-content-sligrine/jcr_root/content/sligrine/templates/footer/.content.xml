@@ -25,37 +25,41 @@
         <nc12b75b5-25da-49e2-824e-0309b40a6a6b
             jcr:primaryType="nt:unstructured"
             sling:resourceType="themecleanflex/components/footer"
-            backgroundtype="color"
+            backgroundtype="image"
             bgcolor="#eeeeee"
+            bgimage="/content/sligrine/assets/snow_in_lab/cyberpunk-styled_laboratory_10.png"
             bgsize="cover"
             bgvideo="https://www.youtube.com/embed/Ju86mknumYM"
             bgxposition="50"
-            bgyposition="50"
+            bgyposition="80"
             blockwidth="default"
-            bottompadding="0"
+            bottompadding="15"
             color2="#c0c0c0"
             colorscheme="dark"
-            copyright="© 2020 example.com, Inc - All Rights Reserved"
-            custombackground="false"
+            copyright="© 2025 motorbrot.org, OS - No Rights Reserved"
+            custombackground="true"
             fullheight="false"
             htmlelement="footer"
-            iconcolor="#000000"
-            iconsize="25"
-            logo="/content/sligrine/assets/placeholders/1x1.png"
+            iconcolor="#e01b24"
+            iconcustomcolor="true"
+            iconsize="27"
+            logo="/content/sligrine/assets/logo/slingslop.png"
             logoalttext="example company logo"
-            logosize="60"
+            logosize="200"
             logourl="/content/sligrine/pages/index"
-            overlaycolor="#ffffff"
-            overlayopacity="50"
+            name="nc12b75b5-25da-49e2-824e-0309b40a6a6b"
+            overlay="true"
+            overlaycolor="#000080"
+            overlayopacity="25"
             showlogo="true"
-            toppadding="30">
+            toppadding="15">
             <columns jcr:primaryType="nt:unstructured">
                 <columns0
                     jcr:primaryType="nt:unstructured"
                     component="nt:unstructured"
                     name="columns0"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns0"
-                    text="&lt;div>&lt;ul>&lt;li>&lt;a href=&quot;/content/sligrine/pages/index.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Home&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/articles.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Articles&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/authors.html&quot; title=&quot;&quot; target=&quot;_self&quot;>Authors&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/sitemap.html&quot; title=&quot;our sitemap - access all pages of this site&quot; target=&quot;_self&quot;>Sitemap&lt;/a>&lt;/li>&lt;/ul>&lt;/div>&lt;div>&lt;br>&lt;/div>"
+                    text="&lt;div>&lt;ul>&lt;li>&lt;a href=&quot;https://www.motorbrot.org/&quot; title=&quot;Reverse CSS Zen Garden&quot; target=&quot;_self&quot; rel=&quot;noopener noreferrer&quot;>Reverse CSS Zen Garden&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;https://slimpo.motorbrot.org&quot; title=&quot;&quot; target=&quot;_self&quot;>Composum Pages site&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/authors&quot; title=&quot;&quot; target=&quot;_self&quot; rel=&quot;noopener noreferrer&quot;>Internal Link&lt;/a>&lt;/li>&lt;li>&lt;a href=&quot;/content/sligrine/pages/sitemap.html&quot; title=&quot;our sitemap - access all pages of this site&quot; target=&quot;_self&quot;>Sitemap&lt;/a>&lt;/li>&lt;/ul>&lt;/div>&lt;div>&lt;br>&lt;/div>"
                     title="Menu"/>
                 <n1594665568050
                     jcr:primaryType="nt:unstructured"
@@ -69,25 +73,25 @@
                     component="nt:unstructured"
                     name="columns1"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns1"
-                    text="&lt;p>EMail:&amp;nbsp;&lt;a href=&quot;mailto:info@example.com&quot; title=&quot;send us a note&quot; target=&quot;_self&quot;>info@example.com&lt;/a>&lt;br>Phone: ++1 949 555 1212&lt;/p>"
+                    text="&lt;p>EMail:&amp;nbsp;&lt;a href=&quot;mailto:info@motorbrot.org&quot; title=&quot;send us a note&quot; target=&quot;_self&quot;>info@motorbrot.org&lt;/a>&lt;br>Phone: +01 555-0167&lt;/p>"
                     title="Contact"/>
                 <columns2
                     jcr:primaryType="nt:unstructured"
                     component="nt:unstructured"
                     name="columns2"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/columns/columns2"
-                    text="&lt;p>1234 South Sample Way&lt;br>Neptune, CA 90909&lt;/p>"
+                    text="&lt;p>1234 South Sample Way&lt;br>Cloud 7, District 9&lt;/p>"
                     title="Location"/>
             </columns>
             <icons jcr:primaryType="nt:unstructured">
                 <icons1
                     jcr:primaryType="nt:unstructured"
                     component="nt:unstructured"
-                    icon="twitter"
-                    iconalttext="Twitter"
+                    icon="youtube"
+                    iconalttext="youtube.com / @adaptTo"
                     name="icons1"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/icons/icons1"
-                    url="https://twitter.com/"/>
+                    url="https://www.youtube.com/c/adaptTo/"/>
                 <icons2
                     jcr:primaryType="nt:unstructured"
                     component="nt:unstructured"
@@ -95,7 +99,7 @@
                     iconalttext="linkedin"
                     name="icons2"
                     path="/jcr:content/nc12b75b5-25da-49e2-824e-0309b40a6a6b/icons/icons2"
-                    url="https://www.linkedin.com"/>
+                    url="https://adapt.to/linkedin"/>
             </icons>
         </nc12b75b5-25da-49e2-824e-0309b40a6a6b>
     </jcr:content>

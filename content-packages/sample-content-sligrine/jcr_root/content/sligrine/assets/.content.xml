@@ -18,4 +18,6 @@
         useTitle="{Boolean}true"/>
     <placeholders/>
     <icons/>
+    <logo/>
+    <snow_in_lab/>
 </jcr:root>

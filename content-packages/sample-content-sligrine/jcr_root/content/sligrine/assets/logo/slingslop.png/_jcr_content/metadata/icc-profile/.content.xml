@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:Folder"
+    class="Display Device"
+    color_space="RGB "
+    connectionspace="XYZ "
+    dateandtime="2025:08:05 07:35:34"
+    description="1 enUS(GIMP built-in sRGB)"
+    platform="Apple Computer, Inc."
+    signature="acsp"
+    size="672"
+    tag_count="13"
+    version="4.4.0"/>

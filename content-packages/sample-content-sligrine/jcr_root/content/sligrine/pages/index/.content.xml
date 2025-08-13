@@ -17,6 +17,64 @@
         useDescription="true"
         useTitle="true">
         <nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b jcr:primaryType="nt:unstructured">
+            <nb7cade28-e981-4059-8454-cdea9fa8c912
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sligrine/components/header"
+                backgroundtype="image"
+                bgcolor="#ffffff"
+                bgimage="/content/sligrine/assets/snow_in_lab/cyberpunk-styled_laboratory_10.png"
+                bgsize="cover"
+                bgvideo="https://www.youtube.com/embed/Ju86mknumYM"
+                bgxposition="50"
+                bgyposition="45"
+                blockwidth="default"
+                bottompadding="10"
+                buttonsize="default"
+                collapsed="true"
+                color2="#c0c0c0"
+                colorscheme="light"
+                custombackground="true"
+                elevation="3"
+                fullheight="false"
+                htmlelement="section"
+                linkcolor="light"
+                logo="/content/sligrine/assets/logo/slingslop.png"
+                logoalttext="Sling Slop"
+                logosize="95"
+                logourl="/content/sligrine/pages/index"
+                name="nb7cade28-e981-4059-8454-cdea9fa8c912"
+                overlay="true"
+                overlaycolor="#000080"
+                overlayopacity="20"
+                sticky="true"
+                toppadding="10">
+                <links jcr:primaryType="nt:unstructured">
+                    <n1755086947779
+                        jcr:primaryType="nt:unstructured"
+                        component="nt:unstructured"
+                        link="https://github.com/orx0815/slimpogrine"
+                        name="n1755086947779"
+                        path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/nb7cade28-e981-4059-8454-cdea9fa8c912/links/n1755086947779"
+                        text="Github"/>
+                    <n1755086984212
+                        jcr:primaryType="nt:unstructured"
+                        component="nt:unstructured"
+                        link="https://slimpo.motorbrot.org"
+                        name="n1755086984212"
+                        path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/nb7cade28-e981-4059-8454-cdea9fa8c912/links/n1755086984212"
+                        text="SliMpo"/>
+                </links>
+                <buttons jcr:primaryType="nt:unstructured">
+                    <n1755087632546
+                        jcr:primaryType="nt:unstructured"
+                        buttoncolor="primary"
+                        buttonlink="https://www.motorbrot.org"
+                        buttontext="Zen Garden"
+                        component="nt:unstructured"
+                        name="n1755087632546"
+                        path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/nb7cade28-e981-4059-8454-cdea9fa8c912/buttons/n1755087632546"/>
+                </buttons>
+            </nb7cade28-e981-4059-8454-cdea9fa8c912>
             <nbd4db08a-f945-425c-a565-5e824304e07e
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="themecleanflex/components/teaservertical"
@@ -24,33 +82,37 @@
                 aligncontent="center"
                 backgroundtype="image"
                 bgcolor="#dbdbdb"
-                bgimage="/content/themecleanflex/assets/samples/beach-bird-s-eye-view-daytime-1249586.jpg"
+                bgimage="/content/sligrine/assets/snow_in_lab/cyberpunk-styled_laboratory_10.png"
                 bgsize="cover"
                 bgvideo="https://www.youtube.com/embed/Ju86mknumYM"
-                bgxposition="50"
-                bgyposition="50"
+                bgxposition="70"
+                bgyposition="66"
                 blockwidth="default"
                 bottompadding="30"
                 buttonsize="large"
                 color2="#c0c0c0"
-                colorscheme="light"
+                colorscheme="dark"
                 custombackground="true"
-                fullheight="true"
+                fullheight="false"
                 htmlelement="section"
-                imagesrc="\0"
+                imagesrc="/content/sligrine/assets/snow_in_lab/cyberpunk-styled_laboratory_10.png"
                 isprimary="true"
                 mediaposition="before"
-                mediawidth="50"
+                mediatitle="follow the white rabbit"
+                mediatype="image"
+                mediawidth="21"
                 name="nbd4db08a-f945-425c-a565-5e824304e07e"
                 overlay="true"
-                overlaycolor="#ffffff"
-                overlayopacity="70"
+                overlaycolor="#000080"
+                overlayopacity="13"
                 showbutton="true"
+                showmedia="false"
                 showsubtitle="true"
+                showtext="true"
                 showtitle="true"
-                subtitle="Peregrine Sample Content"
-                text="&lt;p>Eligendi fugit asperiores et. Corrupti voluptatum quasi sit. Adipisci ut voluptatem necessitatibus cumque aspernatur.&lt;/p>"
-                textwidth="100"
+                subtitle="Peregrine-CMS Sample Content"
+                text="Peregrine is an open-source CMS app installed in the same Apache-Sling server&lt;br>This text is part of [GH-PROJECT]/content-packages/sample-content-sligrine"
+                textwidth="98"
                 title="SLImpoGRINE"
                 toppadding="30"
                 videosrc="\0">
@@ -58,70 +120,18 @@
                     <buttons1
                         jcr:primaryType="nt:unstructured"
                         buttoncolor="primary"
-                        buttonlink="/content/sligrine/pages/articles"
-                        buttontext="Hello World !"
+                        buttonlink="https://github.com/orx0815/slimpogrine"
+                        buttontext="Fork me on Github"
                         component="nt:unstructured"
                         iconclass="\0"
                         name="buttons1"
                         path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/nbd4db08a-f945-425c-a565-5e824304e07e/buttons/buttons1"/>
                 </buttons>
+                <imagesrcSize
+                    jcr:primaryType="nt:unstructured"
+                    height="{Long}1024"
+                    width="{Long}1024"/>
             </nbd4db08a-f945-425c-a565-5e824304e07e>
-            <n18f5aba5-9653-4db0-9a20-13092813533f
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="themecleanflex/components/teaservertical"
-                alignbuttons="center"
-                aligncontent="center"
-                backgroundtype="gradient"
-                bgcolor="#ffffff"
-                bgsize="cover"
-                bgvideo="https://www.youtube.com/embed/Ju86mknumYM"
-                bgxposition="50"
-                bgyposition="50"
-                blockwidth="default"
-                bottompadding="0"
-                buttonsize="default"
-                color2="#c0c0c0"
-                colorscheme="\0"
-                custombackground="false"
-                fullheight="false"
-                gradient="true"
-                htmlelement="section"
-                imagesrc="\0"
-                mediaposition="before"
-                mediawidth="50"
-                overlaycolor="#ffffff"
-                overlayopacity="50"
-                showbutton="false"
-                showsubtitle="true"
-                showtext="false"
-                showtitle="true"
-                subtitle="Molestiae alias et inventore voluptas"
-                text="&lt;p>Eligendi fugit asperiores et. Corrupti voluptatum quasi sit. Adipisci ut voluptatem necessitatibus cumque aspernatur.&lt;/p>"
-                textwidth="100"
-                title="Our Services"
-                toppadding="30"
-                videosrc="\0">
-                <buttons jcr:primaryType="nt:unstructured">
-                    <buttons0
-                        jcr:primaryType="nt:unstructured"
-                        buttoncolor="primary"
-                        buttonlink="/content/sligrine/pages"
-                        buttontext="See More"
-                        component="nt:unstructured"
-                        iconclass="\0"
-                        name="buttons0"
-                        path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/n18f5aba5-9653-4db0-9a20-13092813533f/buttons/buttons0"/>
-                    <buttons1
-                        jcr:primaryType="nt:unstructured"
-                        buttoncolor="primary"
-                        buttonlink="/content/sligrine/pages"
-                        buttontext="About Us"
-                        component="nt:unstructured"
-                        iconclass="\0"
-                        name="buttons1"
-                        path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/n18f5aba5-9653-4db0-9a20-13092813533f/buttons/buttons1"/>
-                </buttons>
-            </n18f5aba5-9653-4db0-9a20-13092813533f>
             <n8ce6d014-0487-4f81-97ca-2ba2b75b405b
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="themecleanflex/components/cards"
@@ -143,6 +153,7 @@
                 customcardcolor="false"
                 fullheight="false"
                 htmlelement="section"
+                name="n8ce6d014-0487-4f81-97ca-2ba2b75b405b"
                 overlaycolor="#ffffff"
                 overlayopacity="50"
                 roundedcorners="large"
@@ -160,13 +171,18 @@
                         buttonsize="default"
                         buttontext="View"
                         component="nt:unstructured"
-                        image="/content/sligrine/assets/placeholders/16x9.png"
+                        image="/content/sligrine/assets/snow_in_lab/follow_the_white_jackrabbit.png"
                         imagealttext="Organized rope hanging on a winch"
                         imagewidth="\0"
                         name="cards0"
                         path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/n8ce6d014-0487-4f81-97ca-2ba2b75b405b/cards/cards0"
-                        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sagittis, est eget commodo imperdiet, lectus quam bibendum ex, eu commodo mi diam molestie tortor."
-                        title="Service 1"/>
+                        text="Explain some basic concepts like OSGi/JCR/Sling, Composum apps, content-packages, ... &amp;nbsp;&lt;br>Create your own launcher with the&amp;nbsp;&lt;span>&lt;em>&lt;b>Sling OSGi Feature Model&lt;/b>&lt;/em> &lt;/span>"
+                        title="Getting started">
+                        <imageSize
+                            jcr:primaryType="nt:unstructured"
+                            height="{Long}1024"
+                            width="{Long}1024"/>
+                    </cards0>
                     <cards1
                         jcr:primaryType="nt:unstructured"
                         buttonalign="center"
@@ -175,13 +191,18 @@
                         buttonsize="default"
                         buttontext="View"
                         component="nt:unstructured"
-                        image="/content/sligrine/assets/placeholders/16x9.png"
+                        image="/content/sligrine/assets/snow_in_lab/steampunk-styled_laboratory.png"
                         imagealttext="Several sets of rope"
                         imagewidth="\0"
                         name="cards1"
                         path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/n8ce6d014-0487-4f81-97ca-2ba2b75b405b/cards/cards1"
-                        text="Maecenas fermentum neque feugiat purus condimentum, sed molestie dolor fermentum. Nullam vestibulum tellus dolor. Cras viverra vel diam quis iaculis."
-                        title="Service 2"/>
+                        text="Tipps and tricks for creating own apps."
+                        title="Develop ">
+                        <imageSize
+                            jcr:primaryType="nt:unstructured"
+                            height="{Long}1024"
+                            width="{Long}1024"/>
+                    </cards1>
                     <cards2
                         jcr:primaryType="nt:unstructured"
                         buttonalign="center"
@@ -190,13 +211,18 @@
                         buttonsize="default"
                         buttontext="View"
                         component="nt:unstructured"
-                        image="/content/sligrine/assets/placeholders/16x9.png"
+                        image="/content/sligrine/assets/snow_in_lab/sling-catapult_and_jackrabbit_3.png"
                         imagealttext="Messy pile of rope"
                         imagewidth="\0"
                         name="cards2"
                         path="/jcr:content/nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b/n8ce6d014-0487-4f81-97ca-2ba2b75b405b/cards/cards2"
-                        text="Fusce sagittis, est eget commodo imperdiet, lectus quam bibendum ex, eu commodo mi diam molestie tortor.Cras viverra vel diam quis iaculis."
-                        title="Service 3"/>
+                        text="Once we have our docker-image, let's bring it online on low-cost cloud servers. Setup a proxy serving multiple domains. GitOps, kubernetes, secrets"
+                        title="Launch">
+                        <imageSize
+                            jcr:primaryType="nt:unstructured"
+                            height="{Long}1024"
+                            width="{Long}1024"/>
+                    </cards2>
                 </cards>
             </n8ce6d014-0487-4f81-97ca-2ba2b75b405b>
         </nebf8e89b-7765-4d9c-9e19-bff3f4d03a7b>

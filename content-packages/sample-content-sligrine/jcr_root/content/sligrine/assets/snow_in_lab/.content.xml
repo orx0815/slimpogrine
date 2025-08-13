@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder"
+    jcr:title="snow_in_lab">
+    <cyberpunk-styled_laboratory_10.png/>
+    <cyberpunk-styled_laboratory_8.png/>
+    <steampunk-styled_laboratory.png/>
+    <sling-catapult_and_jackrabbit_7.png/>
+    <sling-catapult_and_jackrabbit_5.png/>
+    <sling-catapult_and_jackrabbit_3.png/>
+    <more_cyberpunk-rabbits_4.png/>
+    <more_cyberpunk-rabbits_2.png/>
+    <follow_the_white_jackrabbit.png/>
+    <follow_the_white_jackrabbit_8.png/>
+</jcr:root>
