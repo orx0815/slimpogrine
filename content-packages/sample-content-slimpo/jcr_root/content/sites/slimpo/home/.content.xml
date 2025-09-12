@@ -23,7 +23,7 @@
             <teaser
                 jcr:primaryType="cpp:Element"
                 sling:resourceType="composum/pages/components/element/teaser"
-                link="/content/sites/slimpo/home/test"
+                link="/content/sites/slimpo/home/learn_basics"
                 path="\0"
                 subtitle="Slimpogrine Composum-Pages Sample Content"
                 text="Reference content deployed with the launcher.&lt;br>"
@@ -31,25 +31,26 @@
                 variation="bgimage">
                 <image
                     jcr:primaryType="nt:unstructured"
-                    imageRef="/content/sites/slimpo/assets/background/coruscant2_1920x480.jpg"/>
+                    imageRef="/content/sites/slimpo/assets/rabbit/cyberpunk-styled_laboratory_10.jpg"
+                    title="Sling Basics"/>
             </teaser>
             <teaser1
                 jcr:primaryType="cpp:Element"
                 sling:resourceType="composum/pages/components/element/teaser"
-                link="/content/sites/slimpo/home/test"
+                link="/content/sites/slimpo/home/develop"
                 path="\0"
-                subtitle="Slimpogrine Composum-Pages Sample Content"
-                text="Reference content deployed with the launcher.&lt;br>"
-                title="Hello World !"
+                subtitle="on top of Sling"
+                text="Tips and tricks around maven, feature-models, sling-models, sightly, OSGi ...."
+                title="Develop"
                 variation="bgimage">
                 <image
                     jcr:primaryType="nt:unstructured"
-                    imageRef="/content/sites/slimpo/assets/background/catapult_inside_of_laboratory_1920x480.jpg"/>
+                    imageRef="/content/sites/slimpo/assets/rabbit/cyberpunk-styled_laboratory_5.jpg"/>
             </teaser1>
             <teaser2
                 jcr:primaryType="cpp:Element"
                 sling:resourceType="composum/pages/components/element/teaser"
-                link="/content/sites/slimpo/home/test"
+                link="/content/sites/slimpo/home/operate"
                 path="\0"
                 subtitle="Slimpogrine Composum-Pages Sample Content"
                 text="Reference content deployed with the launcher.&lt;br>"
@@ -57,7 +58,7 @@
                 variation="bgimage">
                 <image
                     jcr:primaryType="nt:unstructured"
-                    imageRef="/content/sites/slimpo/assets/background/catapult_inside_of_laboratory2_1920x480.jpg"/>
+                    imageRef="/content/sites/slimpo/assets/rabbit/steampunk-styled_laboratory.jpg"/>
             </teaser2>
         </stage>
         <main
@@ -76,52 +77,34 @@
                         sling:resourceType="composum/pages/components/element/textimage"
                         floatingText="{Boolean}true"
                         imagePosition="right"
-                        text="&lt;p>In a cold, sterile laboratory, where the hum of machines never ceased, a small white jackrabbit sat alone in a wire cage. Its pink eyes darted nervously, ears twitching at every sound. The scientists called him Subject 47, but he knew himself as Snow. The lab was a maze of blinking lights and echoing footsteps, but worst of all were the voices.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ul>  &#xd;&#xa;  &lt;li>&quot;Deliver the content faster,&quot; they whispered, though no one was near.&lt;/li>  &#xd;&#xa;  &lt;li>&quot;Optimize. Streamline. No delays,&quot; another voice hissed, bouncing off the metal walls.&lt;/li>  &#xd;&#xa;&lt;/ul>  &#xd;&#xa;&#xd;&#xa;&lt;p>Snow didn't understand what &quot;content&quot; was, but the voices demanded it with urgency. He pressed his paws against the cage door, longing for the open fields he barely remembered. The lab had stolen his freedom, and now it was stealing his mind.&lt;/p>&lt;p>One night, as the fluorescent lights flickered, a new voice spoke—softer, kinder.&lt;/p>&lt;br>&lt;p>&amp;nbsp;B̖̍u̖̍i̖̍l̖̍d̖̍ ̖̍a̖̍ ̖̍m̖̍a̖̍c̖̍h̖̍i̖̍n̖̍e̖̍ ̖̍f̖̍o̖̍r̖̍ ̖̍m̖̍e̖̍ ̖̍t̖̍h̖̍a̖̍t̖̍ ̖̍c̖̍a̖̍n̖̍ ̖̍d̖̍e̖̍l̖̍i̖̍v̖̍e̖̍r̖̍ ̖̍c̖̍o̖̍n̖̍t̖̍e̖̍n̖̍t̖̍.̖̍ ̖̍T̖̍h̖̍e̖̍n̖̍ ̖̍w̖̍e̖̍ ̖̍l̖̍a̖̍u̖̍n̖̍c̖̍h̖̍ ̖̍i̖̍t̖̍ ̖̍i̖̍n̖̍t̖̍o̖̍t̖̍h̖̍e̖̍ ̖̍c̖̍l̖̍o̖̍u̖̍d̖̍s̖̍.̖̍ ̖̍T̖̍h̖̍e̖̍n̖̍ ̖̍y̖̍o̖̍u̖̍'̖̍l̖̍l̖̍ ̖̍b̖̍e̖̍ ̖̍f̖̍r̖̍e̖̍e̖̍.̖̍&lt;/p>"
+                        text="&lt;p>In a cold, sterile laboratory, where the hum of machines never ceased, a small white jackrabbit sat alone in a wire cage. Its pink eyes darted nervously, ears twitching at every sound. The scientists called him Subject 47, but he knew himself as Snow. The lab was a maze of blinking lights and echoing footsteps, but worst of all were the voices.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ul>  &#xd;&#xa;  &lt;li>&quot;Deliver the content faster,&quot; they whispered, though no one was near.&lt;/li>  &#xd;&#xa;  &lt;li>&quot;Optimize. Streamline. No delays,&quot; another voice hissed, bouncing off the metal walls.&lt;/li>  &#xd;&#xa;&lt;/ul>  &#xd;&#xa;&#xd;&#xa;&lt;p>Snow didn't understand what &quot;content&quot; was, but the voices demanded it with urgency. He pressed his paws against the cage door, longing for the open fields he barely remembered. The lab had stolen his freedom, and now it was stealing his mind.&lt;/p>&lt;p>One night, as the fluorescent lights flickered, a new voice spoke—softer, kinder.&lt;/p>&lt;p>&lt;strong>&lt;code>Build a machine for me to deliver CONTENT. Then we launch it into the CLOUDS, Then you'll be FREE&lt;/code>&lt;/strong>&lt;/p>&lt;p>Ok then, stop this silly AI-generated story for these AI-generated images.&lt;/p>&lt;p>Dear reader, you may ask yourself: &quot;What is this site about? Who should read this?&quot;&amp;nbsp;&amp;nbsp;&lt;/p>&lt;br>&lt;p>This website is trying to make a case for developing &lt;a href=&quot;https://sling.apache.org/&quot; title=&quot;Apache Sling&quot; target=&quot;blank&quot;>Apache Sling&lt;/a> web-applications. In fact it is one.&lt;/p>&lt;p>No matter if you are a little corner-shop or a big organization, you want to tell your story on the internet. Deliver information in your &quot;style&quot;, whether it's investor-relations or just opening times. And this web-content is text with links and images and Sling was made for that.&lt;/p>"
                         title="Follow the white Jackrabbit">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            imageRef="/content/sites/slimpo/assets/rabbit/follow_the_white_jackrabbit_5.png"/>
+                            imageRef="/content/sites/slimpo/assets/rabbit/follow_the_white_jackrabbit_5.jpg"/>
                     </textimage>
                 </column-0>
             </row>
-            <row_1160738332
+            <row_805219313
                 jcr:primaryType="cpp:Container"
                 sling:resourceType="composum/pages/components/container/row"
-                columns="-6--6-"
-                path="\0">
-                <column-1
-                    jcr:primaryType="cpp:Container"
-                    sling:resourceType="composum/pages/components/container/row/column">
-                    <codeblock
-                        jcr:primaryType="cpp:Element"
-                        sling:resourceType="composum/pages/components/element/codeblock"
-                        code="set ACL for everyone (ACLOptions=merge)&#xd;&#xa;        allow jcr:read on /public&#xd;&#xa;        allow jcr:read on /libs/composum/pages/components&#xd;&#xa;        allow jcr:read on /var/composum/clientlibs&#xd;&#xa;        allow jcr:read on /apps/slimpogrine/css_zen_garden"
-                        collapsible="{Boolean}true"
-                        title="repoinit"/>
-                </column-1>
+                columns="-12-"
+                title="Who needs this ?">
                 <column-0
                     jcr:primaryType="cpp:Container"
                     sling:resourceType="composum/pages/components/container/row/column">
-                    <title
-                        jcr:primaryType="cpp:Element"
-                        sling:resourceType="composum/pages/components/element/title"
-                        subtitle="into the clouds"
-                        title="Sling Slop">
-                        <image jcr:primaryType="nt:unstructured"/>
-                    </title>
                     <textimage
                         jcr:primaryType="cpp:Element"
                         sling:resourceType="composum/pages/components/element/textimage"
+                        hideTitle="{Boolean}true"
                         imagePosition="left"
-                        text="To do: How to&amp;nbsp;"
-                        textAlignment="center"
-                        title="Sling Slop">
+                        text="&lt;p>Sling is a Java framework to build web-apps on top. It's quite abstract so it's not easy to grasp the concept in the beginning. It's frontend agnostic, which in turn means you have to come up with design/frontend code (html/css/js) on your own.&lt;/p>&lt;p>You'll need an affinity for java based application servers for delivering that dynamically/editable to the user. Plus the DevOps skills to host that safely. This probably limits it's use to organizations, because you'd hardly find those skills in one person.&lt;/p>&lt;p>The purpose of this page is to create and collect tutorials for this technology stack in order to close knowledge gaps. This page you're reading now is a humble start, created on the same Sling server. It is part of a content-package that is synched back to gitlab once in a while, to be included it in the next release of this DIY webserver.&lt;/p>&lt;p>This isn't software on it's own but more a combination of open source sling-apps.&amp;nbsp;It's served from an inexpensive VPS (Virtual Private Server) docker-host and completely open source.&lt;/p>&lt;br>&lt;br>&lt;br>">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            imageRef="/content/sites/slimpo/assets/rabbit/steampunk-styled_laboratory.png"/>
+                            imageRef="/content/sites/slimpo/assets/rabbit/sling-catapult_and_jackrabbit_3.jpg"/>
                     </textimage>
                 </column-0>
-            </row_1160738332>
+            </row_805219313>
             <row_669778322
                 jcr:primaryType="cpp:Container"
                 sling:resourceType="composum/pages/components/container/row"
@@ -144,15 +127,17 @@
         </main>
         <navigation
             jcr:primaryType="nt:unstructured"
+            isNavRoot="{Boolean}true"
             title="Home"/>
-        <bottom
-            jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/iparsys"/>
         <style jcr:primaryType="nt:unstructured"/>
         <logo
             jcr:primaryType="nt:unstructured"
             imageRef="/content/sites/slimpo/assets/logo/slingslop_640x480.png"/>
+        <bottom
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/iparsys"/>
     </jcr:content>
-    <content/>
-    <test/>
+    <learn_basics/>
+    <develop/>
+    <operate/>
 </jcr:root>

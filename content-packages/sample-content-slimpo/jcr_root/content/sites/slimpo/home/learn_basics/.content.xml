@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        jcr:primaryType="cpp:PageContent"
+        jcr:title="Learn Sling Basics"
+        jcr:uuid="4e1cbf2b-a9bf-4f0b-a748-0cfabf7b7946"
+        sling:resourceType="composum/pages/components/page"
+        template="composum/pages/components/templates/page/content">
+        <main
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys"/>
+        <bottom
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/iparsys"/>
+        <navigation jcr:primaryType="nt:unstructured"/>
+        <style jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

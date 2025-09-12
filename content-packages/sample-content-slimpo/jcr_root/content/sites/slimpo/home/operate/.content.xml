@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="cpp:Page">
+    <jcr:content
+        jcr:primaryType="cpp:PageContent"
+        jcr:title="Sling DevOps"
+        jcr:uuid="3345e16c-3783-4418-9646-f42dbb122f13"
+        sling:resourceType="composum/pages/components/page"
+        template="composum/pages/components/templates/page/content">
+        <main
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys"/>
+        <bottom
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/iparsys"/>
+    </jcr:content>
+</jcr:root>
