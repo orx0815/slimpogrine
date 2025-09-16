@@ -52,7 +52,9 @@ public class CssZenGarden {
     
     // Vibe coded modern, responsive styles
     new Design("401", "Blue Vibe Code", "Claude Sonnet 4", "https://claude.ai/new"),
-    new Design("402", "Light Vibe Code", "Claude Sonnet 4", "https://claude.ai/new")
+    new Design("402", "Light Vibe Code", "Claude Sonnet 4", "https://claude.ai/new"),
+    new Design("403", "Modern Serenity ", "Grok by xAI", "https://x.ai/"),
+    new Design("405", "Commodore 64 Retro Zen Garden ", "Grok by xAI", "https://x.ai/")
 
   };
 
