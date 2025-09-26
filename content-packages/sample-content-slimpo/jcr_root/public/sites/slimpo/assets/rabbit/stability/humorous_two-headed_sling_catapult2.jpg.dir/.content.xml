@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
+    jcr:primaryType="nt:file">
+    <jcr:content
+        cpl:replicatedVersion="{Reference}4a5df91d-6d47-4885-b208-33effd04b8a5"
+        jcr:mixinTypes="[mix:ReplicatedVersionable]"
+        jcr:primaryType="nt:resource"/>
+</jcr:root>

@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="nt:file">
     <jcr:content
-        cpl:replicatedVersion="{Reference}96717c86-d14f-4406-bb35-737b00a34edd"
+        cpl:replicatedVersion="{Reference}18ac8688-3232-43f6-bbcc-8395674f2191"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="nt:resource"/>
 </jcr:root>
