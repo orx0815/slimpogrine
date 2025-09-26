@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
         jcr:primaryType="cpp:PageContent"
         jcr:title="Sling DevOps"
         jcr:uuid="3345e16c-3783-4418-9646-f42dbb122f13"
         sling:resourceType="composum/pages/components/page"
+        pageLanguages="[en]"
         template="composum/pages/components/templates/page/content">
+        <top
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <title
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/title"
+                subtitle="Learn to containerize applications with Docker, set up proxies and caches, and manage node- and blob- storages."
+                title="Sling DevOps: Docker, Proxies, Caches, and Storage.">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/content/sites/slimpo/assets/rabbit/rabbits480x480/cyberpunk-styled_laboratory_10_480x480.jpg"/>
+            </title>
+        </top>
         <main
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/parsys"/>
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>There's no single right way to run a Docker image online.&lt;/p>&lt;p>&lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>We'll begin by focusing on low-budget Virtual Private Servers (VPS).&lt;/a>&lt;/p>&lt;br>&lt;p>Don't be disappointed when you hit a dead-end, it's work-in-progress.&lt;br>&lt;br>&lt;br>You are looking at JCR path: /content/sites/slimpo/home/operate/_jcr_content/main/row/column-0/textimage&lt;br>&lt;br>Link also goes: /content/sligrine/pages/index&lt;/p>&lt;p>&lt;strong>&lt;br>&lt;/strong>&lt;/p>&lt;p>&lt;strong>Back to -&amp;gt; &lt;a href=&quot;https://slimpo.motorbrot.org/&quot;>High-Level-Overview&lt;/a>&lt;u>&lt;/u>&lt;/strong>&lt;/p>"
+                        title="Sling DevOps: Docker, Proxies, Caches, and Storage.">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/content/sites/slimpo/assets/rabbit/rabbits480x480/sling-catapult_and_jackrabbit_480x480.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Verwenden wir die Code-Block-Komponente des &lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>mitgelieferten Peregrine CMS&lt;/a>&amp;nbsp;und sammeln hier einige Grundlagen im Java-Ökosystem.&lt;/p>&lt;br>&lt;p>Seien Sie nicht enttäuscht, wenn Sie in eine Sackgasse geraten, es handelt sich um Work-in-Progress.&lt;/p>&lt;br>&lt;br>&lt;p>Sie sehen sich den JCR&amp;nbsp;&lt;strong>Pfad&lt;/strong> an: &lt;em>/content/sites/slimpo/home/&lt;strong>develop&lt;/strong>/_jcr_content/main/row/column-0/textimage&lt;/em>&lt;/p>&lt;p>Der Link führt auch zu: &lt;em>&lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>/content/sligrine/pages/index&lt;/a>&lt;/em>&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+            </row>
+        </main>
         <bottom
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/iparsys"/>
+            sling:resourceType="composum/pages/components/container/iparsys"
+            parentInheritanceCancelled="{Boolean}true"/>
+        <style jcr:primaryType="nt:unstructured"/>
+        <navigation jcr:primaryType="nt:unstructured"/>
     </jcr:content>
 </jcr:root>

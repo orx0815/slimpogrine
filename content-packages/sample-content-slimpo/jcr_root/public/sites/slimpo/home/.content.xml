@@ -2,7 +2,7 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="3385e394-50e6-42a0-ad19-5b57fda652bd"
+        cpl:replicatedVersion="7de5a390-f972-4216-8fce-94f53cc41d7d"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
         jcr:uuid="113ce817-6557-423b-861d-d14cf155cb5d"
@@ -25,14 +25,14 @@
             <teaser
                 jcr:primaryType="cpp:Element"
                 sling:resourceType="composum/pages/components/element/teaser"
-                link="/public/sites/slimpo/home/learn_basics"
-                subtitle="Slimpogrine Composum-Pages Sample Content"
-                text="Reference content deployed with the launcher.&lt;br>"
+                link="/public/sites/slimpo/assets/rabbit/sling-catapult_and_jackrabbit.jpg"
+                subtitle="Sample Content for Composum Pages (Sling-based CMS)"
+                text="&lt;p>Example content included in the launcher/&lt;a href=&quot;https://hub.docker.com/r/orx0815dockerhub/slimpogrine&quot; target=&quot;_blank&quot;>docker-image&lt;/a>&lt;/p>"
                 title="Hello World !"
                 variation="bgimage">
                 <image
                     jcr:primaryType="nt:unstructured"
-                    imageRef="/public/sites/slimpo/assets/rabbit/cyberpunk-styled_laboratory_10.jpg"
+                    imageRef="/public/sites/slimpo/assets/rabbit/steampunk-styled_laboratory_2.jpg"
                     title="Sling Basics"/>
             </teaser>
             <teaser1
@@ -51,9 +51,9 @@
                 jcr:primaryType="cpp:Element"
                 sling:resourceType="composum/pages/components/element/teaser"
                 link="/public/sites/slimpo/home/operate"
-                subtitle="Slimpogrine Composum-Pages Sample Content"
-                text="Reference content deployed with the launcher.&lt;br>"
-                title="Hello World !"
+                subtitle="DYI app- server with two CMSes and a custom app"
+                text="&lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;_blank&quot;>Fork me on GitHub&lt;/a>"
+                title="Slimpogrine = SLIng + coMPOsum + pereGRINE"
                 variation="bgimage">
                 <image
                     jcr:primaryType="nt:unstructured"
@@ -63,10 +63,109 @@
         <main
             jcr:primaryType="cpp:Container"
             sling:resourceType="composum/pages/components/container/parsys">
-            <row
+            <row_805219313
                 jcr:primaryType="cpp:Container"
                 sling:resourceType="composum/pages/components/container/row"
-                columns="-12-">
+                anchor="why"
+                columns="-12-"
+                title="High-level overview of the Apache Sling stack">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>This website is trying to make a case for developing &lt;a href=&quot;https://sling.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Sling&lt;/a> web-applications. In fact it is one.&lt;/p>&lt;p>No matter if you are a little corner-shop or a big organization, you want to tell your story on the internet. Deliver information in your &quot;style&quot;, whether it's investor-relations or just opening times. And this web-content is text with links and images and Sling was made for that.&lt;/p>&lt;p>Sling is a Java framework for building web applications. It can be hard to understand at first because it's very abstract. It does not come with a built-in frontend, so you need to design and code the user interface (using HTML, CSS, and JavaScript) on your own.&lt;/p>&lt;p>You should be familiar with Java application servers to provide users with dynamic content. Plus some DevOps skills to host that safely. This likely makes it more suitable for organizations, as one person rarely has all these skills.&lt;/p>&lt;p>The purpose of this project is to create and collect tutorials for this technology and close knowledge gaps. This page you're reading now is a humble start, created on &lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;slimpo_doku&quot;>a DIY Sling server&lt;/a>&amp;nbsp;called SliMpoGrine. It's part of a content-package that syncs with GitLab occasionally, to be included in future releases of a self-documenting application-server. That is why you can change the text and image-slop here with a pull-request! This page wants to teach you how to that.&lt;/p>&lt;p>SliMpoGrine isn’t a single software product, but a combination of open-source Sling applications. It runs on a low-cost virtual server using Docker and is fully open source.&lt;/p>&lt;br>&lt;br>&lt;br>"
+                        title="Who needs this ?">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/humorous_two-headed_sling_catapult4.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Diese Website versucht, einen Fall für die Entwicklung von &lt;a href=&quot;https://sling.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Sling&lt;/a>-Webanwendungen zu machen. Tatsächlich ist sie selbst eine solche Anwendung.&lt;/p>&#xd;&#xa;&lt;p>Egal, ob Sie ein kleiner Tante-Emma-Laden oder ein großes Unternehmen sind, Sie möchten Ihre Geschichte im Internet erzählen. Informationen in Ihrem eigenen &quot;Stil&quot; liefern, sei es für Investor Relations oder nur für die Öffnungszeiten. Und dieser Webinhalt besteht aus Text mit Links und Bildern – und genau dafür wurde Sling entwickelt.&lt;/p>&#xd;&#xa;&lt;p>Sling ist ein Java-Framework zum Erstellen von Webanwendungen. Es kann anfangs schwer zu verstehen sein, weil es sehr abstrakt ist. Es bringt keine vorgefertigte Benutzeroberfläche mit, daher müssen Sie die Benutzeroberfläche (mit HTML, CSS und JavaScript) selbst entwerfen und programmieren.&lt;/p>&#xd;&#xa;&lt;p>Sie sollten mit Java-Anwendungsservern vertraut sein, um Nutzern dynamische Inhalte bereitzustellen. Dazu kommen noch einige DevOps-Kenntnisse, um dies sicher zu hosten. Das macht es wahrscheinlich besser für Organisationen geeignet, da eine Person selten all diese Fähigkeiten in sich vereint.&lt;/p>&#xd;&#xa;&lt;p>Der Zweck dieses Projekts ist es, Tutorials für diese Technologie zu erstellen und zu sammeln und Wissenslücken zu schließen. Diese Seite, die Sie gerade lesen, ist ein bescheidener Anfang, erstellt auf &lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;slimpo_doku&quot;>einem DIY-Sling-Server&lt;/a> namens SliMpoGrine. Sie ist Teil eines Content-Packages, das gelegentlich mit GitLab synchronisiert wird, um in zukünftigen Versionen eines sich selbst dokumentierenden Anwendungsservers enthalten zu sein. Deshalb können Sie den Text und den Bildinhalt hier per Pull-Request ändern! Diese Seite möchte Ihnen beibringen, wie das geht.&lt;/p>&#xd;&#xa;&lt;p>SliMpoGrine ist kein einzelnes Softwareprodukt, sondern eine Kombination von Open-Source-Sling-Anwendungen. Es läuft auf einem kostengünstigen virtuellen Server mit Docker und ist vollständig Open Source. [Text is AI translated from English]&lt;/p>"
+                                title="Wer braucht das?"/>
+                            <es
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Este sitio web intenta argumentar a favor del desarrollo de aplicaciones web con &lt;a href=&quot;https://sling.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Sling&lt;/a>. De hecho, es una de ellas.&lt;/p>&lt;p>No importa si eres una pequeña tienda de barrio o una gran organización, quieres contar tu historia en internet. Entregar información con tu &quot;estilo&quot;, ya sean relaciones con inversionistas o simplemente horarios de apertura. Y este contenido web es texto con enlaces e imágenes, y Sling fue hecho para eso.&lt;/p>&lt;p>Sling es un framework de Java para construir aplicaciones web. Al principio puede ser difícil de entender porque es muy abstracto. No incluye un frontend incorporado, por lo que necesitas diseñar y programar la interfaz de usuario (usando HTML, CSS y JavaScript) por tu cuenta.&lt;/p>&lt;p>Deberías estar familiarizado con los servidores de aplicaciones Java para proporcionar a los usuarios contenido dinámico. Además, algunas habilidades de DevOps para alojarlo de forma segura. Esto probablemente lo hace más adecuado para organizaciones, ya que una persona rara vez tiene todas estas habilidades.&lt;/p>&lt;p>El propósito de este proyecto es crear y recopilar tutoriales para esta tecnología y cerrar brechas de conocimiento. Esta página que estás leyendo ahora es un comienzo humilde, creada en &lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;slimpo_doku&quot;>un servidor Sling hecho por uno mismo&lt;/a> llamado SliMpoGrine. Es parte de un paquete de contenido que se sincroniza ocasionalmente con GitLab, para ser incluido en futuras versiones de un servidor de aplicaciones auto-documentado. ¡Por eso puedes cambiar el texto y las imágenes aquí con una solicitud de extracción (pull request)! Esta página quiere enseñarte cómo hacerlo.&lt;/p>&lt;p>SliMpoGrine no es un único producto de software, sino una combinación de aplicaciones Sling de código abierto. Se ejecuta en un servidor virtual de bajo costo usando Docker y es completamente de código abierto. [Text is AI translated from English]&lt;/p>"/>
+                            <fr
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Ce site web tente de démontrer l'intérêt de développer des applications web avec &lt;a href=&quot;https://sling.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Sling&lt;/a>. En fait, il en est une lui-même.&lt;/p>&lt;p>Que vous soyez une petite boutique de quartier ou une grande organisation, vous souhaitez raconter votre histoire sur Internet. Diffuser des informations dans votre « style », qu'il s'agisse de relations avec les investisseurs ou simplement des horaires d'ouverture. Et ce contenu web est constitué de texte, de liens et d'images, et Sling a été conçu pour cela.&lt;/p>&lt;p>Sling est un framework Java pour créer des applications web. Il peut être difficile à comprendre au début car il est très abstrait. Il ne dispose pas d'une interface utilisateur intégrée, vous devez donc concevoir et coder l'interface utilisateur (en utilisant HTML, CSS et JavaScript) vous-même.&lt;/p>&lt;p>Vous devriez être familier avec les serveurs d'applications Java pour fournir aux utilisateurs du contenu dynamique. Plus quelques compétences en DevOps pour héberger cela en toute sécurité. Cela le rend probablement plus adapté aux organisations, car une seule personne possède rarement toutes ces compétences.&lt;/p>&lt;p>L'objectif de ce projet est de créer et de collecter des tutoriels pour cette technologie et de combler les lacunes de connaissances. Cette page que vous lisez maintenant est un modeste début, créée sur &lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;slimpo_doku&quot;>un serveur Sling fait maison&lt;/a> appelé SliMpoGrine. Elle fait partie d'un package de contenu qui se synchronise occasionnellement avec GitLab, pour être inclus dans les futures versions d'un serveur d'applications auto-documenté. C'est pourquoi vous pouvez modifier le texte et les images approximatives ici avec une pull-request ! Cette page veut vous apprendre à le faire.&lt;/p>&lt;p>SliMpoGrine n'est pas un produit logiciel unique, mais une combinaison d'applications Sling open source. Il fonctionne sur un serveur virtuel à faible coût en utilisant Docker et est entièrement open source.&lt;/p>"/>
+                            <zh
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>本网站旨在阐述开发&lt;a href=&quot;https://sling.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Sling&lt;/a>网络应用的理由。事实上，它本身就是一个Sling应用。&lt;/p>&lt;p>无论您是小型街角商店还是大型组织，都希望在互联网上讲述自己的故事。用您的&quot;风格&quot;传递信息——无论是投资者关系还是简单的营业时间。而这些网页内容正是由文本、链接和图像构成，Sling正是为此而生。&lt;/p>&lt;p>Sling是用于构建Web应用程序的Java框架。由于其高度抽象性，初学者可能难以理解。它不提供内置前端，因此需要自行设计和编写用户界面（使用HTML、CSS和JavaScript）。&lt;/p>&lt;p>您需要熟悉Java应用服务器来为用户提供动态内容，同时还需具备一定的运维技能以确保安全部署。这使得该技术可能更适合组织使用，因为个人很少能同时掌握所有这些技能。&lt;/p>&lt;p>本项目旨在创建和收集该技术的教程以填补知识空白。您正在阅读的页面是一个朴素的起点，它搭建在名为SliMpoGrine的&lt;a href=&quot;https://github.com/orx0815/slimpogrine&quot; target=&quot;slimpo_doku&quot;>DIY Sling服务器&lt;/a>上。作为内容包的一部分，它会定期与GitLab同步，未来将被纳入自文档化应用服务器的发行版中。这就是为什么您可以通过提交拉取请求来修改这里的文本和图片！本页面将指导您如何操作。&lt;/p>&lt;p>SliMpoGrine并非单一软件产品，而是开源Sling应用的组合。它通过Docker在低成本虚拟服务器上运行，完全开源。&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+            </row_805219313>
+            <row_805219314
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                anchor="why"
+                columns="-12-"
+                title="Why not using Spring or Jakarta EE like every sane person would do?">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="right"
+                        text="&lt;p>When you're having that question in mind you are right here.&amp;nbsp;&lt;/p>&lt;p>On the frontend, all three support the Jakarta Servlet Api and integrate with template engines, e.g JSP, Thymeleaf, FreeMarker ....&lt;/p>&lt;p>In the backend all three frameworks are based on&amp;nbsp;&lt;code>Dependency Injection&lt;/code>. Business logic is behind backend modules that expose domain-objects and services to act on. It gets @Autowired in Spring, Jakarta&amp;nbsp;Context Dependency Injection&amp;nbsp;(CDI) does a similar thing:&lt;/p>&lt;p>&lt;em>&quot;obtaining objects in such a way as to maximize reusability, testability and maintainability compared to traditional approaches such as constructors, factories, and service locators (e.g., JNDI)&quot;&lt;/em>&lt;/p>&lt;p>In case of Apache Sling, everything is based on OSGi, an open standard for this (+ a bit more). &lt;a href=&quot;https://felix.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Felix&lt;/a> is the used implementation.&lt;/p>&lt;p>OSGi is around since the early 2000s in all sorts of applications, from embedded devices, Smart-Home-Hubs and desktop applications to Jakarta EE servers like GlassFish. (In case you are interested in home automation, have a look into&lt;a href=&quot;https://www.openhab.org/&quot; target=&quot;_blank&quot;> openHAB&lt;/a>.)&lt;/p>&lt;p>&lt;strong>Is OSGi a bit excessive in the era of microservices?&lt;/strong>&lt;/p>&lt;p>Hot-swapping services in a running application may not be necessary anymore? We're deploying Docker images after all. Maybe the Java Platform Module System (JPMS) is enough to split large applications into smaller bits?&amp;nbsp;&lt;/p>&lt;p>These are interesting questions. Two counter-points:&lt;/p>&lt;ul>&lt;li>During development a native hot-deployment IS nice, with short time from saving code to executing it on the server&lt;/li>&lt;li>The Java Enterprise Ecosystem shifted rapidly from avoiding monoliths to dealing with the complexity of too many microservices. &quot;Kubernetes is the Websphere of the millennials&quot; someone wrote. There is a trend trying to find middle-ground here called &quot;&lt;strong>Modulith&lt;/strong>&quot; and Sling was one before it was cool.&lt;/li>&lt;/ul>&lt;br>"
+                        title="Why OSGi ?">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/cyberpunk-styled_laboratory_11_480x480.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Wenn Sie sich diese Frage stellen, sind Sie hier genau richtig.&lt;/p>&#xd;&#xa;&lt;p>Auf der Frontend-Seite unterstützen alle drei die Jakarta Servlet API und integrieren sich mit Template-Engines, z.B. JSP, Thymeleaf, FreeMarker ....&lt;/p>&#xd;&#xa;&lt;p>Im Backend basieren alle drei Frameworks auf &lt;code>Dependency Injection&lt;/code>. Die Geschäftslogik steckt in Backend-Modulen, die Domain-Objekte und Services zur Verfügung stellen, um darauf zu agieren. In Spring wird sie per @Autowired eingebunden; Jakarta Context Dependency Injection (CDI) macht etwas Ähnliches:&lt;/p>&#xd;&#xa;&lt;p>&lt;em>&quot;das Beschaffen von Objekten auf eine Weise, die Wiederverwendbarkeit, Testbarkeit und Wartbarkeit im Vergleich zu traditionellen Ansätzen wie Konstruktoren, Fabriken und Service Locators (z.B. JNDI) maximiert&quot;&lt;/em>&lt;/p>&#xd;&#xa;&lt;p>Im Fall von Apache Sling basiert alles auf OSGi, einem offenen Standard hierfür (und ein bisschen mehr). &lt;a href=&quot;https://felix.apache.org/&quot; target=&quot;slimpo_doku&quot;>Apache Felix&lt;/a> ist die verwendete Implementierung.&lt;/p>&#xd;&#xa;&lt;p>OSGi gibt es seit den frühen 2000er Jahren in allen möglichen Anwendungen, von eingebetteten Geräten, Smart-Home-Hubs und Desktop-Anwendungen bis hin zu Jakarta EE-Servern wie GlassFish. (Falls Sie an Hausautomation interessiert sind, werfen Sie einen Blick auf &lt;a href=&quot;https://www.openhab.org/&quot; target=&quot;_blank&quot; title=&quot;openHAB&quot;>openHAB&lt;/a>.)&lt;/p>&#xd;&#xa;&lt;p>&lt;strong>Ist OSGi in der Ära der Microservices ein bisschen übertrieben?&lt;/strong>&lt;/p>&#xd;&#xa;&lt;p>Muss man Services in einer laufenden Anwendung noch hot-swappen können? Wir deployen schließlich Docker-Images. Vielleicht reicht das Java Platform Module System (JPMS) aus, um große Anwendungen in kleinere Teile zu zerlegen?&lt;/p>&#xd;&#xa;&lt;p>Das sind interessante Fragen. Zwei Gegenargumente:&lt;/p>&#xd;&#xa;&lt;ul>&#xd;&#xa;&lt;li>Während der Entwicklung ist ein natives Hot-Deployment SEHR angenehm, mit kurzer Zeit zwischen dem Speichern des Codes und seiner Ausführung auf dem Server&lt;/li>&#xd;&#xa;&lt;li>Das Java-Enterprise-Ökosystem hat sich schnell von der Vermeidung von Monolithen hin zum Umgang mit der Komplexität von zu vielen Microservices bewegt. &quot;Kubernetes ist das Websphere der Millennials&quot;, schrieb jemand. Es gibt einen Trend, der eine Mittelweg sucht, genannt &quot;&lt;strong>Modulith&lt;/strong>&quot;, und Sling war einer, bevor es cool war.&lt;/li>&#xd;&#xa;&lt;/ul>"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Warum nicht Spring oder Jakarta EE verwenden, wie es jeder vernünftige Mensch tun würde?"/>
+                </i18n>
+            </row_805219314>
+            <row_805219315
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                anchor="why"
+                columns="-12-"
+                title="Why store web content in a JCR tree rather than a SQL or NoSQL database?">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>Ultimately, content consists of files stored on a disk (such as a hard drive or solid-state drive).&lt;/p>&lt;p>This view should correspond to the problem being addressed, and in the real world, many things are organized in a tree hierarchy:&lt;/p>&lt;p>This content-path for example resembles an organizational structure:&lt;/p>&lt;p>&lt;code>/corporation/brand/market/country/region/product/image&lt;/code>&lt;/p>&lt;p>while this might be a website-structure:&lt;/p>&lt;p>&lt;code>/homepage/category/product/spare-part&lt;/code>&lt;/p>&lt;p>and the DOM of a webpage &lt;strong>is&lt;/strong> actually a tree:&lt;/p>&lt;p>&lt;code>/html/body/stage/column/teaser/div/p/introText&lt;/code>&lt;/p>&lt;p>So saving web-content in a tree somehow feels natural.&lt;/p>&lt;p>Similar to OSGi (and Jakarta EE), the 'Content Repository API for Java (JCR)' is an open specification with several implementations. &lt;a href=&quot;https://jackrabbit.apache.org/oak&quot; target=&quot;slimpo_doku&quot;>Apache Jackrabbit Oak&lt;/a>&amp;nbsp;is used here, but developers only interact with the interface package `javax.jcr` when building applications with Sling.&lt;/p>&lt;br>&lt;p>Jackrabbit comes with two node storage flavours:&lt;/p>&lt;ul>&lt;li>The default option, SegmentNodeStore (or TarMK), saves data in continuously growing tar files without needing an external database.&lt;/li>&lt;li>DocumentNodeStore supports clustered setups and relies on MongoDB or a SQL database for instances that share the same JCR repository.&lt;/li>&lt;/ul>&lt;p>Traditionally, TarMK is used. Content is edited on a single author instance and then replicated to multiple publisher instances, each with its own JCR repository.&lt;/p>&lt;p>For this server, everything runs on a single instance using TarMK.&lt;/p>"
+                        title="Why not both?">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/sling-catapult_and_jackrabbit_5_480x480.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Letztendlich besteht Inhalt aus Dateien, die auf einem Datenträger (wie einer Festplatte oder SSD) gespeichert sind.&lt;/p>&#xd;&#xa;&lt;p>Diese Sichtweise sollte dem zu lösenden Problem entsprechen, und in der realen Welt sind viele Dinge hierarchisch in einer Baumstruktur organisiert:&lt;/p>&#xd;&#xa;&lt;p>Dieser Inhalts-Pfad ähnelt zum Beispiel einer Organisationsstruktur:&lt;/p>&#xd;&#xa;&lt;p>&lt;code>/corporation/brand/market/country/region/product/image&lt;/code>&lt;/p>&#xd;&#xa;&lt;p>während dies eine Webseiten-Struktur sein könnte:&lt;/p>&#xd;&#xa;&lt;p>&lt;code>/homepage/category/product/spare-part&lt;/code>&lt;/p>&#xd;&#xa;&lt;p>und das DOM einer Webseite &lt;strong>ist&lt;/strong> tatsächlich ein Baum:&lt;/p>&#xd;&#xa;&lt;p>&lt;code>/html/body/stage/column/teaser/div/p/introText&lt;/code>&lt;/p>&#xd;&#xa;&lt;p>Daher fühlt es sich natürlich an, Webinhalte in einer Baumstruktur zu speichern.&lt;/p>&#xd;&#xa;&lt;p>Ähnlich wie OSGi (und Jakarta EE) ist die 'Content Repository API for Java (JCR)' eine offene Spezifikation mit mehreren Implementierungen. &lt;a href=&quot;https://jackrabbit.apache.org/oak&quot; target=&quot;slimpo_doku&quot;>Apache Jackrabbit Oak&lt;/a>&amp;nbsp;wird hier verwendet, aber Entwickler interagieren beim Erstellen von Anwendungen mit Sling nur mit dem Interface-Paket `javax.jcr`.&lt;/p>&#xd;&#xa;&lt;br>&lt;p>Jackrabbit bietet zwei Varianten zur Knotenspeicherung:&lt;/p>&#xd;&#xa;&lt;ul>&lt;li>Die Standardoption, SegmentNodeStore (oder TarMK), speichert Daten in kontinuierlich wachsenden Tar-Dateien, ohne dass eine externe Datenbank benötigt wird.&lt;/li>&#xd;&#xa;&lt;li>DocumentNodeStore unterstützt Cluster-Konfigurationen und setzt auf MongoDB oder eine SQL-Datenbank für Instanzen, die sich dasselbe JCR-Repository teilen.&lt;/li>&lt;/ul>&#xd;&#xa;&lt;p>Traditionell wird TarMK verwendet. Inhalte werden auf einer einzelnen Author-Instanz bearbeitet und dann auf mehrere Publisher-Instanzen repliziert, die jeweils ihr eigenes JCR-Repository haben.&lt;/p>&#xd;&#xa;&lt;p>Für diesen Server läuft alles auf einer einzelnen Instanz mit TarMK.&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Warum sollte Web-Inhalt in einem JCR-Baum und nicht in einer SQL- oder NoSQL-Datenbank gespeichert werden?"/>
+                </i18n>
+            </row_805219315>
+            <row_1974273663
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                title="What can I do with Apache Sling?">
                 <column-0
                     jcr:primaryType="cpp:Container"
                     sling:resourceType="composum/pages/components/container/row/column">
@@ -75,34 +174,234 @@
                         sling:resourceType="composum/pages/components/element/textimage"
                         floatingText="{Boolean}true"
                         imagePosition="right"
-                        text="&lt;p>In a cold, sterile laboratory, where the hum of machines never ceased, a small white jackrabbit sat alone in a wire cage. Its pink eyes darted nervously, ears twitching at every sound. The scientists called him Subject 47, but he knew himself as Snow. The lab was a maze of blinking lights and echoing footsteps, but worst of all were the voices.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ul>  &#xd;&#xa;  &lt;li>&quot;Deliver the content faster,&quot; they whispered, though no one was near.&lt;/li>  &#xd;&#xa;  &lt;li>&quot;Optimize. Streamline. No delays,&quot; another voice hissed, bouncing off the metal walls.&lt;/li>  &#xd;&#xa;&lt;/ul>  &#xd;&#xa;&#xd;&#xa;&lt;p>Snow didn't understand what &quot;content&quot; was, but the voices demanded it with urgency. He pressed his paws against the cage door, longing for the open fields he barely remembered. The lab had stolen his freedom, and now it was stealing his mind.&lt;/p>&lt;p>One night, as the fluorescent lights flickered, a new voice spoke—softer, kinder.&lt;/p>&lt;p>&lt;strong>&lt;code>Build a machine for me to deliver CONTENT. Then we launch it into the CLOUDS, Then you'll be FREE&lt;/code>&lt;/strong>&lt;/p>&lt;p>Ok then, stop this silly AI-generated story for these AI-generated images.&lt;/p>&lt;p>Dear reader, you may ask yourself: &quot;What is this site about? Who should read this?&quot;&amp;nbsp;&amp;nbsp;&lt;/p>&lt;br>&lt;p>This website is trying to make a case for developing &lt;a href=&quot;https://sling.apache.org/&quot; title=&quot;Apache Sling&quot; target=&quot;blank&quot;>Apache Sling&lt;/a> web-applications. In fact it is one.&lt;/p>&lt;p>No matter if you are a little corner-shop or a big organization, you want to tell your story on the internet. Deliver information in your &quot;style&quot;, whether it's investor-relations or just opening times. And this web-content is text with links and images and Sling was made for that.&lt;/p>"
-                        title="Follow the white Jackrabbit">
+                        text="&lt;p>Now we've covered the basics, let's get into creating apps with Sling.&lt;/p>&lt;p>A condensed answer to &quot;What is Sling&quot; from the homepage:&lt;/p>&lt;p>&lt;code>In a nutshell, Sling maps HTTP request URLs to content resources based on the request's path, extension and selectors. Using convention over configuration, requests are processed by scripts and servlets, dynamically selected based on the current resource.&lt;/code>&lt;/p>&lt;p>In practice, you store your application's building blocks—like HTML pages, scripts, and text—in a content repository. You then define a &quot;&lt;code>sling:resourceType&lt;/code>&quot; for a piece of content. This tells Sling, &quot;When someone requests this content, use these specific scripts or templates to handle it.&quot; Sling then automatically makes that content available at a URL and uses the correct scripts to process requests to that address.&lt;/p>&lt;p>From Sling's point of view it's all content, html/js/css as well as templates. Not only the images with text and links.&lt;/p>&lt;p>This might still seem a bit theoretical. To make it more concrete, let's look at how these concepts work in an actual application.&lt;/p>&lt;br>&lt;p>But before we do that, let's think about what we've got here.&lt;/p>&lt;p>Due to its modularity, Sling consists of more than 300 modules. There is one for almost everything an enterprise application server needs. &lt;a href=&quot;https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html&quot; target=&quot;slimpo_doku&quot;>Scheduling&lt;/a>,&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html&quot; target=&quot;slimpo_doku&quot;>Eventing and Jobs&lt;/a>,&amp;nbsp; &lt;a href=&quot;https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html&quot; target=&quot;slimpo_doku&quot;>Cluster Discovery&lt;/a>&amp;nbsp;and &lt;a href=&quot;https://sling.apache.org/documentation/bundles/distribution.html&quot; target=&quot;slimpo_doku&quot;>Distribution&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/development.html#testing-sling-based-applications-1&quot; target=&quot;slimpo_doku&quot;>Testing ecosystem&lt;/a>, &lt;a href=&quot;https://jackrabbit.apache.org/oak/docs/plugins/blobstore.html&quot; target=&quot;slimpo_doku&quot;>S3/Azure Blobstore&lt;/a>,&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/development/logging.html&quot; target=&quot;slimpo_doku&quot;>Logging&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/bundles/graphql-core.html&quot; target=&quot;slimpo_doku&quot;>GraphQL&lt;/a>&amp;nbsp;...&lt;/p>&lt;p>Chances are you don't need any of that. The key takeaway is that you can start simply. You can use Sling to build and serve a basic web prototype using just HTML, JavaScript, and CSS, leveraging its powerful routing and templating from the very beginning. Sling as over-engineered file server&amp;nbsp;if you will.&lt;/p>"
+                        title="Bringing Back the Fun!">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            imageRef="/public/sites/slimpo/assets/rabbit/follow_the_white_jackrabbit_5.jpg"/>
+                            imageRef="/public/sites/slimpo/assets/rabbit/sling-catapult_and_jackrabbit_8.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Nachdem wir nun die Grundlagen behandelt haben, wollen wir uns mit der Erstellung von Apps mit Sling befassen.&lt;/p>&#xd;&#xa;&lt;p>Eine kurze Antwort auf &quot;Was ist Sling&quot; von der Homepage:&lt;/p>&#xd;&#xa;&lt;p>&lt;code>Kurz gesagt, Sling ordnet HTTP-Anfrage-URLs basierend auf dem Pfad, der Erweiterung und den Selektoren der Anfrage Inhalt-Ressourcen zu. Durch Konvention statt Konfiguration werden Anfragen von Skripten und Servlets verarbeitet, die dynamisch basierend auf der aktuellen Ressource ausgewählt werden.&lt;/code>&lt;/p>&#xd;&#xa;&lt;p>In der Praxis speichern Sie die Bausteine Ihrer Anwendung – wie HTML-Seiten, Skripte und Text – in einem Content-Repository. Anschließend definieren Sie einen &quot;&lt;code>sling:resourceType&lt;/code>&quot; für ein Inhaltsstück. Dies teilt Sling mit: &quot;Wenn jemand diesen Inhalt anfordert, verwende diese spezifischen Skripte oder Vorlagen, um ihn zu verarbeiten.&quot; Sling macht diesen Inhalt dann automatisch unter einer URL verfügbar und verwendet die korrekten Skripte, um Anfragen an diese Adresse zu verarbeiten.&lt;/p>&#xd;&#xa;&lt;p>Aus Sicht von Sling ist alles Inhalt, HTML/JS/CSS ebenso wie Vorlagen. Nicht nur die Bilder mit Text und Links.&lt;/p>&#xd;&#xa;&lt;p>Das mag immer noch etwas theoretisch erscheinen. Um es konkreter zu machen, schauen wir uns an, wie diese Konzepte in einer echten Anwendung funktionieren.&lt;/p>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;p>Bevor wir das tun, lassen Sie uns überlegen, was wir hier haben.&lt;/p>&#xd;&#xa;&lt;p>Aufgrund seiner Modularität besteht Sling aus mehr als 300 Modulen. Es gibt eines für fast alles, was ein Enterprise-Anwendungsserver benötigt. &lt;a href=&quot;https://sling.apache.org/documentation/bundles/scheduler-service-commons-scheduler.html&quot; target=&quot;slimpo_doku&quot;>Scheduling&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html&quot; target=&quot;slimpo_doku&quot;>Eventing und Jobs&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/bundles/discovery-api-and-impl.html&quot; target=&quot;slimpo_doku&quot;>Cluster Discovery&lt;/a> und &lt;a href=&quot;https://sling.apache.org/documentation/bundles/distribution.html&quot; target=&quot;slimpo_doku&quot;>Distribution&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/development.html#testing-sling-based-applications-1&quot; target=&quot;slimpo_doku&quot;>Test-Ökosystem&lt;/a>, &lt;a href=&quot;https://jackrabbit.apache.org/oak/docs/plugins/blobstore.html&quot; target=&quot;slimpo_doku&quot;>S3/Azure Blobstore&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/development/logging.html&quot; target=&quot;slimpo_doku&quot;>Logging&lt;/a>, &lt;a href=&quot;https://sling.apache.org/documentation/bundles/graphql-core.html&quot; target=&quot;slimpo_doku&quot;>GraphQL&lt;/a> ...&lt;/p>&#xd;&#xa;&lt;p>Wahrscheinlich brauchen Sie nichts davon. Die wichtigste Erkenntnis ist, dass Sie einfach beginnen können. Sie können Sling verwenden, um einen einfachen Web-Prototypen nur mit HTML, JavaScript und CSS zu erstellen und auszuliefern und dabei von Anfang an sein leistungsstarkes Routing und Templating zu nutzen. Sling als überdimensionierten Dateiserver, wenn Sie so wollen.&lt;/p>"/>
+                        </i18n>
                     </textimage>
                 </column-0>
-            </row>
-            <row_805219313
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Was kann ich mit Apache Sling machen?"/>
+                </i18n>
+            </row_1974273663>
+            <row_1709131127
                 jcr:primaryType="cpp:Container"
                 sling:resourceType="composum/pages/components/container/row"
                 columns="-12-"
-                title="Who needs this ?">
+                title="What is the Apache Sling Starter ?">
                 <column-0
                     jcr:primaryType="cpp:Container"
                     sling:resourceType="composum/pages/components/container/row/column">
                     <textimage
                         jcr:primaryType="cpp:Element"
                         sling:resourceType="composum/pages/components/element/textimage"
-                        hideTitle="{Boolean}true"
                         imagePosition="left"
-                        text="&lt;p>Sling is a Java framework to build web-apps on top. It's quite abstract so it's not easy to grasp the concept in the beginning. It's frontend agnostic, which in turn means you have to come up with design/frontend code (html/css/js) on your own.&lt;/p>&lt;p>You'll need an affinity for java based application servers for delivering that dynamically/editable to the user. Plus the DevOps skills to host that safely. This probably limits it's use to organizations, because you'd hardly find those skills in one person.&lt;/p>&lt;p>The purpose of this page is to create and collect tutorials for this technology stack in order to close knowledge gaps. This page you're reading now is a humble start, created on the same Sling server. It is part of a content-package that is synched back to gitlab once in a while, to be included it in the next release of this DIY webserver.&lt;/p>&lt;p>This isn't software on it's own but more a combination of open source sling-apps.&amp;nbsp;It's served from an inexpensive VPS (Virtual Private Server) docker-host and completely open source.&lt;/p>&lt;br>&lt;br>&lt;br>">
+                        text="&lt;p>So how do we get from all those bundles to something that actually starts, creates a repository and listens to incoming HTTP requests?&lt;/p>&lt;p>While it is possible to deploy a Sling Web Application Archive (.war) file on any Servlet Container like Tomcat, that's not what we do here.&lt;/p>&lt;p>Instead it's a standalone Java application. Prior to Sling 12 an executable launchpad.jar was created with the 'provisioning model'. Now, the Sling OSGi Feature Model combines bundles, settings, content, and setup scripts into a single unit called a Sling-Feature.&amp;nbsp;The &lt;a href=&quot;https://github.com/apache/sling-slingfeature-maven-plugin/blob/master/README.md&quot; target=&quot;slimpo_doku&quot;>corresponding Maven Plugin&lt;/a>&amp;nbsp;checks if all dependencies are fulfilled. It then creates feature files in JSON format or feature-archive files (.far), which are started using the&amp;nbsp;&lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature-launcher&quot; target=&quot;slimpo_doku&quot;>feature-launcher&lt;/a>. Although you could package everything into a single executable uber-jar (with the&amp;nbsp;&lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-kickstart&quot; target=&quot;slimpo_doku&quot;>kickstarter&lt;/a>), we instead build a Docker image directly..&lt;/p>&lt;p>Initially I went with a fork of the &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-starter/blob/master/README.md&quot; target=&quot;slimpo_doku&quot;>Sling Starter&lt;/a>&amp;nbsp;in order to add&amp;nbsp;more features (Peregrine CMS) &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-starter/tree/master/src/main/features/app&quot; target=&quot;slimpo_doku&quot;>here in src/main/features/app&lt;/a> into a working launcher. I later found that the starter project provides a new &lt;strong>type&lt;/strong> of build output called&amp;nbsp;'osgifeature'. It's basically json with maven coordinates to bundle-jars and content-zips plus repo-init scripts.&lt;/p>"
+                        title="Assembling a Feature Model">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            imageRef="/public/sites/slimpo/assets/rabbit/sling-catapult_and_jackrabbit_3.jpg"/>
+                            imageRef="/public/sites/slimpo/assets/rabbit/dallE_cats/ChatGPT_Image_22._Sept._2025,_11_06_38.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Wie kommen wir also von all diesen Bundles zu etwas, das tatsächlich startet, ein Repository erstellt und auf eingehende HTTP-Anfragen lauscht?&lt;/p>&lt;p>Obwohl es möglich ist, eine Sling Web Application Archive (.war)-Datei auf einem beliebigen Servlet-Container wie Tomcat zu deployen, ist das nicht unser Ansatz hier.&lt;/p>&#xd;&#xa;&lt;p>Stattdessen handelt es sich um eine eigenständige Java-Anwendung. Vor Sling 12 wurde mit dem 'Provisioning Model' eine ausführbare launchpad.jar erstellt. Heute kombiniert das Sling OSGi Feature Model Bundles, Einstellungen, Inhalte und Setup-Skripte in einer einzigen Einheit, einem sogenannten Sling-Feature.&amp;nbsp;Das &lt;a href=&quot;https://github.com/apache/sling-slingfeature-maven-plugin/blob/master/README.md&quot; target=&quot;slimpo_doku&quot;>entsprechende Maven-Plugin&lt;/a>&amp;nbsp;prüft, ob alle Abhängigkeiten erfüllt sind. Anschließend erstellt es Feature-Dateien im JSON-Format oder Feature-Archive-Dateien (.far), die mit dem&amp;nbsp;&lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-feature-launcher&quot; target=&quot;slimpo_doku&quot;>Feature-Launcher&lt;/a> gestartet werden. Obwohl man alles in eine einzige ausführbare Uber-Jar packen könnte (mit dem&amp;nbsp;&lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-kickstart&quot; target=&quot;slimpo_doku&quot;>Kickstarter&lt;/a>), bauen wir stattdessen direkt ein Docker-Image.&lt;/p>&#xd;&#xa;&lt;p>Zunächst habe ich einen Fork des &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-starter/blob/master/README.md&quot; target=&quot;slimpo_doku&quot;>Sling Starters&lt;/a>&amp;nbsp;verwendet, um weitere Features (Peregrine CMS) &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-starter/tree/master/src/main/features/app&quot; target=&quot;slimpo_doku&quot;>hier in src/main/features/app&lt;/a> in einen funktionierenden Launcher einzubinden. Später stellte ich fest, dass das Starter-Projekt eine neue &lt;strong>Art&lt;/strong> von Build-Ergebnis bereitstellt, genannt 'osgifeature'. Es handelt sich im Grunde um JSON mit Maven-Koordinaten zu Bundle-JARs und Content-ZIPs plus Repo-Init-Skripten.&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                    <text_2037661653
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/text"
+                        hideTitle="{Boolean}true"
+                        text="&lt;p>That allows me to include it in my own maven build &lt;a href=&quot;https://github.com/orx0815/slimpogrine/blob/main/launcher/pom.xml#L74&quot; target=&quot;slimpo_doku&quot;>here inside the slingfeature-maven-plugin config&lt;/a>:&amp;nbsp;&lt;/p>">
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Das erlaubt mir, es in meinen eigenen Maven-Build &lt;a href=&quot;https://github.com/orx0815/slimpogrine/blob/main/launcher/pom.xml#L74&quot; target=&quot;slimpo_doku&quot;>hier in der slingfeature-maven-plugin Konfiguration&lt;/a> einzubinden:&amp;nbsp;&lt;/p>"/>
+                        </i18n>
+                    </text_2037661653>
+                    <codeblock
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/codeblock"
+                        code="&lt;aggregate>&#xd;&#xa;  &lt;classifier>slimpogrine_core-aggregate&lt;/classifier>&#xd;&#xa;  &lt;title>Slimpogrine no Persistence&lt;/title>&#xd;&#xa;  &lt;filesInclude>*.json&lt;/filesInclude> &lt;!-- my app -->&#xd;&#xa;  &lt;filesInclude>composum/*.json&lt;/filesInclude> &lt;!-- CMS 1 -->&#xd;&#xa;  &lt;filesInclude>peregrine/*.json&lt;/filesInclude>&lt;!-- CMS 2 -->&#xd;&#xa;  &lt;includeArtifact>&#xd;&#xa;      &lt;!-- Here we include a working starter -->&#xd;&#xa;      &lt;groupId>org.apache.sling&lt;/groupId>&#xd;&#xa;      &lt;artifactId>org.apache.sling.starter&lt;/artifactId>&#xd;&#xa;      &lt;classifier>nosample_base&lt;/classifier>&#xd;&#xa;      &lt;version>${sling.starter.version}&lt;/version>&#xd;&#xa;      &lt;type>slingosgifeature&lt;/type> &lt;!-- type is json -->&#xd;&#xa;  &lt;/includeArtifact>"
+                        language="xml"/>
+                    <text
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/text"
+                        hideTitle="{Boolean}true"
+                        text="&lt;p>Likewise you could include this slimpogrine_core-aggregate as baseline application-server. Which is silly for this proof-of-concept, but you can see how powerful the feature model is.&lt;/p>&lt;p>&lt;strong>There is a different approach&lt;/strong>:&lt;/p>&lt;p>Use the official Sling docker-image as a base layer in your Dockerfile. Install your application components, such as bundles, configuration files, or packages, using Maven within the image. This approach appears to be valid, although it has not been used here.&lt;/p>&lt;p>&lt;strong>Then there is the simple option&lt;/strong>:&lt;/p>&lt;p>Just run the&amp;nbsp;&lt;a href=&quot;https://hub.docker.com/r/apache/sling&quot; target=&quot;slimpo_doku&quot;>Apache Sling Starter Docker Image&lt;/a>&amp;nbsp;and install your applications with the &lt;a href=&quot;https://www.composum.com/home/nodes/pckgmgr.html&quot;>package-manager&lt;/a> application from the Composum suite.&amp;nbsp;&lt;/p>">
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Ebenso könnten Sie diesen slimpogrine_core-aggregate als Basis-Anwendungsserver einbinden. Was für diesen Proof-of-Concept albern ist, aber Sie sehen, wie mächtig das Feature-Modell ist.&lt;/p>&lt;p>&lt;strong>Es gibt einen anderen Ansatz&lt;/strong>:&lt;/p>&lt;p>Verwenden Sie das offizielle Sling Docker-Image als Basis-Ebene in Ihrem Dockerfile. Installieren Sie Ihre Anwendungskomponenten, wie Bundles, Konfigurationsdateien oder Pakete, mit Maven innerhalb des Images. Dieser Ansatz scheint gültig zu sein, wurde hier jedoch nicht verwendet.&lt;/p>&lt;p>&lt;strong>Dann gibt es die einfache Option&lt;/strong>:&lt;/p>&lt;p>Starten Sie einfach das&amp;nbsp;&lt;a href=&quot;https://hub.docker.com/r/apache/sling&quot; target=&quot;slimpo_doku&quot;>Apache Sling Starter Docker Image&lt;/a>&amp;nbsp;und installieren Sie Ihre Anwendungen mit der &lt;a href=&quot;https://www.composum.com/home/nodes/pckgmgr.html&quot;>Package-Manager&lt;/a>-Anwendung aus der Composum-Suite.&amp;nbsp;&lt;/p>"/>
+                        </i18n>
+                    </text>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Was ist der Apache Sling Starter?"/>
+                </i18n>
+            </row_1709131127>
+            <row_1654474631
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                title="Useful apps (Composum)">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="right"
+                        text="&lt;p>So far we only have the basic engine.&amp;nbsp;The &lt;a href=&quot;https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html&quot; target=&quot;slimpo_doku&quot;>Default GET Servlets&lt;/a>&amp;nbsp;handle reading data in formats like XML or JSON, while the&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html&quot; target=&quot;slimpo_doku&quot;>SlingPostServlet&lt;/a>&amp;nbsp;handles writing data to the repository.&lt;/p>&lt;p>That's it. Really.&lt;/p>&lt;p>However, not everyone enjoys using command-line tools like curl to add content, especially when you are new to the system. So the Sling Starter includes three useful apps from the &lt;a href=&quot;https://www.composum.com/home.html&quot; target=&quot;slimpo_doku&quot;>Composum Nodes&lt;/a> project, that is technically not part of Sling but an open-source friend if you will.&lt;/p>&lt;br>&lt;p>&lt;strong>&lt;a href=&quot;https://www.composum.com/home/nodes/browser.html&quot; target=&quot;slimpo_doku&quot;>Console Browser&lt;/a> (/bin/browser.html)&lt;/strong>&lt;/p>&lt;p>Lets you browse the JCR tree, create and edit nodes. Similar to AEM's CRXDE Lite, you can upload files e.g a index.html and even edit it in the browser. CMS for power-users! You can break stuff.&lt;/p>&lt;p>You can set permissions (ACL), query the jcr and run Groovy scripts.&lt;/p>&lt;p>&lt;br>&lt;a href=&quot;https://www.composum.com/home/nodes/pckgmgr.html&quot; target=&quot;slimpo_doku&quot;>Package Manager&lt;/a> (&lt;strong>/bin/packages.html&lt;/strong>)&lt;/p>&lt;p>The easiest way to install an app into a running instance. The app can be bundled as an all/complete zip, that contains several OSGi bundles and content-packages.&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/development/content-packages.html&quot; target=&quot;slimpo_doku&quot;>Content-Package based deployment&lt;/a>&amp;nbsp;achieves a similar outcome at runtime to what the Feature Model approach accomplishes during the build process. However, unlike the Feature Model, it does not verify that all OSGi dependencies are satisfied before deployment.&lt;/p>&lt;p>Main reason for a package-manager is of course to create, build and install content zip-files. That allows transfer of content from one instance to another. It's compatible with AEM both ways.&lt;/p>&lt;br>&lt;p>&lt;strong>User Manager&lt;/strong>&amp;nbsp;(&lt;strong>/bin/users.html)&lt;/strong>&lt;/p>&lt;p>Well, it manages JCR users. Note that it's also JCR content, so there are more ways to add them. Users are below path &lt;em>/home/users. &lt;/em>There are user-groups&amp;nbsp;&lt;em>/home/groups&lt;/em> and the system-users under&lt;em> /home/services&lt;/em>, used for jobs that need some permissions but without giving them full admin access.&lt;/p>"
+                        title="Useful apps (Composum)">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/another_twoheaded_sling_catapult_4.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Bisher haben wir nur die grundlegende Engine. Die &lt;a href=&quot;https://sling.apache.org/documentation/bundles/rendering-content-default-get-servlets.html&quot; target=&quot;slimpo_doku&quot;>Default GET Servlets&lt;/a> kümmern sich um das Lesen von Daten in Formaten wie XML oder JSON, während der &lt;a href=&quot;https://sling.apache.org/documentation/bundles/manipulating-content-the-slingpostservlet-servlets-post.html&quot; target=&quot;slimpo_doku&quot;>SlingPostServlet&lt;/a> das Schreiben von Daten in das Repository übernimmt.&lt;/p>&#xd;&#xa;&lt;p>Das war's. Wirklich.&lt;/p>&#xd;&#xa;&lt;p>Allerdings benutzt nicht jeder gerne Kommandozeilen-Tools wie curl, um Inhalte hinzuzufügen, besonders wenn man neu im System ist. Daher enthält der Sling Starter drei nützliche Apps aus dem &lt;a href=&quot;https://www.composum.com/home.html&quot; target=&quot;slimpo_doku&quot;>Composum Nodes&lt;/a> Projekt, das technisch gesehen nicht Teil von Sling ist, sondern sozusagen ein quelloffener Freund.&lt;/p>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;p>&lt;strong>&lt;a href=&quot;https://www.composum.com/home/nodes/browser.html&quot; target=&quot;slimpo_doku&quot;>Console Browser&lt;/a> (/bin/browser.html)&lt;/strong>&lt;/p>&#xd;&#xa;&lt;p>Ermöglicht es Ihnen, den JCR-Baum zu durchsuchen, Knoten zu erstellen und zu bearbeiten. Ähnlich wie AEMs CRXDE Lite können Sie Dateien hochladen, z.B. eine index.html, und sie sogar im Browser bearbeiten. Ein CMS für Power-User! Sie können Dinge kaputt machen.&lt;/p>&#xd;&#xa;&lt;p>Sie können Berechtigungen (ACL) setzen, das JCR abfragen und Groovy-Skripte ausführen.&lt;/p>&#xd;&#xa;&lt;p>&lt;br>&lt;a href=&quot;https://www.composum.com/home/nodes/pckgmgr.html&quot; target=&quot;slimpo_doku&quot;>Package Manager&lt;/a> (&lt;strong>/bin/packages.html&lt;/strong>)&lt;/p>&#xd;&#xa;&lt;p>Der einfachste Weg, eine App in eine laufende Instanz zu installieren. Die App kann als ein all/complete zip gebündelt sein, das mehrere OSGi-Bundles und Content-Packages enthält. Die &lt;a href=&quot;https://sling.apache.org/documentation/development/content-packages.html&quot; target=&quot;slimpo_doku&quot;>bereitstellung auf Basis von Content-Packages&lt;/a> erreicht zur Laufzeit ein ähnliches Ergebnis wie der Feature-Model-Ansatz während des Build-Prozesses. Im Gegensatz zum Feature Model wird jedoch nicht überprüft, ob alle OSGi-Abhängigkeiten vor der Bereitstellung erfüllt sind.&lt;/p>&#xd;&#xa;&lt;p>Der Hauptgrund für einen Package-Manager ist natürlich, Content-Zip-Dateien zu erstellen, zu bauen und zu installieren. Das ermöglicht die Übertragung von Inhalten von einer Instanz zur anderen. Es ist in beide Richtungen mit AEM kompatibel.&lt;/p>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;p>&lt;strong>User Manager&lt;/strong> (&lt;strong>/bin/users.html)&lt;/strong>&lt;/p>&#xd;&#xa;&lt;p>Nun, er verwaltet JCR-Benutzer. Beachten Sie, dass es sich auch um JCR-Inhalte handelt, daher gibt es mehr Möglichkeiten, sie hinzuzufügen. Benutzer befinden sich unter dem Pfad &lt;em>/home/users&lt;/em>. Es gibt Benutzergruppen &lt;em>/home/groups&lt;/em> und die Systembenutzer unter &lt;em>/home/services&lt;/em>, die für Jobs verwendet werden, die bestimmte Berechtigungen benötigen, ohne ihnen vollen Administratorzugriff zu gewähren.&lt;/p>"/>
+                        </i18n>
                     </textimage>
                 </column-0>
-            </row_805219313>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Nützliche Apps (Composum)"/>
+                </i18n>
+            </row_1654474631>
+            <row_1484740369
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                title="Write your own app">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>Let's say you already have a Sling running inside a docker container on the internet. In a corporate environment that is probably more of an organizational issue to be honest.&lt;/p>&lt;p>Now someone has quickly vibe-coded a TypeScript app, reaching the famous 80% completion, and you want to demonstrate it on your mobile device during lunch. The app comes as a zip-file containing an index.html and the rest is compressed JavaScript. You extract the files into a content package project and install it&amp;nbsp; via package-manager. Done.&lt;/p>&lt;ul>&lt;/ul>&lt;p>&lt;sup>Well, almost. The URL might be cumbersome, and the app may be designed to run without a context path. For example, a path like /apps/playground/my-awesome-app/index.html might not function correctly..We have not yet discussed reverse proxy and caching solutions like Apache, Nginx, or Traefik.&lt;/sup>&lt;/p>&lt;br>&lt;p>Alternatively, if you have HTML and CSS and want a templating solution other than PHP, review the reverse CSS Zen Garden example to see how it is implemented.. &lt;sub>We need a link to a beginner's-guide here.&lt;/sub>&lt;/p>&lt;p>Or you have a react/angular/vue app running somewhere else, that needs a content/business API?&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/bundles/models.html#exporter-framework-1&quot; target=&quot;slimpo_doku&quot;>Sling Models Exporter&lt;/a> is your friend. Or any combination of the above, Sling does not really enforce an architecture.&lt;/p>&lt;p>This approach of combining a single-page application with a content API is now known as a &quot;&lt;strong>Headless CMS&lt;/strong>&quot;. Sling was one before it was cool. Downside is, the lack of a polished user interface may be why it has not been widely adopted.&lt;/p>"
+                        title="Fun and simple">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/another_twoheaded_sling_catapult_3.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Nehmen wir an, Sie haben bereits eine Sling-Instanz, die in einem Docker-Container im Internet läuft. In einer Unternehmensumgebung ist das ehrlich gesagt wohl eher eine organisatorische Herausforderung.&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;p>Jetzt hat jemand schnell eine TypeScript-App &quot;vibe-coded&quot;, die berühmten 80 % Fertigstellungsgrad erreicht, und Sie möchten sie in der Mittagspause auf Ihrem Mobilgerät demonstrieren. Die App liegt als Zip-Datei vor, die eine index.html enthält, und der Rest ist komprimiertes JavaScript. Sie extrahieren die Dateien in ein Content-Package-Projekt und installieren es über den Package-Manager. Erledigt.&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;ul>&lt;/ul>&#xd;&#xa;&#xd;&#xa;&lt;p>&lt;sup>Nun, fast. Die URL könnte umständlich sein, und die App ist möglicherweise so konzipiert, dass sie ohne Kontextpfad läuft. Ein Pfad wie /apps/playground/my-awesome-app/index.html könnte beispielsweise nicht richtig funktionieren. Wir haben Reverse-Proxy- und Caching-Lösungen wie Apache, Nginx oder Traefik noch nicht besprochen.&lt;/sup>&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;br>&#xd;&#xa;&#xd;&#xa;&lt;p>Alternativ, wenn Sie HTML und CSS haben und eine Templating-Lösung außer PHP suchen, werfen Sie einen Blick auf das umgekehrte CSS Zen Garden-Beispiel, um zu sehen, wie es umgesetzt ist. &lt;sub>Wir benötigen hier einen Link zu einem Anfängerleitfaden.&lt;/sub>&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;p>Oder Sie haben eine React/Angular/Vue-App, die woanders läuft und eine Content-/Business-API benötigt?&amp;nbsp;&lt;a href=&quot;https://sling.apache.org/documentation/bundles/models.html#exporter-framework-1&quot; target=&quot;slimpo_doku&quot;>Sling Models Exporter&lt;/a> ist Ihr Freund. Oder jede beliebige Kombination der oben genannten Möglichkeiten, Sling erzwingt keine bestimmte Architektur.&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;p>Dieser Ansatz, eine Single-Page-Anwendung mit einer Content-API zu kombinieren, ist heute als &quot;&lt;strong>Headless CMS&lt;/strong>&quot; bekannt. Sling war eines, bevor es cool war. Der Nachteil ist, dass das Fehlen einer ausgefeilten Benutzeroberfläche der Grund sein könnte, warum es nicht weit verbreitet ist.&lt;/p>"
+                                title="Spaß und einfach"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Schreibe deine eigene App"/>
+                </i18n>
+            </row_1484740369>
+            <row_474646590
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                title="Add apps from others">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="right"
+                        text="&lt;p>Peregrine CMS was presented at adaptTo 2019. &lt;a href=&quot;https://www.youtube.com/watch?v=I_Zkh31r_fQ&amp;amp;t=40s&quot; target=&quot;slimpo_doku&quot;>&quot;There was no CMS in Sling, now there are suddenly three that are open source&quot;&lt;/a>.&lt;/p>&lt;p>The &lt;a href=&quot;https://adapt.to/2019/schedule/the-sling-feature-model-1-0-revealed&quot;>Sling Feature Model 1.0 revealed&lt;/a>&amp;nbsp;was also presented that year. Slimpogrine started as an experiment with the goal to integrate Peregrine into its own feature model. It includes a user-friendly WYSIWYG editor. The system also provides its own image and asset management, along with a unique approach to templates and publishing. It has a &lt;a href=&quot;https://github.com/headwirecom/themeclean-flex/tree/develop-sling12/ui.apps/src/main/content/jcr_root/apps/themecleanflex/components&quot; target=&quot;slimpo_doku&quot;>default theme&lt;/a>&amp;nbsp;including way too many standard components.&lt;/p>&lt;p>The architecture notably shifts from traditional HTML templating to a Single Page Application (SPA) built with Vue.js. Not only is the CMS itself an SPA but also the generated website. For single-instance publishing, the system works by writing JSON files to the filesystem, which are then served directly by Apache.&lt;/p>&lt;p>The project did not get the attention it deserved I think. Then came COVID-19 pandemic and the project now shows limited recent activity on GitHub..&lt;/p>&lt;p>Building SliMpoGrine presents a minor challenge for developers because Peregrine is not on maven-central. Therefore, a developer must first build it into the local Maven .m2 repository using Java 11, while the rest of the project uses Java 21. To make it work with sling-starter 13 as feature, &lt;u>&lt;a href=&quot;https://github.com/orx0815/peregrine-cms/tree/feature/bake_into_far&quot; target=&quot;slimpo_doku&quot;>it has to be this fork&lt;/a>&lt;/u>. Alternatively, you can remove the feature by deleting the folder 'launcher/src/main/features/peregrine'.&lt;/p>&lt;br>&lt;br>"
+                        title="Peregrine CMS">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/humorous_two-headed_sling_catapult2.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Peregrine CMS wurde auf der adaptTo 2019 vorgestellt. &lt;a href=&quot;https://www.youtube.com/watch?v=I_Zkh31r_fQ&amp;amp;t=40s&quot; target=&quot;slimpo_doku&quot;>&quot;Es gab kein CMS in Sling, jetzt gibt es plötzlich drei, die Open Source sind&quot;&lt;/a>.&lt;/p>&lt;p>Das &lt;a href=&quot;https://adapt.to/2019/schedule/the-sling-feature-model-1-0-revealed&quot;>Sling Feature Model 1.0 revealed&lt;/a>&amp;nbsp;wurde ebenfalls in diesem Jahr präsentiert. Slimpogrine begann als Experiment mit dem Ziel, Peregrine in sein eigenes Feature-Modell zu integrieren. Es beinhaltet einen benutzerfreundlichen WYSIWYG-Editor. Das System bietet auch eine eigene Bild- und Asset-Verwaltung sowie einen einzigartigen Ansatz für Vorlagen und Veröffentlichungen. Es hat ein &lt;a href=&quot;https://github.com/headwirecom/themeclean-flex/tree/develop-sling12/ui.apps/src/main/content/jcr_root/apps/themecleanflex/components&quot; target=&quot;slimpo_doku&quot;>Standard-Theme&lt;/a>&amp;nbsp;mit viel zu vielen Standard-Komponenten.&lt;/p>&lt;p>Die Architektur weicht notably von traditionellem HTML-Templating ab und geht hin zu einer Single Page Application (SPA), die mit Vue.js erstellt wurde. Nicht nur das CMS selbst ist eine SPA, sondern auch die generierte Website. Für Single-Instance-Publishing funktioniert das System, indem JSON-Dateien in das Dateisystem geschrieben werden, die dann direkt von Apache ausgeliefert werden.&lt;/p>&lt;p>Das Projekt hat meiner Meinung nach nicht die Aufmerksamkeit erhalten, die es verdient hätte. Dann kam die COVID-19-Pandemie und das Projekt zeigt jetzt nur noch begrenzte Aktivität auf GitHub.&lt;/p>&lt;p>Das Bauen von SliMpoGrine stellt eine kleine Herausforderung für Entwickler dar, da Peregrine nicht auf maven-central verfügbar ist. Daher muss ein Entwickler es zunächst mit Java 11 in das lokale Maven-.m2-Repository bauen, während der Rest des Projekts Java 21 verwendet. Um es mit sling-starter 13 als Feature zum Laufen zu bringen, &lt;u>&lt;a href=&quot;https://github.com/orx0815/peregrine-cms/tree/feature/bake_into_far&quot; target=&quot;slimpo_doku&quot;>muss es dieser Fork sein&lt;/a>&lt;/u>. Alternativ können Sie das Feature entfernen, indem Sie den Ordner 'launcher/src/main/features/peregrine' löschen.&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                    <textimage_2018181023
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>Finally let's add the &lt;a href=&quot;https://www.composum.com/home/pages.html&quot; target=&quot;slimpo_doku&quot;>Composum-Pages&lt;/a>&amp;nbsp;CMS. The page you're currently reading is made with it.&lt;/p>&lt;p>It might seem insane to run two CMSs in the same Docker image. I mean learning one is already a task. But it makes a point about the architecture of Sling! The fact that this is even possible is both logical and surprising.&lt;/p>&lt;p>Unlike nodes-browser/package-manager/user-manager explained above, it's not part of the official Sling Starter. Instead there is an official&amp;nbsp;&lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-app-cms&quot; target=&quot;slimpo_doku&quot;>Sling CMS&lt;/a>, but that is not used here, three would be really silly.&lt;/p>&lt;p>Again it has it's own WYSIWYG editor, too many OOTB components, asset-management and publishing concept. Publishing involves copying content nodes from the '/content' path to the '/public' path within the JCR repository. It would also support publisher-author distribution.&lt;/p>&lt;p>We're also just running the default theme here. The look and feel isn't as nice a Peregrine's default-theme and the mobile-view lacks some responsiveness.&lt;/p>&lt;p>However, the default appearance may not reflect its full capabilities, it's probably made by backend developers. The aim would actually be to explore further and to come up with an own app on top, with custom html and own components in the future.&lt;/p>&lt;br>"
+                        title="Composum Pages">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/photorealistic_two-headed_sling_catapult_4.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Fügen wir schließlich das &lt;a href=&quot;https://www.composum.com/home/pages.html&quot; target=&quot;slimpo_doku&quot;>Composum-Pages&lt;/a>-CMS hinzu. Die Seite, die Sie gerade lesen, wurde damit erstellt.&lt;/p>&lt;p>Es mag verrückt erscheinen, zwei CMS in demselben Docker-Image zu betreiben. Immerhin ist es schon eine Aufgabe, eines zu lernen. Aber es verdeutlicht einen wichtigen Punkt der Sling-Architektur! Die Tatsache, dass dies überhaupt möglich ist, ist sowohl logisch als auch überraschend.&lt;/p>&lt;p>Im Gegensatz zu den oben erklärten Tools wie Nodes-Browser/Package-Manager/User-Manager ist es nicht Teil des offiziellen Sling Starters. Stattdessen gibt es ein offizielles &lt;a href=&quot;https://github.com/apache/sling-org-apache-sling-app-cms&quot; target=&quot;slimpo_doku&quot;>Sling CMS&lt;/a>, das hier jedoch nicht verwendet wird – drei wären wirklich albern.&lt;/p>&lt;p>Wiederum hat es seinen eigenen WYSIWYG-Editor, zu viele Out-of-the-Box-Komponenten, ein Asset-Management und ein Publishing-Konzept. Beim Publishing werden Inhaltsknoten vom Pfad '/content' zum Pfad '/public' innerhalb des JCR-Repositorys kopiert. Es würde auch eine Publisher-Author-Verteilung unterstützen.&lt;/p>&lt;p>Wir verwenden hier auch nur das Standard-Theme. Das Erscheinungsbild ist nicht so ansprechend wie das Standard-Theme von Peregrine, und die Mobilansicht ist nicht vollständig responsiv.&lt;/p>&lt;p>Das Standard-Erscheinungsbild spiegelt jedoch möglicherweise nicht seine gesamten Fähigkeiten wider; es wurde wahrscheinlich von Backend-Entwicklern erstellt. Das Ziel wäre eigentlich, weiter zu forschen und in Zukunft eine eigene App darauf aufzubauen, mit individuellem HTML und eigenen Komponenten.&lt;/p>"/>
+                        </i18n>
+                    </textimage_2018181023>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Apps von anderen hinzufügen"/>
+                </i18n>
+            </row_474646590>
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-"
+                title="What's with these AI slop images?">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        floatingText="{Boolean}true"
+                        imagePosition="right"
+                        text="&lt;p>In a cold, sterile laboratory, where the hum of machines never ceased, a small white jackrabbit sat alone in a wire cage. Its pink eyes darted nervously, ears twitching at every sound. The scientists called him Subject 47, but he knew himself as Snow. The lab was a maze of blinking lights and echoing footsteps, but worst of all were the voices.&lt;/p>  &#xd;&#xa;&#xd;&#xa;&lt;ul>  &#xd;&#xa;  &lt;li>&quot;Deliver the content faster,&quot; they whispered, though no one was near.&lt;/li>  &#xd;&#xa;  &lt;li>&quot;Optimize. Streamline. No delays,&quot; another voice hissed, bouncing off the metal walls.&lt;/li>  &#xd;&#xa;&lt;/ul>  &#xd;&#xa;&#xd;&#xa;&lt;p>Snow didn't understand what &quot;content&quot; was, but the voices demanded it with urgency. He pressed his paws against the cage door, longing for the open fields he barely remembered. The lab had stolen his freedom, and now it was stealing his mind.&lt;/p>&lt;p>One night, as the fluorescent lights flickered, a new voice spoke—softer, kinder.&lt;/p>&lt;p>&lt;strong>&lt;code>Build a machine for me to deliver CONTENT. Then we launch it into the CLOUDS, Then you'll be FREE&lt;/code>&lt;/strong>&lt;/p>&lt;p>Ok then, stop this &quot;I want you to act as a storyteller&quot; AI-generated slop. It is fun though.&lt;/p>&lt;br>"
+                        title="Follow the white Jackrabbit">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/stability/another_twoheaded_sling_catapult_3.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>In einem kalten, sterilen Labor, in dem das Summen der Maschinen niemals aufhörte, saß ein kleiner weißer Eselhase allein in einem Drahtkäfig. Seine rosa Augen huschten nervös umher, und die Ohren zuckten bei jedem Geräusch. Die Wissenschaftler nannten ihn Subjekt 47, aber er kannte sich selbst als Schnee. Das Labor war ein Labyrinth aus blinkenden Lichtern und hallenden Schritten, aber das Schlimmste waren die Stimmen.&lt;/p>&#xd;&#xa;&#xd;&#xa;&lt;ul>&#xd;&#xa;  &lt;li>&quot;Liefer den Inhalt schneller&quot;, flüsterten sie, obwohl niemand in der Nähe war.&lt;/li>&#xd;&#xa;  &lt;li>&quot;Optimiere. Straffe. Keine Verzögerungen&quot;, zischte eine andere Stimme, die von den Metallwänden abprallte.&lt;/li>&#xd;&#xa;&lt;/ul>&#xd;&#xa;&#xd;&#xa;&lt;p>Schnee verstand nicht, was &quot;Inhalt&quot; war, aber die Stimmen verlangten ihn mit Dringlichkeit. Er drückte seine Pfoten gegen die Käfigtür und sehnte sich nach den offenen Feldern, an die er sich kaum erinnerte. Das Labor hatte ihm seine Freiheit geraubt, und jetzt raubte es ihm seinen Verstand.&lt;/p>&#xd;&#xa;&lt;p>Eines Nachts, als die Neonlichter flackerten, sprach eine neue Stimme – leiser, freundlicher.&lt;/p>&#xd;&#xa;&lt;p>&lt;strong>&lt;code>Baue eine Maschine für mich, um INHALT zu liefern. Dann schießen wir sie in die WOLKEN, Dann wirst du FREI sein&lt;/code>&lt;/strong>&lt;/p>&#xd;&#xa;&lt;p>Okay, hör auf mit diesem &quot;Ich möchte, dass du als Geschichtenerzähler agierst&quot; KI-generierten Schund. Macht aber Spaß.&lt;/p>"
+                                title="Folgen Sie dem weißen Jackrabbit"/>
+                        </i18n>
+                    </textimage>
+                    <textimage_384214029
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        imagePosition="left"
+                        text="&lt;p>When generative AI came along, out of the need for a logo it was given the silly task to create an image of a &quot;Two Headed Sling&quot;. That was the result.&lt;/p>&lt;p>AI has evolved, so have the prompts. Here is an inspiration, in case you feel to evolve that style.&lt;/p>&lt;br>&lt;p>&lt;em>A photo-realistic image of a two-headed sling catapult launching a laptop, set in a clean and organized, steampunk-styled laboratory. The catapult is the primary focus. A jackrabbit is present. Three signs are present in the background with the words Sling, Jackrabbit, and Content. The lighting is dominated by a blue hue.&lt;/em>&lt;/p>&lt;br>&lt;p>&lt;em>Create a humorous, 16x9 image of a two-headed sling catapult launching a laptop in a laboratory setting. The artistic style is cyberpunk and &quot;the matrix&quot;. A cute, white jackrabbit is present. Three signs are in the background with the words &quot;Sling&quot; &quot;Jackrabbit&quot; and &quot;Content&quot;. The lighting has a dominant blue hue; the catapult and laptop are the primary focus.&lt;/em>&lt;/p>&amp;nbsp;"
+                        title="Two Headed Sling">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/logo/Two_headed_Sling_beta.dreamstudio.ai.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Als generative KI aufkam, wurde ihr aus der Notwendigkeit eines Logos heraus die alberne Aufgabe gestellt, ein Bild einer &quot;Zweiköpfigen Schleuder&quot; zu erstellen. Das war das Ergebnis.&lt;/p>&#xd;&#xa;&lt;p>KI hat sich weiterentwickelt, und mit ihr die Prompts. Hier ist eine Inspiration, falls Sie Lust haben, diesen Stil weiterzuentwickeln.&lt;/p>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;p>&lt;em>Ein fotorealistisches Bild einer zweiköpfigen Schleuder-Katapulte, die einen Laptop abschießt, angesiedelt in einem sauberen und organisierten, im Steampunk-Stil gehaltenen Labor. Das Katapult steht im Mittelpunkt. Ein Eselhase ist anwesend. Im Hintergrund sind drei Schilder mit den Aufschriften Sling, Jackrabbit und Content zu sehen. Die Beleuchtung wird von einem Blauton dominiert.&lt;/em>&lt;/p>&#xd;&#xa;&lt;br>&#xd;&#xa;&lt;p>&lt;em>Erstellen Sie ein humorvolles, 16x9-Bild einer zweiköpfigen Schleuder-Katapulte, die einen Laptop in einer Laborumgebung abschießt. Der künstlerische Stil ist Cyberpunk und &quot;Matrix&quot;. Ein niedlicher, weißer Eselhase ist anwesend. Im Hintergrund sind drei Schilder mit den Aufschriften &quot;Sling&quot;, &quot;Jackrabbit&quot; und &quot;Content&quot;. Die Beleuchtung hat einen dominanten Blauton; Katapult und Laptop stehen im primären Fokus.&lt;/em>&lt;/p>&amp;nbsp;"/>
+                        </i18n>
+                    </textimage_384214029>
+                </column-0>
+                <i18n jcr:primaryType="nt:unstructured">
+                    <de
+                        jcr:primaryType="nt:unstructured"
+                        title="Was ist mit diesen KI-Schrott-Bildern los?"/>
+                </i18n>
+            </row>
             <row_669778322
                 jcr:primaryType="cpp:Container"
                 sling:resourceType="composum/pages/components/container/row"
@@ -114,7 +413,6 @@
                         jcr:primaryType="cpp:Element"
                         sling:resourceType="composum/pages/components/element/textimage"
                         imagePosition="bottom"
-                        text="SliMPO ipsum Dolores&lt;br>"
                         title="Dark City">
                         <image
                             jcr:primaryType="nt:unstructured"
@@ -133,7 +431,13 @@
             imageRef="/public/sites/slimpo/assets/logo/slingslop_640x480.png"/>
         <bottom
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/iparsys"/>
+            sling:resourceType="composum/pages/components/container/iparsys">
+            <text
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/text"
+                text="No cookies for you"
+                title="Footer"/>
+        </bottom>
     </jcr:content>
     <learn_basics/>
     <develop/>

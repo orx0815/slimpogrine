@@ -2,19 +2,56 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="1c3d3af4-3c4b-47c9-a089-a752698bdd3b"
+        cpl:replicatedVersion="dd771469-cc29-46de-b978-f6152dec5d2c"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
         jcr:title="Learn Sling Basics"
         jcr:uuid="7329df28-751e-4981-a87a-b41e9019f1bd"
         sling:resourceType="composum/pages/components/page"
+        pageLanguages="[en]"
+        subtitle="Launching, HTML templating, working with Composum"
         template="composum/pages/components/templates/page/content">
+        <top
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <title
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/title"
+                subtitle="Launching, templating, composum apps ..."
+                title="Getting started">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/sling-catapult_and_jackrabbit_480x480.jpg"/>
+            </title>
+        </top>
         <main
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/parsys"/>
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        hideTitle="{Boolean}true"
+                        imagePosition="right"
+                        text="&lt;p>Let's use the code-block component of the &lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>included Peregrine CMS&lt;/a>.&lt;/p>&lt;br>&lt;p>Don't be disappointed when you hit a dead-end, it's work-in-progress.&lt;/p>&lt;br>&lt;br>&lt;p>You are looking at JCR&amp;nbsp;&lt;strong>path&lt;/strong>: &lt;em>/content/sites/slimpo/home/learn_basics/_jcr_content/main/row/column-0/textimage&lt;/em>&lt;/p>&lt;p>Link goes: &lt;em>&lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>/content/sligrine/pages/index&lt;/a>&lt;/em>&lt;/p>&lt;p>&lt;em>&lt;br>&lt;/em>&lt;/p>&lt;p>Back to -&amp;gt; &lt;a href=&quot;https://slimpo.motorbrot.org/&quot;>High-Level-Overview&lt;/a>&amp;nbsp;&lt;/p>"
+                        title="Come over">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/more_cyberpunk-rabbits_480x480.jpg"/>
+                    </textimage>
+                </column-0>
+            </row>
+        </main>
         <bottom
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/iparsys"/>
+            sling:resourceType="composum/pages/components/container/iparsys"
+            parentInheritanceCancelled="{Boolean}true"/>
         <navigation jcr:primaryType="nt:unstructured"/>
         <style jcr:primaryType="nt:unstructured"/>
     </jcr:content>

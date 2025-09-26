@@ -1,19 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cpp="http://sling.composum.com/pages/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cpl="http://sling.composum.com/platform/1.0"
     jcr:primaryType="cpp:Page">
     <jcr:content
-        cpl:replicatedVersion="bc61c9f8-3b37-4e39-89d0-dac92d8a1493"
+        cpl:replicatedVersion="9adaec13-182d-489d-a33b-d4b47e2a3070"
         jcr:mixinTypes="[mix:ReplicatedVersionable]"
         jcr:primaryType="cpp:PageContent"
         jcr:title="Build on top of Sling"
         jcr:uuid="a402a6a3-2aed-472a-96af-439d548422c0"
         sling:resourceType="composum/pages/components/page"
+        pageLanguages="[en,de]"
         template="composum/pages/components/templates/page/content">
+        <top
+            jcr:primaryType="cpp:Container"
+            sling:resourceType="composum/pages/components/container/parsys">
+            <title
+                jcr:primaryType="cpp:Element"
+                sling:resourceType="composum/pages/components/element/title"
+                subtitle="Project Structure, Maven tooling, Sling Feature Model, Content packages"
+                title="Java Middleware">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/cyberpunk-styled_laboratory_8_480x480.jpg"/>
+            </title>
+        </top>
         <main
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/parsys"/>
+            sling:resourceType="composum/pages/components/container/parsys">
+            <row
+                jcr:primaryType="cpp:Container"
+                sling:resourceType="composum/pages/components/container/row"
+                columns="-12-">
+                <column-0
+                    jcr:primaryType="cpp:Container"
+                    sling:resourceType="composum/pages/components/container/row/column">
+                    <textimage
+                        jcr:primaryType="cpp:Element"
+                        sling:resourceType="composum/pages/components/element/textimage"
+                        hideTitle="{Boolean}true"
+                        imagePosition="left"
+                        text="&lt;p>Let's use the code-block component of the &lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>included Peregrine CMS&lt;/a>&amp;nbsp;and collect some basics in the Java Ecosystem there.&lt;/p>&lt;br>&lt;p>Don't be disappointed when you hit a dead-end, it's work-in-progress.&lt;/p>&lt;br>&lt;br>&lt;p>You are looking at JCR&amp;nbsp;&lt;strong>path&lt;/strong>: &lt;em>/content/sites/slimpo/home/&lt;strong>develop&lt;/strong>/_jcr_content/main/row/column-0/textimage&lt;/em>&lt;/p>&lt;p>Link also goes: &lt;em>&lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>/content/sligrine/pages/index&lt;/a>&lt;/em>&lt;/p>&lt;p>&lt;strong>&lt;br>&lt;/strong>&lt;/p>&lt;p>&lt;strong>Back to -&amp;gt; &lt;a href=&quot;https://slimpo.motorbrot.org/&quot;>High-Level-Overview&lt;/a>&amp;nbsp;&lt;/strong>&lt;/p>"
+                        title="Come over">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            imageRef="/public/sites/slimpo/assets/rabbit/rabbits480x480/cyberpunk-styled_laboratory_8_480x480.jpg"/>
+                        <i18n jcr:primaryType="nt:unstructured">
+                            <de
+                                jcr:primaryType="nt:unstructured"
+                                text="&lt;p>Verwenden wir die Code-Block-Komponente des &lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>mitgelieferten Peregrine CMS&lt;/a>&amp;nbsp;und sammeln hier einige Grundlagen im Java-Ökosystem.&lt;/p>&lt;br>&lt;p>Seien Sie nicht enttäuscht, wenn Sie in eine Sackgasse geraten, es handelt sich um Work-in-Progress.&lt;/p>&lt;br>&lt;br>&lt;p>Sie sehen sich den JCR&amp;nbsp;&lt;strong>Pfad&lt;/strong> an: &lt;em>/content/sites/slimpo/home/&lt;strong>develop&lt;/strong>/_jcr_content/main/row/column-0/textimage&lt;/em>&lt;/p>&lt;p>Der Link führt auch zu: &lt;em>&lt;a href=&quot;https://sligrine.motorbrot.org/&quot;>/content/sligrine/pages/index&lt;/a>&lt;/em>&lt;/p>&lt;p>&lt;strong>&lt;br>&lt;/strong>&lt;/p>&lt;p>&lt;strong>Back to -&amp;gt; &lt;a href=&quot;https://slimpo.motorbrot.org/&quot;>High-Level-Overview&lt;/a>&amp;nbsp;&lt;/strong>&lt;/p>"/>
+                        </i18n>
+                    </textimage>
+                </column-0>
+            </row>
+        </main>
         <bottom
             jcr:primaryType="cpp:Container"
-            sling:resourceType="composum/pages/components/container/iparsys"/>
+            sling:resourceType="composum/pages/components/container/iparsys"
+            parentInheritanceCancelled="{Boolean}true"/>
+        <style jcr:primaryType="nt:unstructured"/>
+        <navigation
+            jcr:primaryType="nt:unstructured"
+            isNavRoot="{Boolean}true"/>
     </jcr:content>
 </jcr:root>
