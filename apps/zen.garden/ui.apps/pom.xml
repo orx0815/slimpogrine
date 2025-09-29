@@ -31,7 +31,7 @@
     <artifactId>slimpogrine.ui.apps.example</artifactId>
     <packaging>content-package</packaging>
 
-    <name>Slimpogrine -  UI Apps Example</name>
+    <name>Slimpogrine - zen.garden UI Apps Example</name>
     <description>
         This is an empty JCR Package where the JCR Content
         can be deployed with.

@@ -313,8 +313,8 @@
     </dependencyManagement>
   
   <modules>
-    <module>/apps/core.example/core</module>
-    <module>/apps/core.example/ui.apps</module>
+    <module>/apps/zen.garden/core</module>
+    <module>/apps/zen.garden/ui.apps</module>
     <module>/content-packages/all</module>
     <module>/content-packages/sample-content-slimpo</module>
     <module>/content-packages/sample-content-sligrine</module>

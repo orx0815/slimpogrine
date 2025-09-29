@@ -13,7 +13,7 @@
     <artifactId>slimpogrine.core.example</artifactId>
     <packaging>jar</packaging>
 
-    <name>Slimpogrine - Core Example Bundle</name>
+    <name>Slimpogrine - zen.garden Core Example Bundle</name>
     <description>
         This is an empty OSGi Bundle which can be used
         to compile and deploy OSGi Services to Sling.

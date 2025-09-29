@@ -2,5 +2,5 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:description="slimpogrine Home Page Component with HTL"
     jcr:primaryType="sling:Folder"
-    jcr:title="slimpogrine Home Page Component"
-    sling:resourceSuperType="slimpogrine/page"/>
+    jcr:title="C64 themed Page Component"
+    sling:resourceSuperType="slimpogrine/pages/basepage"/>
